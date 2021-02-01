@@ -18,12 +18,41 @@ body {
 #thing {
 	position: absolute;
 }
+.spinner-holder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.spinner-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.spinner {
+    margin: auto;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 </style>
 	</head>
 	<body onload='onload()'>
 		<div id='container'>
+			<div class='spinner-holder'>
+				<div class='spinner-cell'>
+					<div class='spinner'></div>
+				</div>
+			</div>
 			<div id='thing'>
-				<img id='pic' onload='resize()'>
+				<img id='pic' onload='show()'>
 			</div>
 		</div>
 	<script>
@@ -108,7 +137,7 @@ body {
 					{ "text" : "Politics", hash: "library", x: 0.61, y: 0.65 },
 					{ "text" : "Sports", hash: "shambles", x: 0.82, y: 0.68 },
 					{ "text" : "Computers", hash: "library", x: 0.71, y: 0.69 },
-					{ "text" : "Hire Me", hash: "library", x: 0.85, y: 0.82 }
+					{ "text" : "Hire Me", url: "http://hireme.gmmapowell.com", x: 0.85, y: 0.82 }
 				]
 			},
 			library: {
@@ -122,6 +151,11 @@ body {
 				ty: 0.37, by: 0.88
 			}
 		};
+		function show() {
+			resize();
+			var t = document.getElementById('thing');
+			t.style.display = 'block';
+		}
 		window.addEventListener('resize', resize);
 		window.addEventListener('hashchange', onload);
 		function onload() {
@@ -135,16 +169,33 @@ body {
 			var i = document.getElementById('pic');
 			i.src = 'images/' + currpage.img;
 			var t = document.getElementById('thing');
-			for (var q=0;q<currpage.buttons.length;q++) {
-				var b = currpage.buttons[q];
-				var e = document.createElement('button');
-				t.appendChild(e);
-				e.innerText = b.text;
-				e.style.position = 'absolute';
-				e.style.left = (b.x*100) + "%";
-				e.style.top = (b.y*100) + "%";
+			t.style.display = 'none';
+			var q = 0;
+			while (q < t.children.length) {
+				if (t.children[q].tagName == "BUTTON")
+					t.children[q].remove();
+				else
+					q++;
+			}
+			if (currpage.buttons) {
+				for (var q=0;q<currpage.buttons.length;q++) {
+					var b = currpage.buttons[q];
+					var e = document.createElement('button');
+					t.appendChild(e);
+					e.innerText = b.text;
+					e.onclick = moveto(b.url, b.hash);
+					e.style.position = 'absolute';
+					e.style.left = (b.x*100) + "%";
+					e.style.top = (b.y*100) + "%";
+				}
 			}
 			resize();
+		}
+		function moveto(url, hash) {
+			if (url)
+			      return () => window.location = url;
+			else
+				return () => window.location = "#" + hash;
 		}
 	</script>
 	</body>
