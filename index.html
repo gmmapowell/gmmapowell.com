@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Gareth Powell</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<style>
+body {
+	margin: 0;
+	/* width: 100vw;*/
+	/* height: 100vh; */
+	overflow: hidden;
+	/* background: aliceblue; */
+}
+#container {
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+#thing {
+	position: absolute;
+	height: 100%;
+	left: -59%;
+}
+img {
+	/* display: block;*/
+	/* max-width: 100vw; */
+/*	max-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 100vh;
+	left: -850px;
+		*/
+}
+</style>
+	</head>
+	<body onload='fix()'>
+		<div id='container'>
+			<div id='thing'>
+				<!-- TODO: I would like to make this a background image -->
+				<img id='pic' src='images/hollingworth.jpg'>
+			</div>
+		</div>
+	<script>
+		var i = document.querySelector('#pic');
+		var c = document.getElementById('container');
+		var t = document.getElementById('thing');
+		i.addEventListener('click', function(ev) {
+			console.log((ev.x + 850)/ i.width *100, ev.y / i.height *100);
+		});
+		window.addEventListener('resize', resize);
+		function resize(ev) {
+			console.log("size", c.clientWidth, c.clientHeight);
+			var vprat = c.clientWidth / c.clientHeight;
+			var imgrat = i.width/i.height;
+			var intrat = (i.width * 0.33)/(i.height * 0.26);
+			console.log("rat", vprat, imgrat);
+			// var tlx = 0.59 * i.width;
+			// var tly = 0.61 * i.height;
+			// var brx = 0.92 * i.width;
+			// var bry = 0.87 * i.height;
+
+			if (vprat > intrat) { // landscape
+				// 1. Figure the desired height of the image to appear in the container and make that thing.height
+				var newThingHeight = c.clientHeight / 0.26;
+				t.style.height = newThingHeight;
+				i.style.height = newThingHeight;
+				t.style.width = "auto";
+				i.style.width = "auto";
+
+				// 2. We want the top to be -61% of that
+				t.style.top = (-newThingHeight * 0.61) + "px";
+
+				// 3. Figure out the new image width and see what happens to 33% of that
+				var newImgWid = newThingHeight * imgrat;
+				var wanted = 0.33 * newImgWid;
+				var excess = c.clientWidth - wanted;
+				console.log("wid", newImgWid, excess);
+
+				// 4. Put left at 0.59 - .5 *excess
+				t.style.left = (-newImgWid*0.59+excess/2);
+			} else { // portrait
+				// 1. Figure the desired width of the image to appear in the container and make that thing.width
+				var newThingWidth = c.clientWidth / 0.33;
+				t.style.width = newThingWidth;
+				i.style.width = newThingWidth;
+				t.style.height = "auto";
+				i.style.height = "auto";
+
+				// 2. We want the left hand side to be -59% of that
+				t.style.left = (-newThingWidth * 0.59) + "px";
+
+				// 3. Figure out the new image height and see what happens to 26% of that
+				var newImgHt = newThingWidth / imgrat;
+				var wanted = 0.26 * newImgHt;
+				var excess = c.clientHeight - wanted;
+				console.log("ht", newImgHt, excess);
+
+				// 4. Put top at 0.61 - .5 *excess
+				t.style.top = (-newImgHt*0.61+excess/2);
+			}
+		};
+		function fix() {
+			// document.getElementById('container').style.height = (window.innerHeight);
+		//	document.getElementById('pic').style.height = (window.innerHeight) + "px";
+			// document.getElementById('pic').height = (window.innerHeight);
+			setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+			resize();
+		}
+	</script>
+	</body>
+</html>
