@@ -103,7 +103,13 @@ body {
 			hollingworth: {
 				img: 'hollingworth.jpg',
 				lx: 0.59, rx: 0.92,
-				ty: 0.61, by: 0.87
+				ty: 0.61, by: 0.87,
+				buttons: [
+					{ "text" : "Politics", hash: "library", x: 0.61, y: 0.65 },
+					{ "text" : "Sports", hash: "shambles", x: 0.82, y: 0.68 },
+					{ "text" : "Computers", hash: "library", x: 0.71, y: 0.69 },
+					{ "text" : "Hire Me", hash: "library", x: 0.85, y: 0.82 }
+				]
 			},
 			library: {
 				img: 'library.jpg',
@@ -128,6 +134,16 @@ body {
 				currpage = pages['hollingworth'];
 			var i = document.getElementById('pic');
 			i.src = 'images/' + currpage.img;
+			var t = document.getElementById('thing');
+			for (var q=0;q<currpage.buttons.length;q++) {
+				var b = currpage.buttons[q];
+				var e = document.createElement('button');
+				t.appendChild(e);
+				e.innerText = b.text;
+				e.style.position = 'absolute';
+				e.style.left = (b.x*100) + "%";
+				e.style.top = (b.y*100) + "%";
+			}
 			resize();
 		}
 	</script>
