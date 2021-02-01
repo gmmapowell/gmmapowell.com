@@ -23,7 +23,6 @@ body {
 	<body onload='fix()'>
 		<div id='container'>
 			<div id='thing'>
-				<!-- TODO: I would like to make this a background image -->
 				<img id='pic' src='images/hollingworth.jpg'>
 			</div>
 		</div>
@@ -36,31 +35,37 @@ body {
 		});
 		window.addEventListener('resize', resize);
 		function resize(ev) {
+			var lx = 0.59;
+			var ty = 0.61;
+			var rx = 0.92;
+			var by = 0.87;
+			var pw = rx - lx;
+			var ph = by - ty;
 			console.log("size", c.clientWidth, c.clientHeight);
 			var vprat = c.clientWidth / c.clientHeight;
 			var imgrat = i.width/i.height;
-			var intrat = (i.width * 0.33)/(i.height * 0.26);
+			var intrat = (i.width * pw)/(i.height * ph);
 			console.log("rat", vprat, imgrat);
 
 			if (vprat > intrat) { // landscape
 				// 1. Figure the desired height of the image to appear in the container and make that thing.height
-				var newThingHeight = c.clientHeight / 0.26;
+				var newThingHeight = c.clientHeight / ph;
 				t.style.height = newThingHeight;
 				i.style.height = newThingHeight;
 				t.style.width = "auto";
 				i.style.width = "auto";
 
 				// 2. We want the top to be -61% of that
-				t.style.top = (-newThingHeight * 0.61) + "px";
+				t.style.top = (-newThingHeight * ty) + "px";
 
 				// 3. Figure out the new image width and see what happens to 33% of that
 				var newImgWid = newThingHeight * imgrat;
-				var wanted = 0.33 * newImgWid;
+				var wanted = pw * newImgWid;
 				var excess = c.clientWidth - wanted;
 				console.log("wid", newImgWid, excess);
 
-				// 4. Put left at 0.59 - .5 *excess
-				var left = (-newImgWid*0.59+excess/2);
+				// 4. Put left at lx - .5 *excess
+				var left = (-newImgWid*lx+excess/2);
 				if (left + newImgWid < c.clientWidth) {
 					left = c.clientWidth - newImgWid;
 					if (left > 0)
@@ -69,23 +74,23 @@ body {
 				t.style.left = left;
 			} else { // portrait
 				// 1. Figure the desired width of the image to appear in the container and make that thing.width
-				var newThingWidth = c.clientWidth / 0.33;
+				var newThingWidth = c.clientWidth / pw;
 				t.style.width = newThingWidth;
-				i.style.width = newThingWidth;
+				// i.style.width = newThingWidth;
 				t.style.height = "auto";
-				i.style.height = "auto";
+				// i.style.height = "auto";
 
 				// 2. We want the left hand side to be -59% of that
-				t.style.left = (-newThingWidth * 0.59) + "px";
+				t.style.left = (-newThingWidth * lx) + "px";
 
 				// 3. Figure out the new image height and see what happens to 26% of that
 				var newImgHt = newThingWidth / imgrat;
-				var wanted = 0.26 * newImgHt;
+				var wanted = ph * newImgHt;
 				var excess = c.clientHeight - wanted;
 				console.log("ht", newImgHt, excess);
 
-				// 4. Put top at 0.61 - .5 *excess
-				var top = (-newImgHt*0.61+excess/2);
+				// 4. Put top at ty - .5 *excess
+				var top = (-newImgHt*ty+excess/2);
 				if (top + newImgHt < c.clientHeight) {
 					top = c.clientHeight - newImgHt;
 					if (top > 0)
