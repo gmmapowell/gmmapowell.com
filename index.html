@@ -20,10 +20,10 @@ body {
 }
 </style>
 	</head>
-	<body onload='fix()'>
+	<body onload='onload()'>
 		<div id='container'>
 			<div id='thing'>
-				<img id='pic' src='images/hollingworth.jpg'>
+				<img id='pic' onload='resize()'>
 			</div>
 		</div>
 	<script>
@@ -31,21 +31,21 @@ body {
 		var c = document.getElementById('container');
 		var t = document.getElementById('thing');
 		i.addEventListener('click', function(ev) {
-			console.log((ev.x + 850)/ i.width *100, ev.y / i.height *100);
+			console.log(ev.x/ i.width *100, ev.y / i.height *100);
 		});
-		window.addEventListener('resize', resize);
+		var currpage;
 		function resize(ev) {
-			var lx = 0.59;
-			var ty = 0.61;
-			var rx = 0.92;
-			var by = 0.87;
+			var lx = currpage.lx;
+			var ty = currpage.ty;
+			var rx = currpage.rx;
+			var by = currpage.by;
 			var pw = rx - lx;
 			var ph = by - ty;
 			console.log("size", c.clientWidth, c.clientHeight);
 			var vprat = c.clientWidth / c.clientHeight;
 			var imgrat = i.width/i.height;
 			var intrat = (i.width * pw)/(i.height * ph);
-			console.log("rat", vprat, imgrat);
+			console.log("rat", vprat, imgrat, intrat);
 
 			if (vprat > intrat) { // landscape
 				// 1. Figure the desired height of the image to appear in the container and make that thing.height
@@ -76,9 +76,9 @@ body {
 				// 1. Figure the desired width of the image to appear in the container and make that thing.width
 				var newThingWidth = c.clientWidth / pw;
 				t.style.width = newThingWidth;
-				// i.style.width = newThingWidth;
+				i.style.width = newThingWidth;
 				t.style.height = "auto";
-				// i.style.height = "auto";
+				i.style.height = "auto";
 
 				// 2. We want the left hand side to be -59% of that
 				t.style.left = (-newThingWidth * lx) + "px";
@@ -99,14 +99,35 @@ body {
 				t.style.top = top;
 			}
 		};
-		function fix() {
-			// document.getElementById('container').style.height = (window.innerHeight);
-		//	document.getElementById('pic').style.height = (window.innerHeight) + "px";
-			// document.getElementById('pic').height = (window.innerHeight);
-			setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
+		var pages = {
+			hollingworth: {
+				img: 'hollingworth.jpg',
+				lx: 0.59, rx: 0.92,
+				ty: 0.61, by: 0.87
+			},
+			library: {
+				img: 'library.jpg',
+				lx: 0.32, rx: 0.85,
+				ty: 0.43, by: 0.99
+			},
+			shambles: {
+				img: 'shambles.jpg',
+				lx: 0.31, rx: 0.68,
+				ty: 0.37, by: 0.88
+			}
+		};
+		window.addEventListener('resize', resize);
+		window.addEventListener('hashchange', onload);
+		function onload() {
+			var hash = location.hash;
+			if (hash)
+				hash = hash.substring(1);
+			if (hash && pages[hash])
+				currpage = pages[hash];
+			else
+				currpage = pages['hollingworth'];
+			var i = document.getElementById('pic');
+			i.src = 'images/' + currpage.img;
 			resize();
 		}
 	</script>
