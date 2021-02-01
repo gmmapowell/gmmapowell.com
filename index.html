@@ -7,10 +7,7 @@
 <style>
 body {
 	margin: 0;
-	/* width: 100vw;*/
-	/* height: 100vh; */
 	overflow: hidden;
-	/* background: aliceblue; */
 }
 #container {
 	overflow: hidden;
@@ -20,19 +17,6 @@ body {
 }
 #thing {
 	position: absolute;
-	height: 100%;
-	left: -59%;
-}
-img {
-	/* display: block;*/
-	/* max-width: 100vw; */
-/*	max-height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	height: 100vh;
-	left: -850px;
-		*/
 }
 </style>
 	</head>
@@ -57,10 +41,6 @@ img {
 			var imgrat = i.width/i.height;
 			var intrat = (i.width * 0.33)/(i.height * 0.26);
 			console.log("rat", vprat, imgrat);
-			// var tlx = 0.59 * i.width;
-			// var tly = 0.61 * i.height;
-			// var brx = 0.92 * i.width;
-			// var bry = 0.87 * i.height;
 
 			if (vprat > intrat) { // landscape
 				// 1. Figure the desired height of the image to appear in the container and make that thing.height
@@ -80,7 +60,13 @@ img {
 				console.log("wid", newImgWid, excess);
 
 				// 4. Put left at 0.59 - .5 *excess
-				t.style.left = (-newImgWid*0.59+excess/2);
+				var left = (-newImgWid*0.59+excess/2);
+				if (left + newImgWid < c.clientWidth) {
+					left = c.clientWidth - newImgWid;
+					if (left > 0)
+						left /= 2;
+				}
+				t.style.left = left;
 			} else { // portrait
 				// 1. Figure the desired width of the image to appear in the container and make that thing.width
 				var newThingWidth = c.clientWidth / 0.33;
@@ -99,7 +85,13 @@ img {
 				console.log("ht", newImgHt, excess);
 
 				// 4. Put top at 0.61 - .5 *excess
-				t.style.top = (-newImgHt*0.61+excess/2);
+				var top = (-newImgHt*0.61+excess/2);
+				if (top + newImgHt < c.clientHeight) {
+					top = c.clientHeight - newImgHt;
+					if (top > 0)
+						top /= 2;
+				}
+				t.style.top = top;
 			}
 		};
 		function fix() {
