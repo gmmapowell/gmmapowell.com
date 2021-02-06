@@ -4,6 +4,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
+<!-- what I think I want is everything to be on Ziniki using FLAS and to have all the necessary components and plugins so that it all just works -->
+<!-- Think content management with everything in the appropriate content stores, arenas and crobags -->
 <style>
 body {
 	margin: 0;
@@ -42,6 +44,22 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+				.text {
+					position: absolute;
+					top: 10%;
+					left: 10%;
+					width: 80%;
+					height: 80%;
+					column-width: 14em;
+					column-gap: 4em;
+					overflow-x: auto;
+					background: #f0f0ffc8;
+					padding: 10px;
+					font-size: 15pt;
+				}
+				.hidden {
+					display: none;
+				}
 </style>
 	</head>
 	<body onload='onload()'>
@@ -53,6 +71,19 @@ body {
 			</div>
 			<div id='thing'>
 				<img id='pic' onload='show()'>
+			</div>
+			<!-- TODO: it's now fairly obvious to me that want I really want here is a "content" thing
+	       		  - that is initially empty and is styled with absolute positioning.  It then does a "fetch"
+			  - to find the content that's wanted (as HTML) and inserts that, as a set of divs.
+
+			  - Each of the divs has a class, and those classes are defined by a set of stylesheets, all
+			  - of which have media queries about size and aspect ratio.  Because the container is absolutely
+			  - positioned, the children can be as well, and all the positions are % relative to the container.
+
+			  - There are different classes for buttons, menus (i.e. lists of things such as articles)
+			  - and text (i.e. when you get to an article).
+			-->
+			<div id='text' class='text hidden'>
 			</div>
 		</div>
 	<script>
@@ -137,6 +168,9 @@ body {
 					{ "text" : "Politics", hash: "library", x: 0.61, y: 0.65 },
 					{ "text" : "Sports", hash: "shambles", x: 0.82, y: 0.68 },
 					{ "text" : "Computers", hash: "library", x: 0.71, y: 0.69 },
+					{ "text" : "Creative", hash: "library", x: 0.71, y: 0.69 },
+					{ "text" : "Gallery", hash: "library", x: 0.71, y: 0.69 },
+					{ "text" : "Organizations", hash: "library", x: 0.71, y: 0.69 },
 					{ "text" : "Hire Me", url: "http://hireme.gmmapowell.com", x: 0.85, y: 0.82 }
 				]
 			},
@@ -191,6 +225,10 @@ body {
 			}
 			resize();
 		}
+		// This is supposed to enable 'space' to cause the text box to scroll (vertically or horizontally as appropriate)
+		document.getElementById('text').addEventListener('keyup', function(ev) {
+			console.log(ev);
+		});
 		function moveto(url, hash) {
 			if (url)
 			      return () => window.location = url;
