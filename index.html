@@ -90,67 +90,65 @@ body {
 		var i = document.querySelector('#pic');
 		var c = document.getElementById('container');
 		var t = document.getElementById('thing');
-		i.addEventListener('click', function(ev) {
-			console.log(ev.x/ i.width *100, ev.y / i.height *100);
-		});
 		var currpage;
 		function resize(ev) {
+			var cx = currpage.cx;
+			var cy = currpage.cy;
 			var lx = currpage.lx;
 			var ty = currpage.ty;
 			var rx = currpage.rx;
 			var by = currpage.by;
-			var pw = rx - lx;
-			var ph = by - ty;
 			console.log("size", c.clientWidth, c.clientHeight);
 			var vprat = c.clientWidth / c.clientHeight;
 			var imgrat = i.width/i.height;
-			var intrat = (i.width * pw)/(i.height * ph);
-			console.log("rat", vprat, imgrat, intrat);
+			console.log("rat", vprat, imgrat);
+			if (isNaN(imgrat))
+				return;
 
-			if (vprat > intrat) { // landscape
+			if (vprat < imgrat) { // portrait
 				// 1. Figure the desired height of the image to appear in the container and make that thing.height
-				var newThingHeight = c.clientHeight / ph;
+				var newThingHeight = c.clientHeight;
 				t.style.height = newThingHeight;
 				i.style.height = newThingHeight;
 				t.style.width = "auto";
 				i.style.width = "auto";
 
-				// 2. We want the top to be -61% of that
-				t.style.top = (-newThingHeight * ty) + "px";
+				// 2. We want to make it reach the top
+				t.style.top = 0;
 
-				// 3. Figure out the new image width and see what happens to 33% of that
+				// 3. Figure out the new image width
 				var newImgWid = newThingHeight * imgrat;
-				var wanted = pw * newImgWid;
-				var excess = c.clientWidth - wanted;
+				var wanted = newImgWid;
+				var excess = wanted - c.clientWidth;
 				console.log("wid", newImgWid, excess);
 
-				// 4. Put left at lx - .5 *excess
-				var left = (-newImgWid*lx+excess/2);
+				// 4. Put left at cx - .5 *excess
+				var left = -(newImgWid*cx-c.clientWidth/2);
 				if (left + newImgWid < c.clientWidth) {
 					left = c.clientWidth - newImgWid;
 					if (left > 0)
 						left /= 2;
 				}
 				t.style.left = left;
-			} else { // portrait
+			} else { // landscape
 				// 1. Figure the desired width of the image to appear in the container and make that thing.width
-				var newThingWidth = c.clientWidth / pw;
+				var newThingWidth = c.clientWidth;
 				t.style.width = newThingWidth;
 				i.style.width = newThingWidth;
 				t.style.height = "auto";
 				i.style.height = "auto";
 
-				// 2. We want the left hand side to be -59% of that
-				t.style.left = (-newThingWidth * lx) + "px";
+				// 2. We want to make it reach both sides
+				t.style.left = 0
 
-				// 3. Figure out the new image height and see what happens to 26% of that
+				// 3. Figure out the new image height
 				var newImgHt = newThingWidth / imgrat;
-				var wanted = ph * newImgHt;
-				var excess = c.clientHeight - wanted;
+				var wanted = newImgHt;
+				var excess = wanted - c.clientHeight;
 				console.log("ht", newImgHt, excess);
 
-				// 4. Put top at ty - .5 *excess
-				var top = (-newImgHt*ty+excess/2);
+				// 4. Put top at cy - .5 *excess
+				var top = -(newImgHt*cy-c.clientHeight/2)
 				if (top + newImgHt < c.clientHeight) {
 					top = c.clientHeight - newImgHt;
 					if (top > 0)
@@ -162,6 +160,7 @@ body {
 		var pages = {
 			hollingworth: {
 				img: 'hollingworth.jpg',
+				cx: 0.75, cy: 0.73,
 				lx: 0.59, rx: 0.92,
 				ty: 0.61, by: 0.87,
 				buttons: [
