@@ -1,0 +1,13 @@
+	card Politics
+		state
+			Image background
+
+		template politics
+			| => 'flas-screensize'
+			backdrop <- background
+				| => (fillTargetCenter 75 73) 'backdrop'
+
+		implements Lifecycle
+			ready
+				background <- Image.asset 'images/townhall.jpg'
+

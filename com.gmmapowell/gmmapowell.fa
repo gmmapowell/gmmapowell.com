@@ -1,0 +1,35 @@
+	application
+//		baseuri "https://gmmapowell.com"
+		baseuri 'file:///Users/gareth/Clients/gmmapowell.com/IMAGE/index.html'
+		routes
+			title "Gareth Powell"
+			main <- Root
+			home <- Home
+			at
+				main.nest home
+			exit
+				main.done
+			route "politics"
+				title "Talking Politics"
+				politics <- Politics
+				enter
+					main.nest politics
+				exit
+					politics.done
+				route "{articleId}"
+//	and now I would like the title set dynamically based on the article
+//  can I hand that over to Navigation as well?
+					article <- Article
+					enter
+						article.load articleId
+						politics.nest article
+					exit
+						article.done
+			route "gallery"
+				title "Image Gallery"
+				gallery <- Gallery
+				enter
+					main.nest gallery
+				exit
+					gallery.done
+				

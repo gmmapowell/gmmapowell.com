@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /Users/gareth/Clients/gmmapowell.com
+rm -rf IMAGE
+mkdir IMAGE
+cp HTACC IMAGE/.htaccess
+cp favicon.* IMAGE
+cp gmmapowell/gmmapowell.html IMAGE/index.html
+
+cp -r gmmapowell/css IMAGE
+cp -r gmmapowell/flascklib IMAGE
+cp -r gmmapowell/includes IMAGE
+cp -r gmmapowell/modules IMAGE
+cp -r gmmapowell/js IMAGE
+cp -r ui/images IMAGE
+
+uploadSome

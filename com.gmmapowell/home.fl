@@ -1,0 +1,47 @@
+	card Home
+		state
+			Image background
+
+		template home
+			| => 'flas-screensize'
+			backdrop <- background
+				| => (fillTargetCenter 75 73) 'backdrop'
+			creative
+				| => "tile" (minAspect 20 15 15 1 1)
+			creative-text
+				| => 'center-me' (sizeText 25)
+			sports
+				| => "tile" (minAspect 75 20 15 1 0.7)
+			sports-text
+				| => 'center-me' (sizeText 25)
+			politics
+				| => "tile" (minAspect 15 55 15 1 1)
+				=> talkPolitics
+			politics-text
+				| => 'center-me' (sizeText 25)
+			technology
+				| => "tile" (minAspect 75 85 15 1.4 0.7)
+			technology-text
+				| => 'center-me' (sizeText 25)
+			gallery
+				| => "tile" (minAspect 45 85 15 1.4 1)
+			gallery-text
+				| => 'center-me' (sizeText 25)
+			organizations
+				| => "tile" (minAspect 45 40 15 1.6 0.8)
+			organizations-text
+				| => 'center-me' (sizeText 30)
+			hireme
+				| => "tile" (minAspect 80 50 15 1.7 0.8)
+			hireme-text
+				| => 'center-me' (sizeText 30)
+
+
+		requires Navigation n
+
+		implements Lifecycle
+			ready
+				background <- Image.asset 'images/hollingworth.jpg'
+
+		event talkPolitics (ClickEvent ev)
+			<- n.redirect (parseUri "politics")
