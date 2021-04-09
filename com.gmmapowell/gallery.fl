@@ -16,8 +16,15 @@
 				| => (promoteBox 1.33 10) 'gallery-image' 'center-me'
 
 		template image <- (DisplayImage d)
+			| d.posn <> selected => 'hidden'
 			gallery-image <- d.img
 				| => (fillRect 15) 'center-me' 'contained-in-box'
+			left
+				| => 'move-left'
+				=> decrement
+			right
+				| => 'move-right'
+				=> increment
 
 		requires Ajax ajax
 
@@ -32,3 +39,11 @@
 					mapImages n [] = []
 					mapImages n (Cons { head: s, tail: l}) = Cons (makeImage n s) (mapImages (n+1) l)
 					makeImage n s = DisplayImage n (Image.uri (parseUri s))
+
+		event decrement (ClickEvent e)
+			| selected > 0
+				selected <- selected - 1
+
+		event increment (ClickEvent e)
+			| selected < length images - 1
+				selected <- selected + 1
