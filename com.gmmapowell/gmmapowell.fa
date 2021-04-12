@@ -1,6 +1,6 @@
 	application
-//		baseuri "https://gmmapowell.com"
-		baseuri 'file:///Users/gareth/Clients/gmmapowell.com/IMAGE/index.html'
+		baseuri "https://gmmapowell.com"
+//		baseuri 'file:///Users/gareth/Clients/gmmapowell.com/IMAGE/index.html'
 		routes
 			title "Gareth Powell"
 			main <- Root
