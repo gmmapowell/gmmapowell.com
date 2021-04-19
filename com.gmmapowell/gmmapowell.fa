@@ -9,6 +9,26 @@
 				main.nest home
 			exit
 				main.done
+			route "sports"
+				title "Following Sports"
+				sports <- Sports
+				titles <- ArticleList
+				enter
+					main.nest sports
+					titles.load "sports"
+				at
+					sports.nest titles
+				exit
+					sports.done
+				route "{articleId}"
+//	and now I would like the title set dynamically based on the article
+//  can I hand that over to Navigation as well?
+					articleS <- Article
+					enter
+						articleS.load articleId
+						sports.nest articleS
+					exit
+						articleS.done
 			route "politics"
 				title "Talking Politics"
 				politics <- Politics
@@ -17,8 +37,6 @@
 				exit
 					politics.done
 				route "{articleId}"
-//	and now I would like the title set dynamically based on the article
-//  can I hand that over to Navigation as well?
 					article <- Article
 					enter
 						article.load articleId

@@ -43,7 +43,11 @@
 		event decrement (ClickEvent e)
 			| selected > 0
 				selected <- selected - 1
+			|
+				selected <- length images - 1
 
 		event increment (ClickEvent e)
 			| selected < length images - 1
 				selected <- selected + 1
+			|
+				selected <- 0

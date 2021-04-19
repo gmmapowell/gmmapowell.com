@@ -12,6 +12,7 @@
 				| => 'center-me' (sizeText 25)
 			sports
 				| => "tile" (minAspect 75 20 15 1 0.7)
+				=> playSports
 			sports-text
 				| => 'center-me' (sizeText 25)
 			politics
@@ -25,6 +26,7 @@
 				| => 'center-me' (sizeText 25)
 			gallery
 				| => "tile" (minAspect 45 85 15 1.4 1)
+				=> gotoGallery
 			gallery-text
 				| => 'center-me' (sizeText 25)
 			organizations
@@ -33,6 +35,7 @@
 				| => 'center-me' (sizeText 30)
 			hireme
 				| => "tile" (minAspect 80 50 15 1.7 0.8)
+				=> jumpToHiring
 			hireme-text
 				| => 'center-me' (sizeText 30)
 
@@ -43,5 +46,14 @@
 			ready
 				background <- Image.asset 'images/hollingworth.jpg'
 
+		event playSports (ClickEvent ev)
+			<- n.redirect (parseUri "sports")
+
 		event talkPolitics (ClickEvent ev)
 			<- n.redirect (parseUri "politics")
+
+		event gotoGallery (ClickEvent ev)
+			<- n.redirect (parseUri "gallery")
+
+		event jumpToHiring (ClickEvent ev)
+			<- n.redirect (parseUri "https://hireme.gmmapowell.com")

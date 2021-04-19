@@ -1,1 +1,21 @@
+	card ArticleList
+		state
+			List[Link] titles
+
+		template article-list
+			article-titles <- titles
+
+		template article-title <- (Link l)
+			link <- l
+				| => 'article-link-style'
+
+		requires Ajax ajax
+		implements Lifecycle
+			load cat
+				<- ajax.subscribe (parseUri ("/ajax/articles.php?cat=" ++ (cast String cat))) AjaxOptions -> UpdateList
+		handler AjaxHandler UpdateList
+			message m
+				titles <- map makeTitle (cast List[Hash] (assoc (parseJson m.body) "articles"))
+					makeTitle h = Link (parseUri (cast String (assoc h "id"))) (cast String (assoc h "title"))
+
 	card Article

@@ -1,0 +1,18 @@
+	card Sports
+		state
+			Image background
+			Card card
+
+		template sports
+			| => 'flas-screensize'
+			backdrop <- background
+				| => (fillTargetCenter 75 73) 'backdrop'
+			article-title <- 'Sports'
+			articles <- card
+
+		implements Lifecycle
+			nest c
+				card <- c
+			ready
+				background <- Image.asset 'images/boundarypark.jpg'
+
