@@ -21,10 +21,9 @@
 				exit
 					sports.done
 				route "{articleId}"
-//	and now I would like the title set dynamically based on the article
-//  can I hand that over to Navigation as well?
 					articleS <- Article
 					enter
+						articleS.load "sports-"
 						articleS.load articleId
 						sports.nest articleS
 					exit
@@ -32,13 +31,24 @@
 			route "politics"
 				title "Talking Politics"
 				politics <- Politics
+				quickFixes <- ArticleList
+				musings <- ArticleList
+				thoughtExperiments <- ArticleList
 				enter
 					main.nest politics
+				at
+					politics.nest quickFixes
+					politics.nest musings
+					politics.nest thoughtExperiments
 				exit
 					politics.done
 				route "{articleId}"
 					article <- Article
 					enter
+						politics.unnest quickFixes
+						politics.unnest musings
+						politics.unnest thoughtExperiments
+						article.load "politics-"
 						article.load articleId
 						politics.nest article
 					exit

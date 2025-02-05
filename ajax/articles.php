@@ -1,0 +1,85 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+?>
+{
+<?php
+	switch ($_GET['cat']) {
+	case "sports":
+?>
+	"articles": [
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" },
+		{ "id": "tv_football", "title": "TV Football" }
+	]
+<?php
+	}
+?>
+}

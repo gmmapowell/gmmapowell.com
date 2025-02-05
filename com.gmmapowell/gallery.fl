@@ -30,7 +30,7 @@
 
 		implements Lifecycle
 			ready
-				background <- Image.asset 'images/gallery.png' // should really be a pic of the art gallery
+				background <- Image.asset '/images/gallery.png' // should really be a pic of the art gallery
 				<- ajax.subscribe (parseUri "https://gmmapowell.com/ajax/gallery.php") AjaxOptions -> UpdateImages
 
 		handler AjaxHandler UpdateImages

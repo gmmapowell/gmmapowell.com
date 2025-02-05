@@ -1,0 +1,13 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+?>
+{
+  "images": [
+    "https://gmmapowell.com/images/mallorca/Miramar.jpg",
+    "https://gmmapowell.com/images/mallorca/Pool.jpg",
+    "https://gmmapowell.com/images/mallorca/Andratx.jpg",
+    "https://gmmapowell.com/images/mallorca/Harbour.jpg",
+    "https://gmmapowell.com/images/mallorca/MarSenses.jpg"
+  ]
+}

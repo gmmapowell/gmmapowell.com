@@ -44,7 +44,7 @@
 
 		implements Lifecycle
 			ready
-				background <- Image.asset 'images/hollingworth.jpg'
+				background <- Image.asset '/images/hollingworth.jpg'
 
 		event playSports (ClickEvent ev)
 			<- n.redirect (parseUri "sports")

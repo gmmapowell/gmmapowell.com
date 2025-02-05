@@ -19,3 +19,19 @@
 					makeTitle h = Link (parseUri (cast String (assoc h "id"))) (cast String (assoc h "title"))
 
 	card Article
+		state
+			String articleId
+			Html content
+
+		template article-html
+			content <- content
+
+		requires Ajax ajax
+		implements Lifecycle
+			load aid
+				articleId <- articleId ++ (cast String aid)
+			ready
+				<- ajax.subscribe (parseUri ("/ajax/article.php?aid=" ++ articleId)) AjaxOptions -> UpdateContent
+		handler AjaxHandler UpdateContent
+			message m
+				content <- Html.from m

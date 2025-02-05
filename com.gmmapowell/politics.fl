@@ -1,13 +1,20 @@
 	card Politics
 		state
 			Image background
+			List[Card] lists <- []
 
 		template politics
 			| => 'flas-screensize'
 			backdrop <- background
 				| => (fillTargetCenter 75 73) 'backdrop'
+			politics-article-title <- 'Politics'
+			politics-articles <- lists
 
 		implements Lifecycle
+			nest c
+				lists <- append lists (cast Card c)
+			unnest c
+				lists <- [] // something of a hack
 			ready
-				background <- Image.asset 'images/townhall.jpg'
+				background <- Image.asset '/images/townhall.jpg'
 
