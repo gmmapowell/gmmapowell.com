@@ -1,0 +1,13 @@
+# This is a mapping of files in index.txt to where I want them to go on the website
+# Any file not listed in here will not be published
+
+# Each set of articles is grouped by the category into which it should go
+# Each mapping is a one-token destination name followed by a multi-token source name to which ".html" will be appended
+creative
+  aeroplane Life is an Aeroplane
+
+sports
+  tv_football TV Football
+
+tech
+  about About this Site

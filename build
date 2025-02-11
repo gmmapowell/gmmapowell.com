@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PATH=$HOME/Ziniki/Over/Tools/wdiotests/compiler/bin:$PATH
+
+flas --web ui com.gmmapowell
+

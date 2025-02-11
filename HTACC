@@ -3,4 +3,4 @@ FallbackResource /index.html
 <FilesMatch ".(html|css|js|php)$">
 	Header set Cache-Control "no-store"
 </FilesMatch>
-Redirect /slug/life-is-an-aeroplane /articles/creative-aeroplane
+Redirect /slug/life-is-an-aeroplane /creative/aeroplane

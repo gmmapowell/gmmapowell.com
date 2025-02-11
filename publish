@@ -1,0 +1,48 @@
+#!/bin/bash -e
+
+awk '
+  function endit() {
+    print "\t\t]" > ap
+    print "<?php" > ap
+    print "\t\tbreak;" > ap
+  }
+  BEGIN {
+    ap = "ajax/articles.php";
+    print "<?php" > ap
+	printf "header(%cAccess-Control-Allow-Origin: *%c);\n", 34, 34 > ap
+	printf "header(%cAccess-Control-Allow-Headers: *%c);\n", 34, 34 > ap
+	print "?>" > ap
+	print "{" > ap
+    print "<?php" > ap
+	printf "\tswitch ($_GET[%ccat%c]) {\n", 39, 39 > ap
+	haveCase = 0
+  }
+  $0 ~ /^#/ { next }
+  $0 ~ /^[ \t]*$/ { next }
+  $0 ~ /^[a-z]*$/ {
+  	category = $0;
+	if (haveCase == 1)
+	  endit();
+	haveCase = 1;
+    printf "\tcase %c%s%c:\n", 34, category, 34 > ap
+	print "?>" > ap
+	printf "\t\t%carticles%c: [\n", 34, 34 > ap
+	next;
+  }
+  $0 ~ /^  / {
+  	name=$1;
+	sub("  " name " *", "");
+	printf "cp %cformatter/html/%s.html%c articles/%s-%s\n", 34, $0, 34, category, name > "/tmp/publish.sh"
+	printf "\t\t\t{ %cid%c: %c%s%c, %ctitle%c: %c%s%c }\n", 34, 34, 34, name, 34, 34, 34, 34, $0, 34 > ap
+  }
+  END {
+    endit()
+	print "\t}" > ap
+	print "?>" > ap
+    print "}" > ap
+  }
+' formatter/publish.txt
+
+bash -e /tmp/publish.sh
+
+rm /tmp/publish.sh

@@ -18,7 +18,7 @@
 		template image <- (DisplayImage d)
 			| d.posn <> selected => 'hidden'
 			gallery-image <- d.img
-				| => (fillRect 15) 'center-me' 'contained-in-box'
+				| => (fillRect 15) 'relative-center-me' 'contained-in-box'
 			left
 				| => 'move-left'
 				=> decrement

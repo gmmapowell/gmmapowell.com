@@ -1,6 +1,5 @@
 	application
 		baseuri "https://gmmapowell.com"
-//		baseuri 'file:///Users/gareth/Clients/gmmapowell.com/IMAGE/index.html'
 		routes
 			title "Gareth Powell"
 			main <- Root
@@ -9,6 +8,25 @@
 				main.nest home
 			exit
 				main.done
+			route "creative"
+				title "Getting Creative"
+				creative <- Creative
+				titlesX <- ArticleList
+				enter
+					main.nest creative
+					titlesX.load "creative"
+				at
+					creative.nest titlesX
+				exit
+					creative.done
+				route "{articleId}"
+					articleC <- Article
+					enter
+						articleC.load "creative-"
+						articleC.load articleId
+						creative.nest articleC
+					exit
+						articleC.done
 			route "sports"
 				title "Following Sports"
 				sports <- Sports
@@ -60,4 +78,22 @@
 					main.nest gallery
 				exit
 					gallery.done
-				
+			route "technology"
+				title "Look at Technology"
+				tech <- Technology
+				tTitles <- ArticleList
+				enter
+					main.nest tech
+					tTitles.load "tech"
+				at
+					tech.nest tTitles
+				exit
+					tech.done
+				route "{articleId}"
+					articleT <- Article
+					enter
+						articleT.load "tech-"
+						articleT.load articleId
+						tech.nest articleT
+					exit
+						articleT.done

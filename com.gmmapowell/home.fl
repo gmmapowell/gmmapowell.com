@@ -8,6 +8,7 @@
 				| => (fillTargetCenter 75 73) 'backdrop'
 			creative
 				| => "tile" (minAspect 20 15 15 1 1)
+				=> beCreative
 			creative-text
 				| => 'center-me' (sizeText 25)
 			sports
@@ -22,6 +23,7 @@
 				| => 'center-me' (sizeText 25)
 			technology
 				| => "tile" (minAspect 75 85 15 1.4 0.7)
+				=> lookAtTech
 			technology-text
 				| => 'center-me' (sizeText 25)
 			gallery
@@ -46,14 +48,20 @@
 			ready
 				background <- Image.asset '/images/hollingworth.jpg'
 
+		event beCreative (ClickEvent ev)
+			<- n.redirect (parseUri "creative/")
+
 		event playSports (ClickEvent ev)
-			<- n.redirect (parseUri "sports")
+			<- n.redirect (parseUri "sports/")
 
 		event talkPolitics (ClickEvent ev)
-			<- n.redirect (parseUri "politics")
+			<- n.redirect (parseUri "politics/")
 
 		event gotoGallery (ClickEvent ev)
-			<- n.redirect (parseUri "gallery")
+			<- n.redirect (parseUri "gallery/")
+
+		event lookAtTech (ClickEvent ev)
+			<- n.redirect (parseUri "technology/")
 
 		event jumpToHiring (ClickEvent ev)
 			<- n.redirect (parseUri "https://hireme.gmmapowell.com")

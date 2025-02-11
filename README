@@ -1,0 +1,7 @@
+To build the FLAS and everything, run 
+
+$ ./build
+
+To upload everything to DH, run
+
+$ ./send

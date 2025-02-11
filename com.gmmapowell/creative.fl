@@ -1,0 +1,17 @@
+	card Creative
+		state
+			Image background
+			Card card
+
+		template sports
+			| => 'flas-screensize'
+			backdrop <- background
+				| => (fillTargetCenter 75 73) 'backdrop'
+			article-title <- 'Creative'
+			articles <- card
+
+		implements Lifecycle
+			nest c
+				card <- c
+			ready
+				background <- Image.asset '/images/rainbow.jpg'
