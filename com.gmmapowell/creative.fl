@@ -3,7 +3,7 @@
 			Image background
 			Card card
 
-		template sports
+		template creative
 			| => 'flas-screensize'
 			backdrop <- background
 				| => (fillTargetCenter 75 73) 'backdrop'

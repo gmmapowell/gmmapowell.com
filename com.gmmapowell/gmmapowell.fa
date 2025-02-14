@@ -6,27 +6,21 @@
 			home <- Home
 			at
 				main.nest home
-			exit
-				main.done
 			route "creative"
 				title "Getting Creative"
 				creative <- Creative
-				titlesX <- ArticleList
+				titles <- ArticleList
 				enter
 					main.nest creative
-					titlesX.load "creative"
+					titles.load "creative"
 				at
-					creative.nest titlesX
-				exit
-					creative.done
+					creative.nest titles
 				route "{articleId}"
-					articleC <- Article
+					article <- Article
 					enter
-						articleC.load "creative-"
-						articleC.load articleId
-						creative.nest articleC
-					exit
-						articleC.done
+						article.load "creative-"
+						article.load articleId
+						creative.nest article
 			route "sports"
 				title "Following Sports"
 				sports <- Sports
@@ -36,16 +30,12 @@
 					titles.load "sports"
 				at
 					sports.nest titles
-				exit
-					sports.done
 				route "{articleId}"
-					articleS <- Article
+					article <- Article
 					enter
-						articleS.load "sports-"
-						articleS.load articleId
-						sports.nest articleS
-					exit
-						articleS.done
+						article.load "sports-"
+						article.load articleId
+						sports.nest article
 			route "politics"
 				title "Talking Politics"
 				politics <- Politics
@@ -58,8 +48,6 @@
 					politics.nest quickFixes
 					politics.nest musings
 					politics.nest thoughtExperiments
-				exit
-					politics.done
 				route "{articleId}"
 					article <- Article
 					enter
@@ -69,31 +57,23 @@
 						article.load "politics-"
 						article.load articleId
 						politics.nest article
-					exit
-						article.done
 			route "gallery"
 				title "Image Gallery"
 				gallery <- Gallery
 				enter
 					main.nest gallery
-				exit
-					gallery.done
 			route "technology"
 				title "Look at Technology"
 				tech <- Technology
-				tTitles <- ArticleList
+				titles <- ArticleList
 				enter
 					main.nest tech
-					tTitles.load "tech"
+					titles.load "tech"
 				at
-					tech.nest tTitles
-				exit
-					tech.done
+					tech.nest titles
 				route "{articleId}"
-					articleT <- Article
+					article <- Article
 					enter
-						articleT.load "tech-"
-						articleT.load articleId
-						tech.nest articleT
-					exit
-						articleT.done
+						article.load "tech-"
+						article.load articleId
+						tech.nest article
