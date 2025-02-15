@@ -1,0 +1,6 @@
+@media screen AND (max-aspect-ratio: 2/3) { /* portrait */
+	.article-title-list {
+		column-count: auto;
+		column-width: auto;
+	}
+}
