@@ -6,21 +6,36 @@
 			home <- Home
 			at
 				main.nest home
-			route "creative"
-				title "Getting Creative"
-				creative <- Creative
+			route "life"
+				title "Observations on Life"
+				observations <- Observations
 				titles <- ArticleList
 				enter
-					main.nest creative
-					titles.load "creative"
+					main.nest observations
+					titles.load "life"
 				at
-					creative.nest titles
+					observations.nest titles
 				route "{articleId}"
 					article <- Article
 					enter
-						article.load "creative-"
+						article.load "life-"
 						article.load articleId
-						creative.nest article
+						observations.nest article
+//			route "creative"
+//				title "Getting Creative"
+//				creative <- Creative
+//				titles <- ArticleList
+//				enter
+//					main.nest creative
+//					titles.load "creative"
+//				at
+//					creative.nest titles
+//				route "{articleId}"
+//					article <- Article
+//					enter
+//						article.load "creative-"
+//						article.load articleId
+//						creative.nest article
 			route "sports"
 				title "Following Sports"
 				sports <- Sports

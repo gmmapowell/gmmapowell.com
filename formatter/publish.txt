@@ -3,11 +3,19 @@
 
 # Each set of articles is grouped by the category into which it should go
 # Each mapping is a one-token destination name followed by a multi-token source name to which ".html" will be appended
-creative
+life
   aeroplane Life is an Aeroplane
+  rational What it means to be Rational
+  walking-away Walking Away from Life
+
+politics
+  musings-empowered-departure Empowered Departure
+  quickfixes-land-tax
 
 sports
-  tv_football TV Football
+  tv-football TV Football
+  rugby-calendar Harmonized Rugby Calendar
+  contracts Sports Contracts are Stupid
 
 tech
-  about About this Site
+  this-site About this Site

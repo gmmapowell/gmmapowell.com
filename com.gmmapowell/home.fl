@@ -6,10 +6,15 @@
 			| => 'flas-screensize'
 			backdrop <- background
 				| => (fillTargetCenter 75 73) 'backdrop'
-			creative
-				| => "tile" (minAspect 20 15 15 1 1)
-				=> beCreative
-			creative-text
+//			creative
+//				| => "tile" (minAspect 20 15 15 1 1)
+//				=> beCreative
+//			creative-text
+//				| => 'center-me' (sizeText 25)
+			observations
+				| => "tile" (minAspect 30 15 15 2 1)
+				=> observeLife
+			observations-text
 				| => 'center-me' (sizeText 25)
 			sports
 				| => "tile" (minAspect 75 20 15 1 0.7)
@@ -48,8 +53,11 @@
 			ready
 				background <- Image.asset '/images/hollingworth.jpg'
 
-		event beCreative (ClickEvent ev)
-			<- n.redirect (parseUri "creative")
+//		event beCreative (ClickEvent ev)
+//			<- n.redirect (parseUri "creative")
+
+		event observeLife (ClickEvent ev)
+			<- n.redirect (parseUri "life")
 
 		event playSports (ClickEvent ev)
 			<- n.redirect (parseUri "sports")

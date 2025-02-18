@@ -1,5 +1,6 @@
 ﻿@Article
 title=TV Football
+saveAs=sports/tv-football
 
 
 Back in 2021, uproar was caused when a &sp

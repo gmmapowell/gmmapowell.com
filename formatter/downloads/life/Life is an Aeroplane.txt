@@ -1,5 +1,6 @@
 ﻿@Article
 title=Life is an Aeroplane
+saveAs=life/aeroplane
 
 
 They tell me there comes a point in life when you become aware of your own mortality.  I think, for me, that was when I was 12.

@@ -1,5 +1,6 @@
 ﻿@Article
 title=About this Site
+saveAs=tech/this-site
 
 
 I would like to claim that this website is not a "vanity project".  But let's face it, it is.  My main purpose in creating this is to have a little corner of the web where I am able to write my own opinions (at length) and put them up here for all to see.  But this is not a blog.

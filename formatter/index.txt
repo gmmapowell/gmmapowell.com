@@ -1,5 +1,14 @@
-1irRgPQEmQxUSlFxbGv7-vergmEFJ0Mh0xZNLPKt7sOQ TV Football.txt
-1kJI1_w0iwxZIyhO9xTRUzbmaXml0oL9JW-O3zFQZ84o Life is an Aeroplane.txt
-10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU About this Site.txt
+1-RfOuwChQLRlxHzqbQscrL4OdLIbKtmyHZYZIdUJmiI life/Philosophical Suicide.txt
+130XXTD8GbKiBj5qbtHbsLYLejRtpiwdDxlg3luTYews life/What it means to be Rational.txt
+1uGkERfb2DTul3lmnvdFKSKh6OejmwvhBV0TskpdJ4yI politics/Empowered Departure.txt
+1g23hVl7p21JUdXXktt1W2_8_FZQ1hEhEzjQe_zDKTP8 politics/Land Tax.txt
+1fRktOEsVqSn5TEeoFK9WbnVhtZ1GUfYBS8ECvMa2GSc sports/Football FFP Redux.txt
+1vpAsAbPe10vjPFGYnJKSYYm4ACNEts3ESnu5a-fVFbA tech/My View on AI.txt
 --excluded--
 1iKnWLYrmWSnRmmbFo15pmwC6WS2tt6gjHb_imL_TRaE Ideas.txt
+
+1kJI1_w0iwxZIyhO9xTRUzbmaXml0oL9JW-O3zFQZ84o life/Life is an Aeroplane.txt
+1Ymvtf46YCgwkyvYEr1jO2cSzX1hExrtsxoNp2Jy_xH8 sports/Sports Contracts are Stupid.txt
+1irRgPQEmQxUSlFxbGv7-vergmEFJ0Mh0xZNLPKt7sOQ sports/TV Football.txt
+1l8Y3pU2EbGaFn0b0TEcgN9QJgis1kxx5z9aJ7uoDI0M sports/Harmonized Rugby Calendar.txt
+10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU tech/About this Site.txt

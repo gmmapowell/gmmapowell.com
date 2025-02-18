@@ -9,12 +9,6 @@ cp HTACC IMAGE/.htaccess
 cp favicon.* IMAGE
 
 cp -r apps/com.gmmapowell/* IMAGE
-# cp gmmapowell/gmmapowell.html IMAGE/index.html
-# cp -r gmmapowell/css IMAGE
-# cp -r gmmapowell/flascklib IMAGE
-# cp -r gmmapowell/includes IMAGE
-# cp -r gmmapowell/modules IMAGE
-# cp -r gmmapowell/js IMAGE
 cp -r ui/images IMAGE
 cp -r ui/basic.css IMAGE/css
 cp -r ajax IMAGE
