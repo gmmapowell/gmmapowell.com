@@ -31,6 +31,11 @@ awk '
     printf "\tcase %c%s%c:\n", 34, category, 34 > ap
 	  print "?>" > ap
     needComma = 0;
+    prefix = category;
+    sub("^[a-z]*", "", prefix);
+    if (length(prefix) > 0) {
+      prefix = substr(prefix, 2) "-";
+    }
 	  next;
   }
   $0 ~ /^  / {
@@ -41,7 +46,7 @@ awk '
     if (needComma) {
       printf ",\n" > ap
     }
-	  printf "\t\t\t{ %cid%c: %c%s%c, %ctitle%c: %c%s%c }", 34, 34, 34, name, 34, 34, 34, 34, $0, 34 > ap
+	  printf "\t\t\t{ %cid%c: %c%s%s%c, %ctitle%c: %c%s%c }", 34, 34, 34, prefix, name, 34, 34, 34, 34, $0, 34 > ap
     needComma = 1
   }
   END {

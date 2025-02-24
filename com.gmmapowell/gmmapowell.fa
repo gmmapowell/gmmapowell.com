@@ -1,5 +1,4 @@
 	application
-		baseuri "https://gmmapowell.com"
 		routes
 			title "Gareth Powell"
 			main <- Root

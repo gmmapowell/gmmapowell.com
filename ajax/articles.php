@@ -15,14 +15,14 @@ header("Access-Control-Allow-Headers: *");
 		break;
 	case "politics-musings":
 ?>
-			{ "id": "empowered-departure", "title": "Empowered Departure" },
-			{ "id": "immigration", "title": "Immigration is a Category Error" }
+			{ "id": "musings-empowered-departure", "title": "Empowered Departure" },
+			{ "id": "musings-immigration", "title": "Immigration is a Category Error" }
 <?php
 		break;
 	case "politics-quickfixes":
 ?>
-			{ "id": "land-tax", "title": "A Land Use Tax" },
-			{ "id": "free-transport", "title": "Public Transport should be Free" }
+			{ "id": "quickfixes-land-tax", "title": "A Land Use Tax" },
+			{ "id": "quickfixes-free-transport", "title": "Public Transport should be Free" }
 <?php
 		break;
 	case "sports":
