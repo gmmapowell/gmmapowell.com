@@ -8,14 +8,21 @@ life
   rational What it means to be Rational
   walking-away Walking Away from Life
 
-politics
-  musings-empowered-departure Empowered Departure
-  quickfixes-land-tax
+politics-musings
+  empowered-departure Empowered Departure
+  immigration Immigration is a Category Error
+
+politics-quickfixes
+  land-tax A Land Use Tax
+  free-transport Public Transport should be Free
 
 sports
   tv-football TV Football
   rugby-calendar Harmonized Rugby Calendar
   contracts Sports Contracts are Stupid
+  fire-the-manager Should We Fire the Manager?
+  women Women's Sports
 
 tech
   this-site About this Site
+  ai-view My View on AI

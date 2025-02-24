@@ -59,6 +59,9 @@
 				thoughtExperiments <- ArticleList
 				enter
 					main.nest politics
+					quickFixes.load "politics-quickfixes"
+					musings.load "politics-musings"
+					thoughtExperiments.load "politics-experiments"
 				at
 					politics.nest quickFixes
 					politics.nest musings

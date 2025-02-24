@@ -1,9 +1,13 @@
-1-RfOuwChQLRlxHzqbQscrL4OdLIbKtmyHZYZIdUJmiI life/Philosophical Suicide.txt
+1_MfwxLQMEFXOmZo4qiUgZGGaPg9rXRzZ7hGAsiwbbXU life/Walk away 2.txt
 130XXTD8GbKiBj5qbtHbsLYLejRtpiwdDxlg3luTYews life/What it means to be Rational.txt
 1uGkERfb2DTul3lmnvdFKSKh6OejmwvhBV0TskpdJ4yI politics/Empowered Departure.txt
 1g23hVl7p21JUdXXktt1W2_8_FZQ1hEhEzjQe_zDKTP8 politics/Land Tax.txt
 1fRktOEsVqSn5TEeoFK9WbnVhtZ1GUfYBS8ECvMa2GSc sports/Football FFP Redux.txt
 1vpAsAbPe10vjPFGYnJKSYYm4ACNEts3ESnu5a-fVFbA tech/My View on AI.txt
+1BjQJUmkHvH0Hcqe7nwyVbcwRv4vjm5KqrRWVvhEG3H4 sports/Should We Fire the Manager?.txt
+1izu_JhfkIGgAG9u6s7gryQE5fijHy7TlHDhxyHO-Gyo sports/Why Women's Sports?.txt
+1JyTEBQ8eXdFO3vSLTwdyGZFfxbzTfCEa9BoplQLaGoE politics/Immigration is a Category Error.txt
+1s8K-GMc4V8BTqabJDLqq2fBIMyUXMTNlEG6fj4w71xg politics/Public Transport should be Free.txt
 --excluded--
 1iKnWLYrmWSnRmmbFo15pmwC6WS2tt6gjHb_imL_TRaE Ideas.txt
 
@@ -12,3 +16,4 @@
 1irRgPQEmQxUSlFxbGv7-vergmEFJ0Mh0xZNLPKt7sOQ sports/TV Football.txt
 1l8Y3pU2EbGaFn0b0TEcgN9QJgis1kxx5z9aJ7uoDI0M sports/Harmonized Rugby Calendar.txt
 10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU tech/About this Site.txt
+1-RfOuwChQLRlxHzqbQscrL4OdLIbKtmyHZYZIdUJmiI life/Philosophical Suicide.txt

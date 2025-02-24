@@ -1,0 +1,42 @@
+﻿@Article
+title=Public Transport should be Free
+saveAs=politics-quickfixes/free-transport
+
+
+This is a "hot take" based on being a city dweller.  Don't "disagree" just because you live in rural America and drive a pickup.  I'm not really talking to, or about, you.
+
+
+Public transport in cities should be free.  That is, within a certain area of a city, every form of public transport should be free, and there should be lots of it, and cars and taxis should be discouraged.
+
+
+I live in Manchester but I've visited many European cities and I love the freedom that comes from going to (say) Vienna with a day-long transport pass.  The centre of Vienna has roads and cars and trucks, but I don't have the same sense of living on a motorway when I'm there that I do when I'm at home.  I'm going to take improving Manchester as my guide here.
+
+
+I don't have specific numbers to hand, but it's my belief that almost all public transport is subsidized almost everywhere and that any attempt to make it pay for itself for it leads to some kind of "doom loop" where services are cut and/or prices go up so people are less likely to use it, so services are cut and/or prices go up ...
+
+
+The obvious thing to do, then, is to push the flywheel in the other direction and just make it free.
+
+
+Free is an amazingly different thing to "cheap".  If something is cheap, I need to use brain energy thinking about whether it is "worth it".  In Manchester, before boarding a bus, train or tram, I need to review all my plans for the day: will I be taking another one?  Will I also be taking some other form of transport?  Should I be buying a week-long ticket or just one for today?  Or a weekend ticket?  There are so many options, it's wearing.  And even with the "pay contactless, we'll do the maths" service, it still isn't integrated between trams and buses and doesn't offer you the same discounts as weekend or weekly tickets.
+
+
+But if the service were free, I would hop on and off buses and trams at my convenience.  I wouldn't have to think about anything else.
+
+
+"But then more people would use them and they would be busier," I hear you object.  Actually, that's not an objection, that's my proposal: make it free, more people would use them, you would run more services, and then more people would use them and you would run more services ...
+
+
+"But it would cost more," is the next objection.  Yeees, it would cost whoever was paying for the transport system more, _but_ that is because people are receiving a better service.  So, even just limited to the public transport service system, this is a better, more efficient system.  Even if you just take into account people like me who don't have cars, it's worth it.  But if you say, well, this many million journeys were made by people who didn't use their cars, then you are looking at that much money saved - and that's without considering the environmental and congestion benefits.
+
+
+And the virtuous circle keeps on giving: there would be some group of people who would find that the services were sufficiently good that they didn't even _need_ a car anymore (or maybe could go from two to one).  This would be a literal saving of thousands of pounds a year that could easily offset any increase in the general taxation to provide for these services.
+
+
+As the roads in the city centre started to clear of everything except buses and trams, cyclists would find it easier to navigate the streets.  To assist those wanting to cycle from further out, I would also build "cycling corridors" through outlying urban areas.  By making roads accessible to cars but preventing them being "through" roads, cyclists would only have to deal with the small number of cars that lived in an area, and then crossing over any main roads in their path.
+
+
+As the services improved, I would also start to make central Manchester a "no go" area for cars.  I would build large, underground park and ride facilities on the main arterial roads into Manchester (the A6, A34, A56, A5103, etc), probably where they intersected the motorway, and run fast shuttles from there to major intersections of the tram network.  I would start by making all of the area inside the central ring road public transport only (with a possible exception for taxis and cars for the disabled; and delivery trucks outside daytime hours) and try and gradually push out from there to the M60 with the obvious exception that people living inside the M60 could keep their cars at home and drive them "out" of the city.  At every stage, the (free, frequent) public transport system would take up any slack from people who could no longer drive where they wanted to.
+
+
+It would be so much better.

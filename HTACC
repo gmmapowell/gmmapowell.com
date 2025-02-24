@@ -4,3 +4,5 @@ FallbackResource /index.html
 	Header set Cache-Control "no-store"
 </FilesMatch>
 Redirect /slug/life-is-an-aeroplane /life/aeroplane
+Redirect /slug/walk-away-from-life /life/walking-away
+Redirect /slug/empowered-departure /politics/musings-empowered-departure

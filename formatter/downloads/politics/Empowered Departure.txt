@@ -1,6 +1,6 @@
 ﻿@Article
 title=Empowered Departure
-saveAs=politics/musings-empowered-departure
+saveAs=politics-musings/empowered-departure
 
 
 I have written elsewhere about my philosophy of the end of life and, if it isn't already clear, my view is that it is fundamentally up to each individual to choose when they want to leave this life.

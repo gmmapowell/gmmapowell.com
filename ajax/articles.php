@@ -13,22 +13,31 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "walking-away", "title": "Walking Away from Life" }
 <?php
 		break;
-	case "politics":
+	case "politics-musings":
 ?>
-			{ "id": "musings-empowered-departure", "title": "Empowered Departure" },
-			{ "id": "quickfixes-land-tax", "title": "" }
+			{ "id": "empowered-departure", "title": "Empowered Departure" },
+			{ "id": "immigration", "title": "Immigration is a Category Error" }
+<?php
+		break;
+	case "politics-quickfixes":
+?>
+			{ "id": "land-tax", "title": "A Land Use Tax" },
+			{ "id": "free-transport", "title": "Public Transport should be Free" }
 <?php
 		break;
 	case "sports":
 ?>
 			{ "id": "tv-football", "title": "TV Football" },
 			{ "id": "rugby-calendar", "title": "Harmonized Rugby Calendar" },
-			{ "id": "contracts", "title": "Sports Contracts are Stupid" }
+			{ "id": "contracts", "title": "Sports Contracts are Stupid" },
+			{ "id": "fire-the-manager", "title": "Should We Fire the Manager?" },
+			{ "id": "women", "title": "Women's Sports" }
 <?php
 		break;
 	case "tech":
 ?>
-			{ "id": "this-site", "title": "About this Site" }
+			{ "id": "this-site", "title": "About this Site" },
+			{ "id": "ai-view", "title": "My View on AI" }
 <?php
 		break;
 	}

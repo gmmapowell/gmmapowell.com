@@ -22,7 +22,7 @@ awk '
   }
   $0 ~ /^#/ { next }
   $0 ~ /^[ \t]*$/ { next }
-  $0 ~ /^[a-z]*$/ {
+  $0 ~ /^[a-z-]*$/ {
   	category = $0;
 	  if (haveCase == 1) {
 	    endit();

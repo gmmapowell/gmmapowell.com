@@ -1,6 +1,6 @@
 ﻿@Article
 title=A Simple Land Use Tax
-saveAs=politics/quickfixes-land-tax
+saveAs=politics-quickfixes/land-tax
 
 
 I have written elsewhere about the benefits - and thus the necessity - of a wealth tax.
