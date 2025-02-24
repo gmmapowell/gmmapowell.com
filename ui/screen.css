@@ -1,7 +1,16 @@
-@media screen {
+@media screen AND (max-width: 800px) {
+	.article-title-list {
+		column-count: 1;
+	}
+}
+
+@media screen AND (min-width: 800px) {
 	.article-title-list {
 		column-count: 2;
 	}
+}
+
+@media screen {
 	.article-layout {
 		position: absolute;
 		left: 10%;

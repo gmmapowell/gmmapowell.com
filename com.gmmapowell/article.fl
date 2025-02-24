@@ -1,13 +1,22 @@
+	contract SetTitle
+		title (String t)
+
 	card ArticleList
 		state
+			String heading
 			List[Link] titles
 
 		template article-list
+			articles-heading <- heading
 			article-titles <- titles
 
 		template article-title <- (Link l)
 			link <- l
 				| => 'article-link-style'
+
+		implements SetTitle
+			title s
+				heading <- s
 
 		requires Ajax ajax
 		implements Lifecycle

@@ -14,4 +14,4 @@ cp -r ui/basic.css IMAGE/css
 cp -r ajax IMAGE
 cp -r articles IMAGE
 
-uploadSome
+# uploadSome

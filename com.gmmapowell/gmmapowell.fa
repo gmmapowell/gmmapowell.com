@@ -59,8 +59,11 @@
 				enter
 					main.nest politics
 					quickFixes.load "politics-quickfixes"
+					quickFixes.SetTitle.title "Quick Fixes"
 					musings.load "politics-musings"
+					musings.SetTitle.title "Musings"
 					thoughtExperiments.load "politics-experiments"
+					thoughtExperiments.SetTitle.title "Thought Experiments"
 				at
 					politics.nest quickFixes
 					politics.nest musings
