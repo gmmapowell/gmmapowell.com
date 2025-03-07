@@ -8,6 +8,8 @@
 1izu_JhfkIGgAG9u6s7gryQE5fijHy7TlHDhxyHO-Gyo sports/Why Women's Sports?.txt
 1JyTEBQ8eXdFO3vSLTwdyGZFfxbzTfCEa9BoplQLaGoE politics/Immigration is a Category Error.txt
 1s8K-GMc4V8BTqabJDLqq2fBIMyUXMTNlEG6fj4w71xg politics/Public Transport should be Free.txt
+1ZuRwDbUo0rI3i22B6IEVX_hpurNBeUQuT4rdRHRssiQ tech/Iteration.txt
+1nM_LAIQlKgLBdheRaGX1eJ6qAfkN7F07TzNgFi3uMXE tech/Balance in Agile.txt
 --excluded--
 1iKnWLYrmWSnRmmbFo15pmwC6WS2tt6gjHb_imL_TRaE Ideas.txt
 

@@ -14,5 +14,5 @@
 			nest c
 				card <- c
 			ready
-				background <- Image.asset '/images/boundarypark.jpg'
+				background <- Image.asset '/images/technology.jpg'
 

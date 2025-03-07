@@ -26,3 +26,5 @@ sports
 tech
   this-site About this Site
   ai-view My View on AI
+  balance Balance in Agile
+  iteration Iteration

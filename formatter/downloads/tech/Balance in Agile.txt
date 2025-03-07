@@ -1,0 +1,36 @@
+﻿@Article
+title=Balance in Agile
+saveAs=tech/balance
+
+
+One of the good things about putting all my thoughts together in a single place is that I can group them by the questions that they answer.  One thing I expect I will come back and answer many times in many ways is the question "What is Agile, anyway?".  In scoping out this article, I made about ten bullet points of things that I thought were important.  But I couldn't figure out how to put them together.
+
+
+Then I saw &sp
+&link 'https://www.linkedin.com/posts/jbrains_youre-in-an-elevator-with-the-ceo-shes-activity-7299822730726506496-5Y3S/' 'this prompt'
+&sp on LinkedIn, where the challenge was to get it down to its most salient characteristics in a single sentence.
+
+
+As someone who struggles to emerge from the weeds and eliminate nuance, that is always very difficult for me.  A single sentence is such a broad brush that you have to sweep almost everything you think and believe under the carpet.  And certainly I would say different things on different days.  And then try and convince them to spend enough time to understand it better, possibly by reading this post.
+
+
+Right now, I think the answer I would give is that "it's all about being ready for anything".  An agile project _should_ always be in such a place of perfect balance that _anything_ the client asks for "next" is equally possible.  Not that I have any first hand experience, but I believe that this sense of balance is the same as that to be found in martial arts.
+
+
+(This is in contrast to, say, chess, where you predict what your opponent will do, and thinking through a long-term strategy pays dividends.)
+
+
+I went searching the internet for confirmation, and failed to find any words in the literature for "that sense of balance that prepares you for whatever comes next".  The closest I could find was &sp
+&link 'https://mercerislandma.com/the-important-role-of-balance-in-martial-arts/' 'this blog post'
+&sp on the importance of being balanced, physically, mentally and spiritually.
+
+
+This is my view of how it corresponds to software development:
+
+
+* Physically, your code needs to be healthy and in good shape.  You should have at least clean, well factored code with a complete set of feature tests that protect you against introducing regressions.  Any refactorings should be completely worked through; you should not have four implementations of the same thing, or three versions of an API.  Things need to be named sensibly, and there needs to be enough knowledge somewhere - in the team, in commentary, in documents, in videos, that provides an overview of what it does and how.  All of the code should contribute to the tasks that are complete _now_ and the code should not reflect things that may not come to pass.
+* Mentally, your code needs to be ready to be enhanced.  Come Monday morning (or whenever), you will have a planning meeting with your client.  They could ask for anything.  Hopefully, they will ask for *the one thing* that will deliver the most value for their users.  You have no idea what it might be or how it will fit into whatever you already have.  Hopefully, you have never thought about this feature before.  But the code must be open in every direction to receiving this new feature, and then, as you add it, must "heal" over any scars to make sure that at the end of the week the code is just as perfect as it was when you started.
+* Spiritually, your team needs to be energized and up for the challenge.  The code is inanimate, but the team brings it alive.  Your team must have a chance to breathe and to reflect, as well as to celebrate their weekly wins - ideally with the client and some of their users.
+
+
+One good week leads to another.  But only if you are fit and healthy.  If you are carrying dead weight, or weighed down with emotional hangovers, you will not be balanced and ready to go.

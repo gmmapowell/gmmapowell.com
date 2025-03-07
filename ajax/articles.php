@@ -37,7 +37,9 @@ header("Access-Control-Allow-Headers: *");
 	case "tech":
 ?>
 			{ "id": "this-site", "title": "About this Site" },
-			{ "id": "ai-view", "title": "My View on AI" }
+			{ "id": "ai-view", "title": "My View on AI" },
+			{ "id": "balance", "title": "Balance in Agile" },
+			{ "id": "iteration", "title": "Iteration" }
 <?php
 		break;
 	}

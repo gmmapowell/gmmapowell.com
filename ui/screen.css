@@ -21,14 +21,20 @@
 	}	
 	.text {
 		position: absolute;
-		top: 3em;
-		left: 10%;
-		width: 80%;
-		height: calc(100% - 5em);
-		column-gap: 3em;
+		top: 4em;
+		bottom: 3em;
+		left: 5%;
+		right: 5%;
+		height: calc(100% - 7em);
+		column-gap: 1.2em;
 		overflow-x: auto;
 		background: #f0f0ffc8;
 		padding: 10px;
-		font-size: 15pt;
+		font-size: 12pt;
+	}
+
+	.text ul {
+		padding: 0px 0px 0px 12px;
+		margin-block-end: 12px;
 	}
 }
