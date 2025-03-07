@@ -10,7 +10,8 @@ header("Access-Control-Allow-Headers: *");
 ?>
 			{ "id": "aeroplane", "title": "Life is an Aeroplane" },
 			{ "id": "rational", "title": "What it means to be Rational" },
-			{ "id": "walking-away", "title": "Walking Away from Life" }
+			{ "id": "walking-away", "title": "Walking Away from Life" },
+			{ "id": "forgive", "title": "Forgive and Forget" }
 <?php
 		break;
 	case "politics-musings":
@@ -39,7 +40,9 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "this-site", "title": "About this Site" },
 			{ "id": "ai-view", "title": "My View on AI" },
 			{ "id": "balance", "title": "Balance in Agile" },
-			{ "id": "iteration", "title": "Iteration" }
+			{ "id": "iteration", "title": "Iteration" },
+			{ "id": "why-estimate", "title": "Why Do We Estimate?" },
+			{ "id": "estimate-and-decide", "title": "Estimation and Decisions" }
 <?php
 		break;
 	}

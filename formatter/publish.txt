@@ -7,6 +7,7 @@ life
   aeroplane Life is an Aeroplane
   rational What it means to be Rational
   walking-away Walking Away from Life
+  forgive Forgive and Forget
 
 politics-musings
   empowered-departure Empowered Departure
@@ -28,3 +29,5 @@ tech
   ai-view My View on AI
   balance Balance in Agile
   iteration Iteration
+  why-estimate Why Do We Estimate?
+  estimate-and-decide Estimation and Decisions
