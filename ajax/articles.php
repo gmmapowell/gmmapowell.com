@@ -11,7 +11,12 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "aeroplane", "title": "Life is an Aeroplane" },
 			{ "id": "rational", "title": "What it means to be Rational" },
 			{ "id": "walking-away", "title": "Walking Away from Life" },
-			{ "id": "forgive", "title": "Forgive and Forget" }
+			{ "id": "find-out", "title": "Let's Find out Together" },
+			{ "id": "forgive", "title": "Forgive and Forget" },
+			{ "id": "forty-years", "title": "Forty Year Decisions" },
+			{ "id": "induction", "title": "Life is Pointless (by Induction)" },
+			{ "id": "running", "title": "Running To or From?" },
+			{ "id": "love-need", "title": "Love is NOT All You Need" }
 <?php
 		break;
 	case "politics-musings":
@@ -42,7 +47,13 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "balance", "title": "Balance in Agile" },
 			{ "id": "iteration", "title": "Iteration" },
 			{ "id": "why-estimate", "title": "Why Do We Estimate?" },
-			{ "id": "estimate-and-decide", "title": "Estimation and Decisions" }
+			{ "id": "estimate-and-decide", "title": "Estimation and Decisions" },
+			{ "id": "literate-programming", "title": "Literate Prograaming" },
+			{ "id": "deployer", "title": "A Cloud Deployer" },
+			{ "id": "garden", "title": "Planning a Garden" },
+			{ "id": "wheels", "title": "Reinventing the Wheel" },
+			{ "id": "team-radar", "title": "Mapping a Team on a Radar" },
+			{ "id": "starting", "title": "Starting and Finishing" }
 <?php
 		break;
 	}

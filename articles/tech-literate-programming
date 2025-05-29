@@ -1,0 +1,168 @@
+<p>Ever since I can remember I have been fascinated by the "art" of writing computer programs.</p>
+<p>Like most kids of my generation, I learnt to program in BASIC, and then, along with a smaller proportion, I went on to write assembler for about five years.  I became quite proficient at it, but it was never easy.  When I went to University and started writing C code, it was amazing how much more quickly I could produce working code - and code that I could then go back and <i>understand</i>.  The thing with assembler is, that while the computer has no difficulty understanding it, it's a bit like trying to have a conversation with someone who is speaking incredibly slowly and long-windedly: by the time you've reached the end of the sentence, you've forgotten the plot.  It's all detail and very little overview.</p>
+<p>But the moment you have grasped how much better C is than assembler, you suddently want more, then more and more.  From that time, it was "obvious" to me what programming <i>could</i> be, if we could just build the tools to "make it so".  But then - indeed, even now - it is not clear to me how to actually build those tools.</p>
+<p>I'll tell you this much - C++ was not it.  Object orientation "helps" the understanding of programs, but not nearly enough.  Program "proof" is not it - you are back to being mired in the weeds of detail.  For the longest time, the closest thing I found was functional programming.  Functional programs really do address a lot of the detail issues and condense complex programs down to short programs.  Unfortunately, they can often leave short, condensed, <i>unintelligible</i> programs behind.</p>
+<p>To somewhat counteract this, Miranda (the first functional programming language I learnt) had a mode called "literate scripts".  This involved burying a small amount of code within a <i>lot</i> of text and, rather than having the comments be hidden within "comment characters", the lines which were <i>code</i>, not comments, were specially marked.</p>
+<p>Everything I have done since then has used much the same style, except I have used a simpler convention: since functional languages depend so much on indentation, the "literate narrative" starts in Column 0; code is indented one level.</p>
+<p>When first starting out on my research, I did read the original source material on literate programming - specifically papers and books by  <a href='https://en.wikipedia.org/wiki/Literate_programming'>Donald Knuth</a> in which he outlines his approach to building software by telling a story.  At some level, I obviously grasped what he was saying, and how radical it was, but I also lived every day with what David Turner had done in Miranda, and it was "good enough".</p>
+<p>But the other day, I went back and re-read some of the articles about literate programming, and specifically the PDF version of the adventure game code he re-wrote in C, and I was struck by something that hadn't particularly stuck with me although I think it has influenced a lot of my thinking: that the linear order in which compilers want to see programs is <i>not</i> at all the obvious order for humans to encounter them.</p>
+<p>When I say that I feel we need better "tools" to handle programming, one of the key things I think we need is the ability to group concepts together that belong together.  In particular, almost all the time we make "a change" (in a single commit) that consists of five one-or-two line changes across half a dozen functions in two or three files.  Why is that?  Why is the change not all in one place?</p>
+<p>The obvious answer is the wrong one.  The obvious answer is that we need to change half a dozen different functions because that is where "the code is" that we need to change.  This answer is wrong because it begs the question: <i>why</i> is that code there in the first place?</p>
+<p>The answer to that question complements the <i>correct</i> answer to the first question: because we have to put all the code in all the places that the <i>compiler</i> wants it, and that means we need to manually weave our changes in between the existing code.  The compiler refuses to be adaptable and conform to what <i>we</i> want, so we have to be adaptable and conform to what it will accept.</p>
+<p>It doesn't need to be this way.</p>
+<p>Literate Programming offers a different way of thinking about programs.  Instead of taking the compiler's side, it attempts to allow the humans to <i>tell a story</i>.</p>
+<p>At the end of the day, a program is simply a set of instructions that tell the computer what to do.  At the lowest level, this must be simple instructions that match the architecture of the computer.  In general, with a  <a href='https://en.wikipedia.org/wiki/Von_Neumann_architecture'>von Neumann architecture</a>, what this means is a sequence of instructions which manipulate a rectangular memory array along with controlling the order in which the instructions are processed.  Every "higher level" language we have built on top of that - assembler, macro assembler, COBOL, BASIC, OO languages, functional languages - are just an attempt to make the compiler do more of the work of understanding what humans are trying to express.</p>
+<p>And literate programming is another step in that direction.</p>
+<p>Consider a classic example of a banking application and transferring money.  It's possible to write something like this in a literate program (very much abbreviated, you understand):</p>
+<blockquote class='article_blockquote'>
+Consider&nbsp;
+a&nbsp;
+simple&nbsp;
+banking&nbsp;
+application.&nbsp;
+&nbsp;
+There&nbsp;
+is&nbsp;
+an&nbsp;
+API&nbsp;
+for&nbsp;
+the&nbsp;
+bank:<br/>
+&lt;&lt;+classes&gt;&gt;<br/>
+class&nbsp;
+Bank&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;bank-api&gt;&gt;<br/>
+}<br/>
+&lt;&lt;/&gt;<br/>
+Every&nbsp;
+customer&nbsp;
+has&nbsp;
+one&nbsp;
+or&nbsp;
+more&nbsp;
+accounts.<br/>
+&lt;&lt;+classes&gt;&gt;<br/>
+class&nbsp;
+Account&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;acct-members&gt;&gt;<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;acct-actions&gt;&gt;<br/>
+}<br/>
+&lt;&lt;/&gt;&gt;<br/>
+An&nbsp;
+account&nbsp;
+is&nbsp;
+identified&nbsp;
+by&nbsp;
+an&nbsp;
+account&nbsp;
+number,&nbsp;
+which&nbsp;
+is&nbsp;
+a&nbsp;
+string&nbsp;
+of&nbsp;
+characters.<br/>
+&lt;&lt;+acct-members&gt;&gt;<br/>
+AccountID&nbsp;
+accountNo;<br/>
+&lt;&lt;/&gt;&gt;<br/>
+class&nbsp;
+AccountID&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+String&nbsp;
+id;<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;id-members&gt;&gt;<br/>
+}<br/>
+It&nbsp;
+is&nbsp;
+possible&nbsp;
+to&nbsp;
+transfer&nbsp;
+money&nbsp;
+between&nbsp;
+two&nbsp;
+accounts.&nbsp;
+&nbsp;
+This&nbsp;
+requires&nbsp;
+an&nbsp;
+API<br/>
+operation,&nbsp;
+transfer,&nbsp;
+which&nbsp;
+takes&nbsp;
+two&nbsp;
+account&nbsp;
+ids&nbsp;
+and&nbsp;
+an&nbsp;
+amount.<br/>
+&lt;&lt;+bank-api&gt;&gt;<br/>
+void&nbsp;
+transfer(AccountID&nbsp;
+from,&nbsp;
+AccountID&nbsp;
+to,&nbsp;
+Money&nbsp;
+amount);<br/>
+&lt;&lt;/&gt;&gt;<br/>
+And&nbsp;
+this&nbsp;
+in&nbsp;
+turn&nbsp;
+will&nbsp;
+depend&nbsp;
+on&nbsp;
+the&nbsp;
+accounts&nbsp;
+having&nbsp;
+a&nbsp;
+"withdraw"&nbsp;
+and&nbsp;
+"deposit"&nbsp;
+method.<br/>
+&lt;&lt;+acct-actions&gt;&gt;<br/>
+void&nbsp;
+withdraw(Money&nbsp;
+amount)&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;withdraw-logic&gt;&gt;<br/>
+}<br/>
+void&nbsp;
+deposit(Money&nbsp;
+amount)&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+&lt;&lt;deposit-logic&gt;&gt;<br/>
+}<br/>
+&lt;&lt;/&gt;&gt;<br/>
+</blockquote>
+<p>And you can see how we could continue to develop this into a fully functional program.</p>
+<p>What is going on here?</p>
+<p>The <i>main</i> thing that is going on, and I cannot dwell on this enough, is that one human is communicating to all future humans what she thinks this banking application is supposed to do.  The most important things is that there are lots and lots of words here: a stream of consciousness if you will.</p>
+<p>Interspersed with that are occasional fragments of code.  Ultimately, all of the code you want to write has to be here somewhere, but <i>it does not have to be in the order the compiler expects to see it</i>.  You tell the story in the way in which you wish the story to unfold, and then you go back and add more to the appropriate place when you are ready for that to unfold.</p>
+<p>This is what all those <tt>&lt;&lt;X&gt;&gt;</tt> are for.  The <tt>&lt;&lt;X&gt;&gt;</tt> syntax itself represents a "placeholder": a block where we can come back and add code later, and <tt>X</tt> is a unique name.  When you are ready to add some code to a block, use the syntax <tt>&lt;&lt;+X&gt;&gt; ... &lt;&lt;/&gt;&gt;</tt> to indicate that the code in here is to be attached to the end of the named block.</p>
+<h2><p>Can we go further?
+</h2>
+<p>This feels to me, seismic.  And yet at the same time, disappointing.</p>
+<p>It's seismic because it reflects such a big upheaval in the way that we think about code.  So much code is obscure and tangled; just presenting it in this way gives it a "narrative" quality that code is generally lacking.</p>
+<p>But it still feels very much controlled by a linear model of thinking: you start at the beginning and you move to the end.  This is not what software development "feels" like to me.  I go back and change things, improve things, refactor things.  While you obviously <i>can</i> do this here, you do it by going back and <i>changing</i> the story.  You can't do it but continuing to <i>tell</i> the story; telling the story about how the program (and your thinking) evolved.</p>
+<p>Consider an analogy with  <a href='https://martinfowler.com/eaaDev/EventSourcing.html'>event sourcing</a>.  In event sourcing, we keep track of everything that <i>happens</i> as an event and then we can process this with some kind of summarizer.  This is very similar to the way that <tt>tangle</tt> converts a literate program into executable code.  What I would like is the ability to say "and now I want to change the name of the class" and have it do so.  Or be able to say "you know that test I wrote back there, I want it to be different".  And go on, explaining how I want it to be different in words, and then allow the code to change.</p>
+<p>And then I want a tool that makes all this clear.  That shows you, as you read through the document, that while this is <i>what you did</i> back then, it has changed now and looks like <i>this</i> instead.</p>
+<p>Is that possible?  I'm sure it is.  How would it work?  I don't know.  Am I tempted to give it a go?  You bet.</p>
+<p>First things first, though.  I'm thinking I should go back and make my FLAS compiler not just semi-literate but fully literate.</p>

@@ -1,4 +1,4 @@
-1xP7y8T7WZN4QP07vdSUN5E7W6EMESB0cJbY_3aJOWeI tech/Why Do We Estimate?.txt
+--excluded--
 --downloaded--
 1JDn4TmicWVJYHTS7vTnYUGX7wJqhvEGaTY5UoaOM_B8 tech/Estimation and Decisions.txt
 1_MfwxLQMEFXOmZo4qiUgZGGaPg9rXRzZ7hGAsiwbbXU life/Walk away 2.txt
@@ -14,7 +14,6 @@
 1ZuRwDbUo0rI3i22B6IEVX_hpurNBeUQuT4rdRHRssiQ tech/Iteration.txt
 1nM_LAIQlKgLBdheRaGX1eJ6qAfkN7F07TzNgFi3uMXE tech/Balance in Agile.txt
 1N4f-6yJWQdODfXG6E-oN0HpH2uCzJbj_8GFaPGUoe8Y life/Forgive and Forget.txt
---excluded--
 1iKnWLYrmWSnRmmbFo15pmwC6WS2tt6gjHb_imL_TRaE Ideas.txt
 
 1kJI1_w0iwxZIyhO9xTRUzbmaXml0oL9JW-O3zFQZ84o life/Life is an Aeroplane.txt
@@ -23,3 +22,19 @@
 1l8Y3pU2EbGaFn0b0TEcgN9QJgis1kxx5z9aJ7uoDI0M sports/Harmonized Rugby Calendar.txt
 10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU tech/About this Site.txt
 1-RfOuwChQLRlxHzqbQscrL4OdLIbKtmyHZYZIdUJmiI life/Philosophical Suicide.txt
+1xP7y8T7WZN4QP07vdSUN5E7W6EMESB0cJbY_3aJOWeI tech/Why Do We Estimate?.txt
+1QalrVnpIc_p_W74k_3C6VIHiT1HKQGO8gDVOZCeXzJU tech/Payment Processing.txt
+
+1hgGwgbaumo5JsUDBUNEOAfJCWAxwVznR1uA9KJiUltY tech/Literate Programming.txt
+1HdfDXdtrlxqdrqJApYr-F-uLp5l6cmpoXZoScbPncpc life/40-year Decisions.txt
+
+1u7l9tBdA2-EQgaFMsszNF8aIkUIYJ4_muzJ3F52hbA8 tech/Planning a Garden.txt
+1O0veOyzvBzUjcT3shVS_MaUkD2MIQjmxGjStEvB2Mj4 tech/A Cloud Deployer.txt
+1q7rRMxblP47_VCXKYoBmgPeWJYXz4e2RQv8O4rJYZHk tech/Reinventing the Wheel.txt
+
+1hNGYkgh4NtmxZ9Gc4nkHnvVjHzOLnrw9hZc6vPuUshk tech/Starting and Finishing.txt
+1HkfbcQJBKdSf0oEiXSrx7MnESLPNtAIJqYFp1ZTkPKs tech/Team Radar.txt
+1t9q3c8h6cwGkfD6vWI2D0pazA-hIQFEi0dJAuLkTcWk life/Inductively, Life is Pointless.txt
+1KDSQttLKTOGOa7P5_OFWJRCQ2qTt8NA0fI1--TMhYoI life/Love is not All You Need.txt
+1Dqm9cDWCvGFMYuGiTd9UsfTcOh2BS6RZN_TVQEFiYUo life/Running to or from.txt
+1Og3AHn0-XttLOOvriTYJgqcU-bmmNXgxwVUgwJLn3xw life/Let's Find Out Together.txt

@@ -11,6 +11,8 @@ header("Access-Control-Allow-Headers: *");
     "https://gmmapowell.com/images/mallorca/MarSenses.jpg",
     "https://gmmapowell.com/images/oldham/boathouse.jpg",
     "https://gmmapowell.com/images/oldham/treebird.jpg",
-    "https://gmmapowell.com/images/oldham/bridge.jpg"
+    "https://gmmapowell.com/images/oldham/bridge.jpg",
+    "https://gmmapowell.com/images/keukenhof/moll.png",
+    "https://gmmapowell.com/images/keukenhof/river.png"
   ]
 }

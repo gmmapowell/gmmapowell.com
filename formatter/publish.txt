@@ -7,7 +7,12 @@ life
   aeroplane Life is an Aeroplane
   rational What it means to be Rational
   walking-away Walking Away from Life
+  find-out Let's Find out Together
   forgive Forgive and Forget
+  forty-years Forty Year Decisions
+  induction Life is Pointless (by Induction)
+  running Running To or From?
+  love-need Love is NOT All You Need
 
 politics-musings
   empowered-departure Empowered Departure
@@ -31,3 +36,9 @@ tech
   iteration Iteration
   why-estimate Why Do We Estimate?
   estimate-and-decide Estimation and Decisions
+  literate-programming Literate Prograaming
+  deployer A Cloud Deployer
+  garden Planning a Garden
+  wheels Reinventing the Wheel
+  team-radar Mapping a Team on a Radar
+  starting Starting and Finishing

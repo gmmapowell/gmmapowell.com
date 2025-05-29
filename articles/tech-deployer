@@ -1,0 +1,294 @@
+<p>I am building a cloud deployer.</p>
+<p>Yes, yes, yes, I know.  They already exist.  But read my other articles on why I reinvent things that already exist.</p>
+<p>On this occasion, I am taking the viewpoint that all the tools I have used (such as Chef, Puppet, Terraform, CloudFormation) fall down because they have not set out to solve what I consider the fundamental problem: to write a program to deploy to the cloud.</p>
+<p>A common problem is to view the end product as being "fixed" and that all you need to do is to describe what that looks like and the tool will do the rest.  I don't fundamentally believe that.  Sure, it is really important to be able to say "I want this bucket called X to exist" and if you change some of its properties you want those to be changed (rather than deleting the bucket), but there are also times when you really need to be able to say "and I want to <b>restart</b> this server": it is up now, and I want it to be up at the end, but I do, most definitely, want it to be down in between.  And you want that to happen at a certain point in time.</p>
+<p>On the other hand, I do most definitely want a <i>high level programming</i> language.  I don't want to have to futz with figuring out relationships and writing things in a markup language.  I want to be able to say I want to have a bucket, and then to say I want to copy files from a deployment directory into that bucket.  This seems obvious, but always seems incredibly painful.</p>
+<p>A lot of people at this point - trying to be smart - would say that they want a "Turing-complete" language.  I don't, because I <i>am</i> smart.  I don't need to be able to calculate π to a thousand decimal places (which is required for Turing completeness) but I do want to interact with AWS (which isn't).  What I want is a language that is rich enough to do what I want to be able to do.</p>
+<p>So I want <i>functions</i> in the deployer language because I want to be able to manipulate paths, but I'm not sure I need to <i>define</i> functions.</p>
+<p>I want a macro or template or subsystem functionality because I want to be able to describe setting up a combination of components once and then use it multiple times with different parameters.</p>
+<p>I want to be able to have the templates take explicit parameters when they know they don't know what the user will want (e.g. if they are setting up something on a specific domain, they will need the domain name) and also have the ability to override anything where the user <i>might</i> want something.  These are probably two different mechanisms.</p>
+<p>I want the ability to "name" things as they are created or found so that I can refer to them later.  I probably want names to "nest" in scopes, but I probably <i>don't</i> want the scopes to be "hidden" - I probably want everything to be "white box".</p>
+<p>I want 90% of the code that interacts with the cloud to be "built-in" in the implementation language and just exposed to me: I do not want any low-level primitives (such as sockets) in this language.</p>
+<p>I want something akin to transactional semantics: but definitely I <b>don't</b> want to be halfway through a deployment and say "ah, I just realized ...".  Before a program changes <b>anything</b> it should be sure that all the changes could, theoretically, go ahead.  This should include everything from conflicts to missing options to permissions.  Obviously it will be dependent on the low-level modules checking those things, but the language should have a tendency that way.</p>
+<p>I want to work with any cloud provider (well, personally I only want to work with AWS, but I want to support the idea of working with any) and do so <i>natively</i>: that is, there should be a distinct module for each cloud provider.  If a user specifically wants an abstraction layer above (say) AWS and Azure with the appropriate compromises, they can build one of those for themselves (or a third party can provide it) but that is not the default expectation.</p>
+<p>I want to be able to start small and build just a core deployer which can interface to AWS using existing libraries and figure out its own "types" and "methods" using reflection.  I don't know how possible this is, but I don't want to be re-writing thousands of lines of code "just to create a bucket", and I certainly don't want to spend hours reinventing all of the permissions code.  At the same time, I do want to allow all of that to be incorporated into my explicit scripts and allow the template model to automate and systemize the creation of permissions documents.</p>
+<p>The implication of that is that all of the interaction with the cloud providers is handled by "modules" which can be selected at runtime.  So the outline of the language is minimal, with a "core" library which handles concepts such as "ensuring something exists" and handling targets and macros, and then all the heavy lifting is done by "a filesystem module", "an AWS module", "an Azure module" etc.</p>
+<p>Finally, if we are going to allow people to stand things up, they should also be able to tear them down - by specifying a single flag.  Ideally, the language should be able to just run the program backwards inverting everything.  But there are a couple of gotchas:</p>
+<ul>
+<li><p>First, there may be some steps which either don't make sense - or aren't necessary - when tearing the infrastructure down.  For example, the "reboot server" step may not be necessary if we are just about to delete it anyway.</p>
+<li><p>Secondly, some steps are of the "if it doesn't exist" variety - for instance, ensure this bucket exists and has these contents.  When tearing down, this might be interpreted as "delete" or "leave".</p>
+</ul>
+<p>In both of these cases, it should be possible - or required - to specify the "teardown" semantics in the script: such as "destroy", "preserve" or possibly something more specific - a bucket might have "empty".</p>
+<h2><p>Basic Outline
+</h2>
+<p>So, what does this look like?</p>
+<p>All my programming languages look alike - they follow the "semi-literate" style of Miranda and Haskell.  For simplicity, this one is going to enforce a very strict "one line per statement" rule.  That is, it is not permitted to extend one logical line over multiple lines of text.  Any statement may, however, have a nested block which adds information to the statement.  Nested blocks are defined by indentation using white space (tabs or spaces - it won't care which as long as you are consistent).</p>
+<p>At the top level, the only thing that the deployer inherently knows about are "targets".  A target is something that the user can request the deployer to "make happen".  It can find the description of a target in one of the scripts that are provided as the configuration to the deployer.  Each target must be at the "top level" of a script and will be introduced using the <tt>target</tt> keyword, and will have just one other token on that line - its name.</p>
+<p>Obviously, each target may only be defined once in all the scripts.  While I'm here, you can have as many scripts as you want (for purposes of organization) in a single directory and the deployer will read all of them that have the right extension.</p>
+<p>A target has a nested block of <i>actions</i>: each action is technically <i>imperative</i> (that is, it does something, and the order is important) but many of them will have essentially <i>declarative</i> and <i>idempotent</i> semantics (that is, they describe how the world should be afterwards and so can be run multiple times without doing the same operation multiple times).</p>
+<p>Let's consider a simple example, wanting a bucket to exist with the contents expiring after 24 hours:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+target&nbsp;
+makeBucket<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+ensure&nbsp;
+aws.s3.Bucket&nbsp;
+"org.name.my_bucket"<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+Expiration&nbsp;
+&lt;-&nbsp;
+24&nbsp;
+hours<br/>
+</blockquote>
+<p>This defines a <tt>target</tt> called <tt>makeBucket</tt>, which means that you can create this using the deployer:</p>
+<blockquote class='article_blockquote'>
+$deployer&nbsp;
+makeBucket<br/>
+</blockquote>
+<p>and can tear it down again using the <tt>--teardown</tt> option:</p>
+<blockquote class='article_blockquote'>
+$deployer&nbsp;
+--teardown&nbsp;
+makeBucket$<br/>
+</blockquote>
+<p>When this target is executed, it looks at its one action and says "this requires me to make sure that this bucket exists".  If it already exists, nothing happens.  Otherwise, it creates the bucket setting the <tt>Expiration</tt> parameter to "24 hours" (we'll come back to that).</p>
+<p>This requires a collaboration between multiple modules.  The <tt>ensure</tt> command is part of the <tt>core</tt> module, which is capable of requesting any object which understands the <tt>Ensure</tt> contract to make sure it exists after execution.  The <tt>aws.s3.Bucket</tt> object recognizes this contract, so it is fine.</p>
+<p>The language offers two ways of providing configuration to an object being ensured: it is possible to specify some arguments as part of the actual statement.  The object being created must indicate through the <tt>Ensure</tt> contract what arguments it requires and what it allows.  If the arguments on the line match an acceptable configuration, they are passed through.  If not, an error occurs (importantly, before <b>any</b> changes have been made to the infrastructure).  The other method is through "named properties".  Each such property consists of a <i>name</i>, an assignment arrow (<tt>&lt;-</tt>), and an expression.</p>
+<p>Expressions in the deployer language are unusual:  there may be other languages which support prefix, postfix and infix operators interchangeably, but I haven't used one.  This works by having the parser break every token down into the concept of "nouns" and "verbs" during resolution.  Numbers and strings will always be nouns; an identifier needs to be resolved to a definition and then it may identify as a noun or a verb.  In this case <tt>hours</tt> is a verb and says it expects to have one argument appear before it which should be a number (either a numeric literal or a variable of number type).  It will then produce a value of <tt>Duration</tt> type.  This enables us to write the much more natural "24 hours" rather than "hours 24", "hours(24)" or some such.</p>
+<p>It is permissible to have multiple verbs in the same expression.  In this case, the first one to appear (i.e. the one in the leftmost position) is asked to interpret the overall expression.  This allows higher order functions (such as <tt>map</tt> and <tt>filter</tt>) to be provided by the system.  Note again that I am not committing to allowing functions to be defined <i>in</i> the language, but they can be defined in modules and <i>used</i> in the language, and the acceptance of higher order functions allows them to be <i>composed</i> in the language as well.</p>
+<p>It is possible to remember any object that has been created (or found) in a variable.  This simply uses the "push" syntax (<tt>=&gt;</tt> and a variable) like this:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+ensure&nbsp;
+aws.s3.Bucket&nbsp;
+"org.name.my_bucket"&nbsp;
+=&gt;&nbsp;
+bucket<br/>
+</blockquote>
+<p>This means that after this line has executed the variable <tt>bucket</tt> will have a reference to a bucket in it.  Subsequent steps can reference this and, by implication, possibly change it.  The implications of this may be subtle and are discussed below in the section which claims to be about type checking.  For example, since a bucket has a name, which is a string, we can write an action like this:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+echo&nbsp;
+"we&nbsp;
+created&nbsp;
+a&nbsp;
+bucket&nbsp;
+called&nbsp;
+"&nbsp;
+bucket-&gt;Name<br/>
+</blockquote>
+<p>Here, <tt>echo</tt> is a command in the <tt>core</tt> module which accepts any number of arguments of any types but has no nested definitions (it may, of course, in the fullness of time, decide to accept some nested definitions, but it does not need any).  Each of the arguments is converted into a string, they are concatenated, and the result is written to the terminal.</p>
+<p>Parentheses can always be used to group sub-expressions "more tightly" but the element operator (<tt>-&gt;</tt>) has the highest precedence.  Note that the operator is not "dot" (<tt>.</tt>) for the simple reason that I want to use that as the package name operator and it is hard to do both consistently.</p>
+<h2><p>Templates
+</h2>
+<p>I have indicated a desire for a "macro" like feature in the language.  I think, in fact, I want to call these <tt>template</tt>s and use the verb <tt>instantiate</tt> to create one.</p>
+<p>In my view, language - and, in particular, the words we use - shape our expectations of how a feature will work.  I like the word template here because it does suggest that this is a plan which we can bend quite a bit out of shape, whereas the word "macro" tends to suggest something more solid and inflexible.  My desire here is to simplify things <i>without</i> removing <i>any</i> flexibility whatever.  In essence, you should be able to take a template and unroll it to make any changes you want.</p>
+<p>The basic definition of a <tt>template</tt> is identical to that of a <tt>target</tt>:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+template&nbsp;
+aNewBucket<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+param&nbsp;
+string&nbsp;
+name<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+ensure&nbsp;
+aws.s3.Bucket&nbsp;
+name&nbsp;
+=&gt;&nbsp;
+bucket<br/>
+</blockquote>
+<p>Inside a target (or, indeed, another template) we can now say in the simplest case:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+instantiate&nbsp;
+aNewBucket<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+name&nbsp;
+&lt;-&nbsp;
+"my_bucket"<br/>
+</blockquote>
+<p>Each parameter declared with <tt>param</tt> is required and MUST have the indicated type.  They may, however, be declared in any order.  They may NOT be placed on the <tt>instantiate</tt> line but must appear in the inner scope.</p>
+<p>That is the simple case.</p>
+<p>But supposing you wanted to have a bucket, and you wanted to use this template, but you wanted to tweak some feature of the bucket for your own purposes that was not a parameter?  How could you do that?</p>
+<p>For any element in a template which is assigned to a variable, it is possible to provide nested scope to the definition associated with that variable by specifying it in the parameter list.  For example, if the bucket can have a <tt>Tag</tt> parameter, you can do this:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+instantiate&nbsp;
+aNewBucket<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+name&nbsp;
+&lt;-&nbsp;
+"my_bucket"<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+bucket.Tag&nbsp;
+&lt;-&nbsp;
+"website"<br/>
+</blockquote>
+<p>This will cause the template to expand to:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+ensure&nbsp;
+aws.s3.Bucket&nbsp;
+"my_bucket"&nbsp;
+=&gt;&nbsp;
+bucket<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+Tag&nbsp;
+&lt;-&nbsp;
+"website"<br/>
+</blockquote>
+<p>This is so powerful a feature that I am considering whether to allow any such action in a template to <i>not</i> assign its resulting value to a variable: by requiring it, there is a consistent guarantee that anything can be modified.  And there is no risk of name pollution, since each variable defined within a template is local <i>within that template</i>.</p>
+<p>Finally, it is not allowed for targets to refer to other targets, but it is permissible for templates to instantiate other templates.  Recursion is <i>not</i> allowed however.  It is an error for there to be a cycle between templates.  Or, to put it another way, the set of targets and templates must form a directed, acyclic graph.</p>
+<h2><p>Type Checking (and more)
+</h2>
+<p>I find type checking incredibly valuable, especially "static" type checking.</p>
+<p>Why?  For the very simple reason that it is "quick" and "early".  Especially in an IDE, it is often possible to detect and fix problems even while you are still typing.  But there are two problems with static type checking: one is that it is often complex to implement; and the other is that it often misses some subtle cases.</p>
+<p>This deployer will have strict type checking, but it will not be static.  There are a number of reasons for this, but the single biggest one is pragmatic: static type checking (compared to dynamic strict type checking) produces errors very quickly (millisecond range) whereas dynamic type checking requires you to get to "that point" in your program, which could well be seconds or minutes.  But deployment "programs" do not take that long to run.</p>
+<p>It is my belief (based on experience) that what takes all the time in cloud deployments is when the infrastructure needs to stand up a component (a bucket, or an EC2 server).  This can take several minutes.  Compared to this, interpreting and executing a deployment script will take less than a second.  Even if you factor in making requests to the cloud provider to understand what the current state is, it is possible to do a "dry run" through the entire script in just a few seconds.  Trivial compared to actually deploying anything.</p>
+<p>Many tools offer a "dry run" flag to see what would happen compared to the current environment, and mine will be no different.  Where mine will differ is that it will <i>always</i> do a dry run before starting on the actual deployment, and will use that to try and detect <i>all</i> possible errors in the deployment.  Most obviously, this will find any errors in your scripts, specifically type errors, but it should also be able to catch:</p>
+<ul>
+<li><p>Permission errors, if it is reasonably possible to tell that an operation requires permissions that you do not have;</p>
+<li><p>Missing infrastructure errors, where you have requested to link an item to an existing item of infrastructure which is not there;</p>
+<li><p>Naming errors, where you have used the correct type (string) but the value does not meet some more detailed naming convention (e.g. no spaces);</p>
+<li><p>Parameter range errors, where you have used the correct type (e.g. int or Duration) for a parameter, but the value you have used is not part of the legal range.</p>
+</ul>
+<p>I say "should be able to" rather than "will" because obviously all of these checks need to be written by some human and, at least to start with, it is my intention to try and use reflection of some sort to determine all the types and operations that are allowed to access the AWS cloud.  In taking this shortcut, many of these checks will not be done.  However, as time goes on, and these features are used, I expect that more and more tests will be added by people who have had their scripts fail.</p>
+<p>Because I always like to work in the unknown with a "known" model, I am going to draw on database technology here for a metaphor and compare this to "two phase commit".  In deploying infrastructure, there will be a "prepare" phase in which we go through the script once, asking each action and type to prepare to perform the action.  It should make sure that:</p>
+<ul>
+<li><p>All the variables it refers to are currently defined;</p>
+<li><p>Expressions evaluate correctly;</p>
+<li><p>Expressions have the right type for their context;</p>
+<li><p>Any other constraints on values are met;</p>
+<li><p>All the properties being referenced exist;</p>
+<li><p>Any permissions that are needed for the operation have been granted;</p>
+<li><p>Any other referenced pieces of infrastructure exist.</p>
+</ul>
+<p>In short, it should do the best job it can to make sure that everything is in place to enable the real deployment to succeed.</p>
+<p>It should then update the memory model of the infrastructure to reflect the changes it <i>would</i> make if it were to go ahead and deploy.  For example, in the case of creating a bucket, it should add the bucket to the internal list of buckets that exist with all the correct permissions and properties <i>as if the bucket existed in the cloud and had been queried</i>.  This is obviously vital in order to make sure that any subsequent steps which depend on this bucket can pass their own checks.</p>
+<p>At the same time, the code should generate an "action" that will be carried out during the "commit" phase.  That is, it should create an object which, when called during the commit phase, carries out the actual work of deployment.  It is perfectly acceptable for the same object to be used, but if the "prepare" method has done some level of calculation and query of infrastructure, it may be easier to create an object which just does the construction.</p>
+<p>If anything goes wrong, the deployment should fail during the "prepare" phase, ideally with a clear description of what went wrong (good luck with that!).  Once the "commit" phase begins, the only errors that should be caught are of the "timeout" or "cloud unavailable" variety.  Hopefully, it should be possible to avoid the kind of errors that seem all too frequent with CloudFormation, where it reaches an inconsistent state, tries to rollback and then gives up saying, "you figure this out".  More than anything else, that is my criterion for success or failure of this project.</p>
+<p>I suspect this will be tricky and subtle.  As I've already noted above, it does require the modules to be very aware of what all the rules are when deploying infrastructure, and that's all code that needs to be written, which pushes against my initial approach which will be to just use reflection to provide broad API coverage.  I'm assuming that at least in early days, and later with less frequently used objects, there will be significant holes in this approach and that the fallback position - in which the "commit" phase fails due to an error reported by the cloud itself - will happen frequently.  Dedication and diligence are required to make sure each such failure is used to train the "prepare" phase; and I will likewise need to be careful to ensure that the "commit" phase can be restarted easily in this case.</p>
+<h2><p>Conclusion
+</h2>
+<p>In my opinion, deployment tools are weak because they have evolved from scripts, and because nobody has taken the time to create the polished tool everyone would want to use.  It's possible that in my hubris I have missed "the perfect deployment tool" but if so, why do all the others continue to exist?</p>
+<p>The area is huge, and the amount of infrastructure that needs to be supported vast, but it is my opinion that a small core tool, correctly designed to encourage pluggable modules, can be built quite quickly and then allowed to grow over time as the tool becomes adopted.</p>

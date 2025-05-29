@@ -1,0 +1,45 @@
+﻿@Article
+title=Starting and Finishing
+saveAs=tech/starting
+
+
+I don't think I'm alone in struggling with the beginning and ending of software projects.
+
+
+Inasmuch as I _am_ different, I think it's that I struggle much more with the beginning than the ending.  As I write this, I am in the early stages of a "new" project (a cloud deployer, q.v.), and I'm struggling to get it to take the shape I think I want it to have.  This struggle feels almost existential to me, and more than once before I have given up on a project, thrown it all away and started again - just to try and regain control.
+
+
+On the other hand, while nailing down a project at the end has two difficult aspects, they both feel "within my control".  One, of course, is the very open-ended question of _when_ to stop: has enough been done?  While that question can never be truly answered, it is easy enough to say "yes" at any point after the project crosses viability.  The other challenge is to remain focused and "in the game" while stamping on thousands of little bugs and making sure all the necessary documents have been written.  No, I don't enjoy it; and yes, I often give up personal projects as they reach that stage.  But it all feels like something I _can_ do - and frequently have done professionally.
+
+
+But I don't think I've ever felt truly content at the beginning of a software project.  There is so much to build out, so quickly, in so many directions.  And it is so easy to get something - one little detail - wrong.  And wrong in a way that you feel you can never come back from.
+
+
+I remember reading Simon Peyton-Jones article on the Spineless, Tagless G-Machine when I was younger.  In the original version of that paper, he talked about how the various functional language interpreters that had gone before had been like isolated islands in a sea of possible designs.  But that as time went on, and more and more of the islands appeared, it became more and more clear what the dimensions of design choices were.
+
+
+I think I feel like that _within_ a software project.  When you start off, there are a few, isolated data points.  In particular, I tend to work within want Kent Beck calls a "metaphor".  I know roughly what I want to do, and I have some terms that make sense in that context.  And I expect those to transfer over onto the software itself.  Some of them do; some don't.
+
+
+As you work your way through the process of turning dreams into code, those dreams are exposed to the harsh realities of life in a way that cannot be imagined by people who do not code: they are forever exposed to the test of absolute consistency enforced by type systems and data structures.  You can wave your hands around it and say "well, it's a bucket", and your colleagues may nod and believe you, but the compiler will say, "well, it may be _some_ sort of bucket, but it's not _this exact_ type of bucket".  And you slink away back to your cave.
+
+
+The consequence of this is that I always end up in the same situation.  I write some code, it looks good, and then I consider "another case".  This case is not the same as the first one: I can get it to work, but often only by doing unspeakable things to the existing code.  I then need to hammer both "branches" in the code until they look the same.  I breathe for a minute and then tackle "another case".  The same thing happens: it wants to take the code in a different direction.  It needs a feature, some data, some external link that I didn't have before.
+
+
+This has been particularly painful over the past couple of weeks as I have worked on a cloud deployer in Go.  As far as I can tell, Go does not have the same level of refactoring tools that I am used to in Java, in part because the language does not truly understand (enforce? compel?) the connection between interfaces and implementations.  And so I am left struggling to rewrite things on the fly: often finding that things will compile only to find that runtime casts fail.
+
+
+Sometimes it's not clear 
+
+
+After you have done ten or twenty similar things (for some reason, people always say "screens" or "reports", but I don't generally write that kind of software), you start to see patterns emerge - like the design islands.  It now becomes clear how to build more of these things, and much of the time you can see how you _should_ have built the ones that went before: if you're lucky (or determined), you can go back and refactor those.
+
+
+There comes a point where everything just hums along: you have made your existing codebase consistent and correct; you are able to add more and more "similar" things; you are testing and releasing with regularity.  Those are the fun times.
+
+
+Until it becomes time to wrap up.
+
+
+As an aside, I think it's worth pointing out that it's not only software that has this issue: natural language is much the same.  In almost every language, there are a handful of very common verbs (to be, to go, etc) which are highly irregular.  And then, after a while, patterns starting to emerge and all the less common verbs follow very regular patterns.  Sadly, we almost never go back and refactor natural language.
