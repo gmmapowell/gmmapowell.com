@@ -4,15 +4,20 @@
 # Each set of articles is grouped by the category into which it should go
 # Each mapping is a one-token destination name followed by a multi-token source name to which ".html" will be appended
 life
+  systems-thinking Systems Thinking
+  find-out Let's Find out Together
+  forty-years Forty Year Decisions
+  forgive Forgive and Forget
+  induction Life is Pointless (by Induction)
   aeroplane Life is an Aeroplane
   rational What it means to be Rational
   walking-away Walking Away from Life
-  find-out Let's Find out Together
-  forgive Forgive and Forget
-  forty-years Forty Year Decisions
-  induction Life is Pointless (by Induction)
   running Running To or From?
   love-need Love is NOT All You Need
+  living-or-waiting Living or Waiting to Die?
+  live-for-you I Would Live for You
+  open-loops Open Loops
+
 
 politics-musings
   empowered-departure Empowered Departure
@@ -28,6 +33,7 @@ sports
   contracts Sports Contracts are Stupid
   fire-the-manager Should We Fire the Manager?
   women Women's Sports
+  ivan-cleary Ivan Cleary
 
 tech
   this-site About this Site
@@ -42,3 +48,5 @@ tech
   wheels Reinventing the Wheel
   team-radar Mapping a Team on a Radar
   starting Starting and Finishing
+  parallel-ai Truly Parallel Circuitry
+  rewiring Refactoring or Rewiring?

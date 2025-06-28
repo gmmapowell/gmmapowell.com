@@ -1,3 +1,7 @@
+18JGNdpfli1Cr5Smx0cd7AaTRf58hCwfyMoZYiBGYCfQ tech/Rewiring.txt
+10-V-PSni0fZigyYpDtqRXrzW6VgVu1Y2ENFfguAe61g life/Systems Thinking .txt
+1E6Lz9XnY7biL_8CXrfcUNVH7ENzofQcwJaKzFhESMiA life/Open Loops.txt
+
 --excluded--
 --downloaded--
 1JDn4TmicWVJYHTS7vTnYUGX7wJqhvEGaTY5UoaOM_B8 tech/Estimation and Decisions.txt
@@ -38,3 +42,8 @@
 1KDSQttLKTOGOa7P5_OFWJRCQ2qTt8NA0fI1--TMhYoI life/Love is not All You Need.txt
 1Dqm9cDWCvGFMYuGiTd9UsfTcOh2BS6RZN_TVQEFiYUo life/Running to or from.txt
 1Og3AHn0-XttLOOvriTYJgqcU-bmmNXgxwVUgwJLn3xw life/Let's Find Out Together.txt
+1LtFSvdJEbOBnDAfiumA7a3Xy0zQi36CHaLSMslNINi4 tech/Truly Parallel Circuitry.txt
+1U-8r3uurJCRjgCxhcFKE_CmvuV6NHHEvAJmu3MWPX_k Living or Waiting to Die?.txt
+148umpg-Z2_CdeIcUhk1nX7JnqMAOtIMudR_2naVyMes life/I Would Live for You.txt
+
+1HvwM_2k74qHwoqeKjE15w7QPBU4B0M08Xk1Xly0nyCs sports/Ivan Cleary.txt

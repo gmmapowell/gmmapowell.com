@@ -8,15 +8,19 @@ header("Access-Control-Allow-Headers: *");
 	switch ($_GET['cat']) {
 	case "life":
 ?>
+			{ "id": "systems-thinking", "title": "Systems Thinking" },
+			{ "id": "find-out", "title": "Let's Find out Together" },
+			{ "id": "forty-years", "title": "Forty Year Decisions" },
+			{ "id": "forgive", "title": "Forgive and Forget" },
+			{ "id": "induction", "title": "Life is Pointless (by Induction)" },
 			{ "id": "aeroplane", "title": "Life is an Aeroplane" },
 			{ "id": "rational", "title": "What it means to be Rational" },
 			{ "id": "walking-away", "title": "Walking Away from Life" },
-			{ "id": "find-out", "title": "Let's Find out Together" },
-			{ "id": "forgive", "title": "Forgive and Forget" },
-			{ "id": "forty-years", "title": "Forty Year Decisions" },
-			{ "id": "induction", "title": "Life is Pointless (by Induction)" },
 			{ "id": "running", "title": "Running To or From?" },
-			{ "id": "love-need", "title": "Love is NOT All You Need" }
+			{ "id": "love-need", "title": "Love is NOT All You Need" },
+			{ "id": "living-or-waiting", "title": "Living or Waiting to Die?" },
+			{ "id": "live-for-you", "title": "I Would Live for You" },
+			{ "id": "open-loops", "title": "Open Loops" }
 <?php
 		break;
 	case "politics-musings":
@@ -37,7 +41,8 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "rugby-calendar", "title": "Harmonized Rugby Calendar" },
 			{ "id": "contracts", "title": "Sports Contracts are Stupid" },
 			{ "id": "fire-the-manager", "title": "Should We Fire the Manager?" },
-			{ "id": "women", "title": "Women's Sports" }
+			{ "id": "women", "title": "Women's Sports" },
+			{ "id": "ivan-cleary", "title": "Ivan Cleary" }
 <?php
 		break;
 	case "tech":
@@ -53,7 +58,9 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "garden", "title": "Planning a Garden" },
 			{ "id": "wheels", "title": "Reinventing the Wheel" },
 			{ "id": "team-radar", "title": "Mapping a Team on a Radar" },
-			{ "id": "starting", "title": "Starting and Finishing" }
+			{ "id": "starting", "title": "Starting and Finishing" },
+			{ "id": "parallel-ai", "title": "Truly Parallel Circuitry" },
+			{ "id": "rewiring", "title": "Refactoring or Rewiring?" }
 <?php
 		break;
 	}
