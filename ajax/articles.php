@@ -60,7 +60,8 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "team-radar", "title": "Mapping a Team on a Radar" },
 			{ "id": "starting", "title": "Starting and Finishing" },
 			{ "id": "parallel-ai", "title": "Truly Parallel Circuitry" },
-			{ "id": "rewiring", "title": "Refactoring or Rewiring?" }
+			{ "id": "rewiring", "title": "Refactoring or Rewiring?" },
+			{ "id": "idempotent", "title": "Atomic or Idempotent?" }
 <?php
 		break;
 	}

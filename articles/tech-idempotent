@@ -1,0 +1,46 @@
+<p>If a program dies in mid-sentence, what do you do?</p>
+<p>The normal answer, of course, is "don't worry about it".  This is fine for a significant number of cases where you weren't in the middle of doing something important anyway.  Some programs (like Emacs or Word) keep a frequent "in progress" copy of your work and then give you the opportunity to choose to use that rather than the original when you start up again.  Of course, Word doesn't feel the need to tell you what the differences are, often leaving you confused as to whether you had saved it before making "all those changes" or if you accidentally pressed "select-all/delete" but fortunately didn't save it.</p>
+<p>At a slighly lower level, I have thought for about thirty years now that "transactional" semantics were what I wanted: for any given operation, it either <i>all</i> works or <i>none</i> of it works.  In other words, you either end up where you wanted to go or you are still where you started.  A journey without any middle ground.</p>
+<p>The final option is to have things be "idempotent": that is, if you perform the same operation multiple times nothing changes; if the operation fails halfway through, you just "do it again" and everything will be fine.  Cool, but generally hard to do unless you <i>also</i> have some level of transactional semantics.</p>
+<p>Let's consider a simple example.  I have a variable <tt>x</tt> with an initial value of 0.  I have a pseudo-program:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+x&nbsp;
+&lt;-&nbsp;
+x+1<br/>
+</blockquote>
+<p>When I run this program successfully, I obviously expect it to end up with the value 1.</p>
+<p>If I just blithely run it multiple times until I succeed, I have no idea what happens, so it is either 0 or 1.  If it crashes three times and then works on the fourth, the only provably true statement is that <tt>x</tt> has a value between 1 and 4 (since it completed the fourth time, the value must be at least 1).</p>
+<p>If I run it in a transaction, and the program crashes, I either have the information that the value is 0 and the transaction rolled back, or it is 1 and the transaction completed successfully.  I can use this second piece of information to determine if I want to run it again or not, although generally I will delegate that to the transaction manager's recovery logic.</p>
+<p>If I want to run it <i>idemponently</i>, then I need to change the program in some way.  Something like this:</p>
+<blockquote class='article_blockquote'>
+&nbsp;
+&nbsp;
+if&nbsp;
+x&nbsp;
+==&nbsp;
+0&nbsp;
+{<br/>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+x&nbsp;
+&lt;-&nbsp;
+x+1<br/>
+&nbsp;
+&nbsp;
+}<br/>
+</blockquote>
+<p>Now, you may say, this is no different from just writing <tt>x &lt;- 1</tt>, and that is certainly true in this case.  As with everything else in software, trivial things are trivial when dealing with trivial examples.</p>
+<p>Which brings me to what I'm doing that makes me bring this up.</p>
+<p>I am (as noted elsewhere) in the middle of writing a cloud deployer.  As stated there, my reasons for doing so are manyfold, but mainly revolve around the fact that all the other tools I have used "suck".  In particular, one of the things that sucks about Amazon's CloudFormation is that it attempts to offer transactional semantics.  When you update the "component stack" in CloudFormation, it attempts to either do everything or roll everything back.  I say "attempts to" because, for me at least, it often gets stuck, generally when rolling things back.</p>
+<p>Now, I say again, I am a big fan of transactional semantics, <i>when applied correctly</i>.  I don't think (until now) I've really thought about this at a theoretical level, but I think in this case it is quite simply a misapplication of the model.  What a deployer should really have - and what I designed into mine without even really thinking about it too deeply - is idempotence.</p>
+<p>When you write a deployer script, you are describing <i>how you want the components you specify to look</i> once the script has finished running.  This is what you want, and until you change your mind (and thus the script) the deployer should make that happen or die trying.  I understand that there are issues with having your cloud infrastructure left in an "in-between" state, but that happens <i>during</i> deployment anyway, and it can still happen during rollback.  So you might as well leave it as close as you can get.</p>
+<p>When I set out to write my deployer, my plan was to try never to do anything that might possibly go wrong.  It turns out that that is unrealistic.  It's still my goal - as much as possible - to check that a script <i>makes sense</i> before trying to change anything.  So it goes through the script and tries to check that everything that needs to exist <i>before</i> the script starts in order for the script to pass does, in fact, exist.</p>
+<p>But when something goes unavoidably wrong (because, for example, it is impossible to tell if a bucket name is taken by somebody else without actually trying to create a bucket), there really isn't any other option except to stop what you are doing and inform the user.  They may have options that you do not have (for example, to delete a conflicting resource in another account), or they may have made a mistake that you could not detect in advance and can now fix the script.</p>
+<p>And this is where <i>idempotence</i> comes in.  Because the script describes <i>the world as it should be</i>, you can build up a model of that and see how much of it does, in fact, already exist.  If you completed the first four steps before crashing, you should find that those items are there and exactly how you want them going into step five.  And so you can just pick up there.  You don't need the user to tell you.  It is just "obvious" from the fact that the deployer looks <i>at the infrastructure directly</i> and sees what is there before starting to run the script.  It does not use some second source of truth.</p>
+<p>This does, of course, require compromises.  In order to have an idempotent system you need a clear sense of <i>identity</i>.  In my deployer, every item in the script must have a name, and that name is "expected" to remain constant between runs of the script.  If you want to change the name, you either need to tear everything down and start again, or else change the name <i>outside</i> the script at the same time as changing it <i>in</i> the script; anything else will get you into trouble as the two will not line up.  If something does not "naturally" have a name, it is necessary to artifically attach one, for example through the "tags" mechanism.  The important point being it must be possible to <b>uniquely</b> identify zero or one resources in the cloud which correspond to the one named in the script.</p>
+<p>I'm not saying this is easy.  In fact, it's taking me quite a long time to nail down a lot of the details, and even then I'm still currently punting on a bunch of the trickier issues.  The naming issue above is one such - it is <i>possible</i> to add in a "previously called" adverb with the "old name" in it; the deployer can then look for the resource under either the old or the new name and use whichever (hopefully only one!) it finds, and then do the renaming.  But I believe it is all possible, in a way that I do not believe it is possible to model cloud infrastructure as a transactional resource.  And, having built transactional systems in the past, I claim to know what I am talking about.</p>
+<p>It's simply a question of fit.  Idempotence is a much better "fit" for cloud infrastructure that the transactional model is.</p>

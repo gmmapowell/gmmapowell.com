@@ -50,3 +50,4 @@ tech
   starting Starting and Finishing
   parallel-ai Truly Parallel Circuitry
   rewiring Refactoring or Rewiring?
+  idempotent Atomic or Idempotent?
