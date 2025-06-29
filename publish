@@ -58,7 +58,6 @@ awk '
   }
 ' formatter/publish.txt
 
-cat /tmp/publish.sh
 echo "Unpublished articles:"
 sort /tmp/published-articles.txt | comm -23 /tmp/all-articles.txt - | sed 's/^/ + /'
 
