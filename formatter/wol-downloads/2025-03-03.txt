@@ -75,11 +75,13 @@ Blog about Syntax Highlighting
 
 
 &totalhours 23
+
+
 &project ChainLedger
-&project Deployer
-
-
 &achieved "ChainLedger happy path" 
+&project Deployer
+&achieved "Started AWS Deployer in Go"
+
+
 &blog "Go and Modules"
 &blog "Testing Syntax Highlighting"
-&achieved "Started AWS Deployer in Go"

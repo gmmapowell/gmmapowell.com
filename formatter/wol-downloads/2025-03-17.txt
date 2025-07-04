@@ -1,0 +1,66 @@
+﻿@WorkOutLoud
+
+
+Monday
+
+
+CDP Blog Post
+
+
+1 hour - breaking ground and building up basic web server
+
+
+1.5 watch and reload
+
+
+1.5 hour html and fixes
+// 4
+
+
+Tuesday
+
+
+2 hours - writing blog post
+
+
+3 hours - writing the parser
+
+
+1.25 hours - interpreter & repo
+
+
+1 hour - generation
+// 7.25
+
+
+Wednesday
+
+
+3 hours - JavaScript runtime
+2 hours - JavaScript runtime
+1 hour - Beginning Plugin
+// 6
+
+
+Thursday
+
+
+2 hours (am) - Showing the Source
+1 hour (pm) - Getting started with debugger
+// 3
+Friday
+
+
+1 hour - Attaching & Enabling the debugger
+45 minutes - breakpoints
+45 minutes - breakpoints
+20 minutes - breakpoints
+25 minutes - tabs
+ // 3.25
+
+
+&totalhours 23.5
+&project "Chrome Debugger Blog"
+&achieved "Debugger setup"
+&achieved "CDP Till Parser"
+&achieved "Basic Debugger"

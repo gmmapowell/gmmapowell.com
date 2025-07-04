@@ -2,8 +2,10 @@
 
 
 &totalhours 14.5
-&blog "NFC in Linux and Android"
 &project "Deployer"
+
+
+&blog "NFC in Linux and Android"
 
 
 Monday
