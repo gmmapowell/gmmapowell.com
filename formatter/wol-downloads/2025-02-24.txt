@@ -26,5 +26,5 @@ Fixing routing issues with non-existent routes
 
 &totalhours 6
 &project website
-&achieved fixed issues
-&achieved wrote content
+&achieved "Fixed issues with website"
+&achieved "Wrote content for website"
