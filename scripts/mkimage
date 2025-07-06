@@ -5,13 +5,13 @@ scripts/publish
 rm -rf IMAGE
 mkdir IMAGE
 mkdir IMAGE/css
-cp HTACC IMAGE/.htaccess
-cp favicon.* IMAGE
+cp src/HTACC IMAGE/.htaccess
+cp src/icons/favicon.* IMAGE
 
-cp -r apps/com.gmmapowell/* IMAGE
-cp -r ui/images IMAGE
-cp -r ui/basic.css IMAGE/css
-cp -r ajax IMAGE
+cp -r src/apps/com.gmmapowell/* IMAGE
+cp -r src/ui/images IMAGE
+cp -r src/ui/basic.css IMAGE/css
+cp -r src/ajax IMAGE
 cp -r articles IMAGE
 
 
