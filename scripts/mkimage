@@ -10,10 +10,8 @@ cp src/icons/favicon.* IMAGE
 
 cp -r src/apps/com.gmmapowell/* IMAGE
 cp -r src/ui/images IMAGE
-cp -r src/ui/basic.css IMAGE/css
 cp -r src/ajax IMAGE
 cp -r articles IMAGE
-
 
 cp custom/fakeit.html IMAGE
 cp custom/css/* IMAGE/css

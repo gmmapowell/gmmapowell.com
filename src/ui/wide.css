@@ -1,0 +1,7 @@
+@media screen AND (min-width: 800px) {
+	.home-items-container {
+		position: absolute !important;
+		left: 0px;
+		top: 0px;
+	}
+}
