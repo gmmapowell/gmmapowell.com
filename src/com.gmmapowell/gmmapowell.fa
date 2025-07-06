@@ -97,3 +97,8 @@
 						article.load "tech-"
 						article.load articleId
 						tech.nest article
+			route "workoutloud"
+				title "Working Out Loud"
+				workloud <- WorkOutLoud
+				enter
+					main.nest workloud

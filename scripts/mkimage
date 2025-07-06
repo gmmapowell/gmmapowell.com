@@ -12,6 +12,7 @@ cp -r src/apps/com.gmmapowell/* IMAGE
 cp -r src/ui/images IMAGE
 cp -r src/ajax IMAGE
 cp -r articles IMAGE
+cp -r formatter/wol-html/* IMAGE/ajax
 
 cp custom/fakeit.html IMAGE
 cp custom/css/* IMAGE/css
