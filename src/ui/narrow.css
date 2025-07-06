@@ -24,4 +24,24 @@
 		overflow-y: scroll;
 	}
 
+	.workoutloud-content {
+		overflow-x: hide;
+		white-space: nowrap;
+		height: 90%;
+		width: 100%;
+		clip-path: view-box;
+	}
+
+	.workoutloud {
+		display: inline-block;
+		border: 2px solid black;
+		border-radius: 15px;
+		padding: 7px;
+		margin-left: 10px;
+		margin-right: 10px;
+		width: calc(100% - 38px);
+		height: 90%;
+		vertical-align: top;
+	}
+
 }
