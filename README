@@ -1,7 +1,19 @@
 To build the FLAS and everything, run 
 
-$ ./build
+$ scripts/build
+
+To run locally on port 9091, run
+
+$ scripts/localsrv
+
+To publish the latest content, run
+
+$ scripts/publish
+
+To put everything into the IMAGE directory, run
+
+$ scripts/mkimage
 
 To upload everything to DH, run
 
-$ ./send
+$ scripts/send
