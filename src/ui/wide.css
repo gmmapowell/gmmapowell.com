@@ -4,4 +4,22 @@
 		left: 0px;
 		top: 0px;
 	}
+
+	.workoutloud-content {
+		overflow-x: scroll;
+		white-space: nowrap;
+		height: 90%;
+	}
+
+	.workoutloud {
+		display: inline-block;
+		border: 2px solid black;
+		border-radius: 15px;
+		padding: 7px;
+		margin-left: 10px;
+		margin-right: 10px;
+		width: 330px;
+		height: 90%;
+		vertical-align: top;
+	}
 }
