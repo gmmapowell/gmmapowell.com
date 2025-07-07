@@ -36,11 +36,20 @@ Fri
 2hrs - ScriptFormatter, handling workoutloud
 
 
-// TODO: update this ...
-&totalhours 15
+Sun
+
+
+2.5hrs - website
+1hr - fixing up deployer cloudfront distribution
+
+
+&totalhours 18.5
 &project Deployer
 &achieved "CloudFront distribution as a single command"
 &achieved "Fixed bugs with scoping"
 &project "GnuCash Blog"
 &project "ScriptFormatter"
 &achieved "Basic WorkOutLoud processor"
+&project "Website"
+&achieved "Basic WorkOutLoud card"
+&achieved "Improved mobile home screen"
