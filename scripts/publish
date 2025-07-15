@@ -9,7 +9,7 @@ awk '
     print "\t\tbreak;" > ap
   }
   BEGIN {
-    ap = "ajax/articles.php";
+    ap = "src/ajax/articles.php";
     print "<?php" > ap
 	  printf "header(%cAccess-Control-Allow-Origin: *%c);\n", 34, 34 > ap
 	  printf "header(%cAccess-Control-Allow-Headers: *%c);\n", 34, 34 > ap

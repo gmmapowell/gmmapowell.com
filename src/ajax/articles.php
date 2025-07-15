@@ -20,7 +20,9 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "love-need", "title": "Love is NOT All You Need" },
 			{ "id": "living-or-waiting", "title": "Living or Waiting to Die?" },
 			{ "id": "live-for-you", "title": "I Would Live for You" },
-			{ "id": "open-loops", "title": "Open Loops" }
+			{ "id": "open-loops", "title": "Open Loops" },
+			{ "id": "justOne", "title": "Just One Mistake" },
+			{ "id": "truth-falsehood", "title": "Truth and Falsehood" }
 <?php
 		break;
 	case "politics-musings":

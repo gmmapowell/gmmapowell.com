@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
 	margin: 0;
 	overflow: hidden;
@@ -168,5 +170,59 @@ body {
 	background-color: #c0c0c0;
 	padding: 1em;
 	border-radius: 22px;
+}
+
+.workoutloud .title {
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+.workoutloud .hours {
+	/* margin-bottom: 0.2em; */
+}
+
+.workoutloud .hours::before {
+	content: "Time Worked: ";
+	font-weight: bold;
+}
+
+.workoutloud .workedOn {
+	margin-top: 0.5em;
+}
+
+.workoutloud .workedOn ~ .workedOn{
+	margin-top: 0em;
+}
+
+.workoutloud .workedOn::before {
+	content: "Worked on ";
+	font-weight: bold;
+}
+
+.workoutloud .achieved {
+	margin-top: 0.5em;
+}
+
+.workoutloud .achieved ~ .achieved {
+	margin-top: 0em;
+}
+
+.workoutloud .achieved::before {
+	content: "👍 ";
+}
+
+.workoutloud .bloggedAbout {
+	margin-top: 0.5em;
+}
+
+.workoutloud .bloggedAbout ~ .bloggedAbout {
+	margin-top: 0em;
+}
+
+.workoutloud .bloggedAbout::before {
+	content: "Blogged about ";
+	font-weight: bold;
 }
 

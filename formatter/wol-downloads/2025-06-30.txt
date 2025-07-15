@@ -1,0 +1,55 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1.5hrs - deployer cloudfront distribution command
+1.5hrs - deployer maps & lists as properties
+
+
+Tue
+
+
+3hrs - deployer - scoping & resolution done right
+
+
+Wed
+
+
+1hr - deployer - scoping
+1hr cloudfront distribution command - coins
+
+
+Thu
+
+
+4hr - cloudfront distribution command - collecting coins
+
+
+Fri
+
+
+1hr - CT600 schemas, only nothing happening.
+
+
+2hrs - ScriptFormatter, handling workoutloud
+
+
+Sun
+
+
+2.5hrs - website
+1hr - fixing up deployer cloudfront distribution
+
+
+&totalhours 18.5
+&project Deployer
+&achieved "CloudFront distribution as a single command"
+&achieved "Fixed bugs with scoping"
+&project "GnuCash Blog"
+&project "ScriptFormatter"
+&achieved "Basic WorkOutLoud processor"
+&project "Website"
+&achieved "Basic WorkOutLoud card"
+&achieved "Improved mobile home screen"

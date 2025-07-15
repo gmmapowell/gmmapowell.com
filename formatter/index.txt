@@ -1,4 +1,5 @@
-1ANP-vOpb3arTdMvhMLtbcfD-kcd6_MKez8eWkdN32eY tech/Atomic or Idempotent.txt
+1UV6UxnFvwB9133Yfx6lEuEf4_jls_gEB3TZGLRz_uqk life/Just One Mistake.txt
+1BSSJGup8HYdKcHz2B2K8YAgtHHryT_P1244eMRSjmlg life/Truth and Falsehood.txt
 --excluded--
 --downloaded--
 10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU tech/About this Site.txt
@@ -43,3 +44,10 @@
 1xP7y8T7WZN4QP07vdSUN5E7W6EMESB0cJbY_3aJOWeI tech/Why Do We Estimate?.txt
 1Ymvtf46YCgwkyvYEr1jO2cSzX1hExrtsxoNp2Jy_xH8 sports/Sports Contracts are Stupid.txt
 1ZuRwDbUo0rI3i22B6IEVX_hpurNBeUQuT4rdRHRssiQ tech/Iteration.txt
+148umpg-Z2_CdeIcUhk1nX7JnqMAOtIMudR_2naVyMes life/I Would Live for You.txt
+
+1HvwM_2k74qHwoqeKjE15w7QPBU4B0M08Xk1Xly0nyCs sports/Ivan Cleary.txt
+1ANP-vOpb3arTdMvhMLtbcfD-kcd6_MKez8eWkdN32eY tech/Atomic or Idempotent.txt
+18JGNdpfli1Cr5Smx0cd7AaTRf58hCwfyMoZYiBGYCfQ tech/Rewiring.txt
+10-V-PSni0fZigyYpDtqRXrzW6VgVu1Y2ENFfguAe61g life/Systems Thinking .txt
+1E6Lz9XnY7biL_8CXrfcUNVH7ENzofQcwJaKzFhESMiA life/Open Loops.txt

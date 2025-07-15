@@ -1,0 +1,50 @@
+﻿@WorkOutLoud
+
+
+&totalhours 14.5
+&project "Deployer"
+
+
+&blog "NFC in Linux and Android"
+
+
+Monday
+
+
+3 hours
+
+
+Publishing NFC Posts
+
+
+Tuesday
+
+
+1 hour
+
+
+Publishing NFC Posts
+
+
+3 hours
+
+
+Deployer
+
+
+Wednesday
+
+
+4.5 hours
+
+
+Deployer
+
+
+Friday
+
+
+3 hours
+
+
+Deployer

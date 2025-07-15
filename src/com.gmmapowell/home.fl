@@ -31,6 +31,31 @@
 				=> lookAtTech
 			technology-text
 				| => 'center-me' (sizeText 25)
+			workoutloud
+				| => "tile" (minAspect 62 70 19 1.4 0.7)
+				=> workoutloud
+			workoutloud-text
+				| => 'center-me' (sizeText 25)
+.			ignorance
+.				| => "tile" (minAspect 60 45 22 1.6 0.7)
+.				=> ignoranceBlog
+.			ignorance-text
+.				| => 'center-me' (sizeText 18)
+.			now
+.				| => "tile" (minAspect 10 15 18 1.4 0.7)
+.				=> goNow
+.			now-text
+.				| => 'center-me' (sizeText 22)
+.			go-fish
+.				| => "tile" (minAspect 57 15 18 1.4 0.7)
+.				=> goFish
+.			go-fish-text
+.				| => 'center-me' (sizeText 22)
+.			downloads
+.				| => "tile" (minAspect 33 45 15 1.4 0.7)
+.				=> downloads
+.			downloads-text
+.				| => 'center-me' (sizeText 25)
 			gallery
 				| => "tile" (minAspect 45 85 15 1.4 1)
 				=> gotoGallery
@@ -70,6 +95,21 @@
 
 		event lookAtTech (ClickEvent ev)
 			<- n.redirect (parseUri "technology")
+
+		event workoutloud (ClickEvent ev)
+			<- n.redirect (parseUri "workoutloud")
+
+		event ignoranceBlog (ClickEvent ev)
+			<- n.redirect (parseUri "ignorance-blog")
+
+		event downloads (ClickEvent ev)
+			<- n.redirect (parseUri "downloads-page")
+
+		event goNow (ClickEvent ev)
+			<- n.redirect (parseUri "now")
+
+		event goFish (ClickEvent ev)
+			<- n.redirect (parseUri "go-fish")
 
 		event jumpToHiring (ClickEvent ev)
 			<- n.redirect (parseUri "https://hireme.gmmapowell.com")

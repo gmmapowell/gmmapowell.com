@@ -1,0 +1,87 @@
+﻿@WorkOutLoud
+
+
+Mon 
+
+
+4 hours
+
+
+ChainLedger dealing with remote transactions
+ChainLedger remote blocks
+
+
+Tue
+
+
+2 hours
+
+
+ChainLedger remote blocks
+
+
+3 hours
+
+
+Started on weaving
+
+
+Wed
+
+
+2 hours
+
+
+Wrapped up weaving
+
+
+2 hours
+
+
+Signing weaving
+
+
+2 hours
+
+
+Consolidation 
+
+
+Thu
+
+
+3 hours
+
+
+Go & Modules
+
+
+Fri
+
+
+3 hours
+
+
+Deployer Go Runner
+
+
+Sun
+
+
+2 hours
+
+
+Blog about Syntax Highlighting
+
+
+&totalhours 23
+
+
+&project ChainLedger
+&achieved "ChainLedger happy path" 
+&project Deployer
+&achieved "Started AWS Deployer in Go"
+
+
+&blog "Go and Modules"
+&blog "Testing Syntax Highlighting"

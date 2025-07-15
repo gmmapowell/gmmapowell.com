@@ -1,0 +1,30 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+3 hours
+
+
+Website: fixing issues with formatting
+fixing flas bugs with routing & punnet layout 
+
+
+Tue
+
+
+3 hours
+
+
+Adding content to website
+Fixing some website issues
+Fixing routing issues with non-existent routes
+
+
+
+
+&totalhours 6
+&project Website
+&achieved "Fixed issues with website"
+&achieved "Wrote content for website"

@@ -2,5 +2,5 @@
 
 PATH=$HOME/Ziniki/Over/Tools/wdiotests/compiler/bin:$PATH
 
-flas --web ui com.gmmapowell
+flas --project-dir src --web ui com.gmmapowell
 
