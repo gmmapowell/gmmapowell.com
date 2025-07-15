@@ -1,0 +1,69 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr deploying neptune cluster
+2hrs deploying neptune cluster
+1hr deploying dynamo cluster
+
+
+Tue
+
+
+0.75hr ct600 schema blog
+1hr custom properties interpreter
+0.5hr ct600 validate schema
+1.5hr ct600 manage submissions
+
+
+Wed
+
+
+6hrs ct600 CompanyTaxReturn & IRmark
+
+
+Thu
+
+
+1.5hrs deployer dynamodb
+1hr starting neptune blog codein
+1.5hrs neptune/dynamo start coding
+
+
+Fri
+
+
+2hrs neptune connectivity
+3.5hrs neptune connectivity &vpn
+3hrs struggling with certificates and connectivity
+0.5hrs getting everything running on Linux
+
+
+Sat
+
+
+2.5hrs IRMark
+1hr neptune creation
+1hr neptune cleaning
+
+
+Sun
+
+
+2.5hrs creating a network of nodes 
+2hrs finding stock prices
+3hrs user endpoints
+
+
+&totalhours 38.75
+&project "Neptune Blog"
+&achieved "Researched Neptune for the Blog"
+&project "GnuCash Blog"
+&achieved "Successfully submitted a (bogus) return to HMRC"
+&project Deployer
+&achieved "Custom Properties Interpreter on Deployer"
+&achieved "Deployed Neptune Cluster"
+&achieved "Deployed Neptune Instances"
+&achieved "Deployed Dynamo Tables"
