@@ -8,10 +8,12 @@ header("Access-Control-Allow-Headers: *");
 	switch ($_GET['cat']) {
 	case "life":
 ?>
+			{ "id": "arrogant-assertions", "title": "Arrogant Assertions" },
 			{ "id": "systems-thinking", "title": "Systems Thinking" },
 			{ "id": "find-out", "title": "Let's Find out Together" },
 			{ "id": "forty-years", "title": "Forty Year Decisions" },
 			{ "id": "forgive", "title": "Forgive and Forget" },
+			{ "id": "guys", "title": "Guys is not Gender Neutral" },
 			{ "id": "induction", "title": "Life is Pointless (by Induction)" },
 			{ "id": "aeroplane", "title": "Life is an Aeroplane" },
 			{ "id": "rational", "title": "What it means to be Rational" },
@@ -22,7 +24,12 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "live-for-you", "title": "I Would Live for You" },
 			{ "id": "open-loops", "title": "Open Loops" },
 			{ "id": "justOne", "title": "Just One Mistake" },
-			{ "id": "truth-falsehood", "title": "Truth and Falsehood" }
+			{ "id": "truth-falsehood", "title": "Truth and Falsehood" },
+			{ "id": "be-it", "title": "Be it, Do it, Say it" },
+			{ "id": "say-mean", "title": "Say what you Mean!" },
+			{ "id": "no-finally", "title": "Life does not have a Finally Clause" },
+			{ "id": "no-time", "title": "I don't have Time" },
+			{ "id": "title", "title": "What's in a Title?" }
 <?php
 		break;
 	case "politics-musings":
@@ -55,6 +62,7 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "iteration", "title": "Iteration" },
 			{ "id": "why-estimate", "title": "Why Do We Estimate?" },
 			{ "id": "estimate-and-decide", "title": "Estimation and Decisions" },
+			{ "id": "agile-done", "title": "Agile Projects are Always 100% Done" },
 			{ "id": "literate-programming", "title": "Literate Prograaming" },
 			{ "id": "deployer", "title": "A Cloud Deployer" },
 			{ "id": "garden", "title": "Planning a Garden" },

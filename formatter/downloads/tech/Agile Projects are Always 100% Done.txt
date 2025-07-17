@@ -1,0 +1,70 @@
+﻿@Article
+title=Agile Projects are Always 100% Done
+saveAs=tech/agile-done
+
+
+I generally don't get involved much in social media.
+
+
+The fact is that it's mainly a troll farm.  And you don't want to feed trolls.  I mainly use Twitter as a way of consolidating various different mailing lists and being able to scroll through things I might be interested in quickly and reliably.  I always just look at tweets from accounts I am "Following", I never let the algorithm get involved.  On Bluesky, I do the same and frequently interact with friends/acquaintances there, along with posting what's going on in my life.
+
+
+My biggest exposure to life-threatening danger is on LinkedIn.
+
+
+As far as I know (and tell me if I just don't know!) there is no way to avoid the algorithm (or the ads) on LinkedIn.  When you log in, you see whatever crap they want to show you.  And so I end up being exposed to all sorts of troll bait that I have no desire to see.  From time to time I give in and slap someone because I can't resist.  Unlike most people, I am not trying to garner engagement, it's just that I sometimes reach a point where I am so frustrated by the stupidity of people that I feel the need to point out their idiocy.
+
+
+And then I sometimes retreat here to mull things over and make a broader or more detailed point.
+
+
+So, here's what &sp
+&link 'https://www.linkedin.com/feed/update/urn:li:activity:7349014602166231041?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7349014602166231041%2C7349141526569988097%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287349141526569988097%2Curn%3Ali%3Aactivity%3A7349014602166231041%29' 'I wrote the other day' 
+&sp in response to a long post about agile vs waterrfall:
+
+
+$$
+No, no, no.
+
+
+An agile project is always exactly 100% done.
+
+
+Everything that has been built, shipped and is running in live is done. Everything else is just so much fantasizing.
+$$
+
+
+The original poster had hypothesized that in a waterfall project it is possible to know how far you are through a project by looking at all the specifications and seeing how far through you are, and then comparing this to "stories" in agile.  While the ultimate conclusion was that agile only cares about work that is "done", in my mind it misses the much bigger, if philosophical point: you cannot *possibly* know how far through a project you are unless you know what the end point is.
+
+
+I want to be clear that this is different to the "usual objection" that, even if you know where you are going, you _still don't know how far you are through_.  Let's go with an analogy.
+
+
+If I am taking a train from Manchester to London, I can see that the timetable says I will be on the train for 2h6m.  If everything goes according to plan, then, I will arrive 126 minutes after I leave.  I am sure that this has happened to me at least once in my life, but if so, I don't remember it.  These trains are almost always late.  So if you ask me at Stoke how far we are through the journey, I *could* look at my watch and say "42 minutes gone, so 33% done, 67% to go".  I would, of course, be lying.  I don't know that.  I'm not going to go through all the various cases, because I'm sure they're obvious.
+
+
+I could, more accurately, tell you what percentage of the _distance_ we've gone, because that is fixed (as it happens, _I_ couldn't tell you this; but I accept the data is out there somewhere).  But, in general, you won't care about that.  What you care about is when you can check in to your hotel/have a coffee/meet your friends/attend a meeting.  And that is about time.
+
+
+Following on from this, the broader point that I want to make about agile is that _the whole question is wrong_.  Suppose we had "no particular reason" for going to London - we just thought it would be good for a weekend.  When we reach Stoke, a friend calls up and says that she is hosting a party in Birmingham.  We discuss it quickly, leave the train at Stoke and get on the Cross-Country service to Southampton instead (which calls at Birmingham).  Leaving aside the inflexibility of the ticketing system on British trains, _how far are we through our journey_?
+
+
+The only truly valid statement I can make about our train journey is that "we have reached Stoke".  Those passengers who wanted to reach Stoke are done, and they can get off.  Those who wanted to go to London are on their way, and those who want to go to Birmingham can get off here and change.
+
+
+Software Projects are pretty much the same.  When you start a software project, you build something.  Anything that you _have built_ and that works, and that you have deployed in some way _is real_ and has been achieved.  It can be used.
+
+
+Everything else is just a conversation you had over coffee.
+
+
+You might think that your system needs a "recurring billing" feature.  Your client may think that.  You may be about to start building it when, suddenly, a sponsor comes forward and says they will pick up all the costs of your system; leave it free at point of use.  Your system no longer needs this feature.  Is your system more or less done that it was this morning?  If you insist that your original specification is the only valid definition of done, it will _never_ now be done, since you are never going to implement this feature.  On the other hand, if you insist that the target may have moved, but not your commitment to it, you are now more done that you were before.  On the other hand, if new requirements come up - oh, and they will - then you will suddenly wake up one morning to be further behind than you were yesterday.
+
+
+All of this is ridiculous.  Mendacious, even.  Sophistry, anyone?
+
+
+The only thing that *ever* counts on any software project is what you have built, shipped and placed in your user's hands.  And that is always 100% done.
+
+
+By definition.

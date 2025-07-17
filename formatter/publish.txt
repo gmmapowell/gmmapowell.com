@@ -4,10 +4,12 @@
 # Each set of articles is grouped by the category into which it should go
 # Each mapping is a one-token destination name followed by a multi-token source name to which ".html" will be appended
 life
+  arrogant-assertions Arrogant Assertions
   systems-thinking Systems Thinking
   find-out Let's Find out Together
   forty-years Forty Year Decisions
   forgive Forgive and Forget
+  guys Guys is not Gender Neutral
   induction Life is Pointless (by Induction)
   aeroplane Life is an Aeroplane
   rational What it means to be Rational
@@ -19,6 +21,11 @@ life
   open-loops Open Loops
   justOne Just One Mistake
   truth-falsehood Truth and Falsehood
+  be-it Be it, Do it, Say it
+  say-mean Say what you Mean!
+  no-finally Life does not have a Finally Clause
+  no-time I don't have Time
+  title What's in a Title?
 
 politics-musings
   empowered-departure Empowered Departure
@@ -43,6 +50,7 @@ tech
   iteration Iteration
   why-estimate Why Do We Estimate?
   estimate-and-decide Estimation and Decisions
+  agile-done Agile Projects are Always 100% Done
   literate-programming Literate Prograaming
   deployer A Cloud Deployer
   garden Planning a Garden

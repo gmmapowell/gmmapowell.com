@@ -1,5 +1,19 @@
-1UV6UxnFvwB9133Yfx6lEuEf4_jls_gEB3TZGLRz_uqk life/Just One Mistake.txt
-1BSSJGup8HYdKcHz2B2K8YAgtHHryT_P1244eMRSjmlg life/Truth and Falsehood.txt
+--downloaded--
+1-j4pqBkqwJyZwFIix_-470A608Un8wwDgu7liz6S6FU life/What's in a Title? .txt
+1NVWeewFtqvoq7oCNkzkEanCuv4JkwDFIm0jWe0jpaz4 life/Guys is not Gender Neutral.txt
+1OC7knrAQ0bJH9vXKX738xtU2nqOCaz_gIWwrrPTw3n4 life/Be It.txt
+1dUd9CE3THZYKRa9DIU_UHDrVYYDxFvjlnYyUw0spDng life/No Time.txt
+1-cv1cfskeS60tr5ezQgQk6_G_m-jB_SRw5CcrJ8WzOw life/Life does not have a Finally Clause.txt
+1lz95Z0PGDb-KqE0qqtGeluPoofj1rhUZMJfMxA9XERo life/Say what you Mean!.txt
+1XABBC8Z4rsYRXvNR46oNRXB7CrFODsy36jVm2qQoc4M life/Arrogant Assertions.txt
+1F8SFMthqdWPE-87pEg4ZWbJybHKoxCrk9duEbIq_JH0 tech/Agile Projects are Always 100% Done.txt
+--excluded--
+1fkFV_n9iW15aZEedsB3BSUcMkn638_ozsMLMfgGjwQE now/2025-07-16.txt
+1wUyOlQyr4EBub2RmQYdgyll0tTAlyr5g6ZpHgFgL2zw now/2024-12-28.txt
+1naM_G_GNGZCuE-5HphIPfJe8cYWa5PVu6ERvb2XyRtM now/2023-05-02.txt
+1tLDB_F8aG1_P2bqxM9fTItm-mX0HLR9_KzFGdItPe6Q now/2021-12-31.txt
+18VOPAkG4NaVFmaRcp1zvAt2hT3QuOntUDuIkM0epPhM now/2020-11-08.txt
+1PTpUQ3UvaWaFDz_1D4Em1CSEtpHB1o--m3OWJ1pYsN4 now/2020-07-15.txt
 --excluded--
 --downloaded--
 10a_MIMFV__isf-BCKzvI0LF4N2aaOQUyCilUzhgbmBU tech/About this Site.txt
@@ -51,3 +65,7 @@
 18JGNdpfli1Cr5Smx0cd7AaTRf58hCwfyMoZYiBGYCfQ tech/Rewiring.txt
 10-V-PSni0fZigyYpDtqRXrzW6VgVu1Y2ENFfguAe61g life/Systems Thinking .txt
 1E6Lz9XnY7biL_8CXrfcUNVH7ENzofQcwJaKzFhESMiA life/Open Loops.txt
+1UV6UxnFvwB9133Yfx6lEuEf4_jls_gEB3TZGLRz_uqk life/Just One Mistake.txt
+1BSSJGup8HYdKcHz2B2K8YAgtHHryT_P1244eMRSjmlg life/Truth and Falsehood.txt
+
+
