@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -ex
 
-cd IMAGE
+ROOT="`dirname $0`"
+ROOT="`dirname $ROOT`"
+cd $ROOT/IMAGE
 php -S localhost:9091

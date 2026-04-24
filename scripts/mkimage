@@ -14,5 +14,7 @@ cp -r src/ajax IMAGE
 cp -r articles IMAGE
 cp -r formatter/wol-html/* IMAGE/ajax
 
+# This overrides the css which should have been copied into the app dir
+cp -r src/ui/*.css IMAGE/css
 cp custom/fakeit.html IMAGE
 cp custom/css/* IMAGE/css

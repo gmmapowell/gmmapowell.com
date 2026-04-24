@@ -59,7 +59,7 @@ tech
   why-estimate Why Do We Estimate?
   estimate-and-decide Estimation and Decisions
   agile-done Agile Projects are Always 100% Done
-  literate-programming Literate Prograaming
+  literate-programming Literate Programming
   deployer A Cloud Deployer
   garden Planning a Garden
   wheels Reinventing the Wheel

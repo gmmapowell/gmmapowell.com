@@ -74,7 +74,7 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "why-estimate", "title": "Why Do We Estimate?" },
 			{ "id": "estimate-and-decide", "title": "Estimation and Decisions" },
 			{ "id": "agile-done", "title": "Agile Projects are Always 100% Done" },
-			{ "id": "literate-programming", "title": "Literate Prograaming" },
+			{ "id": "literate-programming", "title": "Literate Programming" },
 			{ "id": "deployer", "title": "A Cloud Deployer" },
 			{ "id": "garden", "title": "Planning a Garden" },
 			{ "id": "wheels", "title": "Reinventing the Wheel" },
