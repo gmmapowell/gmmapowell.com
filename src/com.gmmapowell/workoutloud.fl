@@ -9,7 +9,7 @@
 				| => (fillTargetCenter 75 73) 'backdrop'
 			article-title <- 'Working Out Loud'
 			content <- content
-				| => 'workoutloud-content'
+				| => 'workoutloud-content flas-scrollable'
 
 		requires Ajax ajax
 

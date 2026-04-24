@@ -7,8 +7,11 @@
 
 	.workoutloud-content {
 		overflow-x: scroll;
+		overflow-y: hidden;
 		white-space: nowrap;
 		height: 90%;
+		--flas-scroll-to: last-item;
+		background-color: white;
 	}
 
 	.workoutloud {
