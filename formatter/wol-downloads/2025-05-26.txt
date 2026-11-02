@@ -1,0 +1,21 @@
+﻿@WorkOutLoud
+
+
+Wed
+
+
+2 hours Starting on CT600 transmission
+1 hour Writing web content
+3 hours Baseball Stats
+
+
+Thu
+
+
+2 hours CT600 XML formats
+1 hour generating ct600
+
+
+&totalhours 9
+&project "GnuCash Blog"
+&project "BaseballStats"

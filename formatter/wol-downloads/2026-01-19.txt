@@ -1,0 +1,44 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - trying to understand flakiness of submissions
+1.5hrs - moving to etree.Element
+
+
+Tue
+
+
+0.5hrs - moving to etree.Element
+
+
+Wed
+
+
+0.5hrs - moving to etree.Element
+1hr - trying to fix errors in submissions
+
+
+Thu
+
+
+1.25hrs - Quickbuild build everything that has changed
+0.5hrs - fixing issues with wdioziniki unpacking
+
+
+Fri
+
+
+0.5hrs - Patching up serstories.dply
+1hr - working with localstack to try and get CF working
+0.5hrs - trying to get acm cert to work for serstories
+
+
+&totalhours 8.25
+&project "GnuCash Blog"
+&achieved "Fixing submission errors"
+&achieved "Moved to etree"
+&project QuickBuild
+&achieved "Build everything that has changed"

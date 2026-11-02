@@ -1,0 +1,32 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - tidying up attrs in etree usages
+1.5hrs - collecting account values in generator 
+
+
+Tue
+
+
+.5hr - writing up blogs
+
+
+Wed
+
+
+.5hr - writing up blogs
+1.75hr - configuring reports
+
+
+Thu
+
+
+3hr - configuring reports
+
+
+&totalhours 8.25
+&project "GnuCash Blog"
+&achieved "Configuring Reports"

@@ -1,0 +1,47 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1.5hrs - JarJar for file list resources
+
+
+Tue
+
+
+1hr - JarJar for file list resources
+
+
+Wed
+
+
+1.5hrs - JarJar for ziniki resources
+
+
+Thu
+
+
+1hr - docker working on ampleforth
+1hr - JarJar for Ziniki resources
+2.5hr - switchability between docker and AWS live
+
+
+Sat
+
+
+2hrs - deploying to docker/localstack
+2hrs - accounts issues with canonicalization
+
+
+Sun
+
+
+.5hrs - regex matching in deployer
+1.5hrs - regex replacement in deployer
+.5hrs - expressions with assignment as commands
+
+
+&totalhours 15
+&project QuickBuild
+&project Deployer

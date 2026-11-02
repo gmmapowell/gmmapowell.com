@@ -1,0 +1,50 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+2hrs - integrating splitter into main flow
+2hrs - postgres & schema evolution
+1hr - stripping down build
+1.5hrs - fixing issues with build & splitter
+
+
+Tue
+
+
+1.5 hrs - evolving with test data
+2hrs - refactoring deployer
+1hr - refactoring deployer
+
+
+Wed
+
+
+3 hrs - deploying Aurora
+2 hrs - refactoring evolution tool to work with Aurora 
+
+
+Thu
+
+
+1hr - getting aurora up and running
+2hrs - fixing up scripts to work with Aurora
+
+
+Fri
+
+
+2hrs - finding users to support Aurora perms
+
+
+Sat
+
+
+2hrs - unit tests to support (x->m)
+
+
+&totalhours 23
+&project Ziniki
+&achieved "Integrating new splitter"
+&achieved "Aurora test"

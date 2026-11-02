@@ -1,0 +1,55 @@
+﻿@WorkOutLoud
+
+
+Mon 5.5
+
+
+2.5hrs Deployer --destroy mode
+3hrs - Certs with DH
+
+
+Tue 3
+
+
+2hrs Certs with DH
+1hr Writing Deployer Website
+
+
+Wed 2.75
+
+
+1hr Invalidating CF cache
+0.25hrs Neptune Blog
+1.5 styling deployer website 
+
+
+Thu 7
+
+
+1hr Neptune Blog
+6hrs Deployer Documentation
+
+
+Fri 6.5
+
+
+1hr Deployer doc
+3.5hr - deployer bidmas parsing
+2hr - fixity operator parsing
+
+
+Sat 1
+1hr fixity parsing
+
+
+Sun 1
+1hr fixity parsing
+
+
+&totalhours 26.75
+
+
+&project Deployer
+&achieved "BIDMAS Expression Parsing in Deployer"
+&achieved "Deployer website up"
+&achieved "Invalidating CloudFront cache"

@@ -1,0 +1,41 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+0.5 hour deployer - framing up next golden test
+
+
+Tue
+
+
+3.25 Blog - Chrome Debugger
+
+
+Wed
+
+
+3.25 Blog - Chrome Debugger
+
+
+Thu
+
+
+0.5 Blog - Review and Publish
+
+
+Fri
+
+
+2hr Blog - Chrome Debugger
+
+
+Sat
+
+
+1hr blog - Blogging about finished debugger
+
+
+&totalhours 10.5
+&project "Chrome Debugger Blog"

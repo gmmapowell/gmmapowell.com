@@ -1,0 +1,61 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+2 hours - adding more golden tests
+
+
+Tue
+
+
+6 hours
+ paren scanning
+ env var test
+ copy files test
+ read env vars
+ basic files actions
+
+
+Wed
+
+
+4 hours - Deployer
+  refactoring & getting tests to pass
+
+
+Thu
+
+
+4 hours - Deployer
+  fixing issues with variables & scopes
+
+
+Fri
+
+
+2 hours - Deployer
+  pulling everything together
+2 hours - Deployer
+  breaking ground on AWS module
+
+
+Sat
+
+
+2 hours - Deployer
+ Working with S3 and errors
+
+
+Sun
+
+
+1 hour - Deployer
+  Bucket actual creation
+
+
+&totalhours 23
+&project Deployer
+&achieved "Worked through more actions in deployer"
+&achieved "Deployer actually created a bucket in live"

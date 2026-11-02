@@ -1,0 +1,17 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - finishing up expressions as names in ensure
+
+
+Fri
+
+
+. 75hrs - files. Project_dir
+
+
+&totalhours 1.75
+&project Deployer

@@ -1,0 +1,51 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - fixing up issues with deployer that I should have got done on the flight yesterday
+
+
+Tue
+
+
+2hrs - fiddling with iXBRL submissions
+
+
+Wed
+
+
+2hrs - fiddling with iXBRL submissions
+
+
+Thu
+
+
+2hrs - fiddling with iXBRL submissions
+3hrs - deployer updating CBs
+
+
+Fri
+
+
+1hr - deployer default root object
+1hr - lambda parsing
+2.5hrs - lambda creation/teardown
+
+
+Sat
+
+
+2hrs - creating nested role for Lambda
+
+
+Sun
+
+
+2hrs - resolving things in lambda
+
+
+&totalhours 18.5
+&project Deployer
+&project "GnuCash Blog"

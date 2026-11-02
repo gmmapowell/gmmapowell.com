@@ -1,0 +1,36 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - trying again with ixbrl
+
+
+Tue
+
+
+1hr - deployer website
+
+
+Wed
+
+
+1hr - deployer website
+
+
+Thu
+
+
+1hr - deployer website
+
+
+Fri
+
+
+1hr - deployer website
+
+
+&totalhours 5
+&project "GnuCash Blog"
+&project Deployer

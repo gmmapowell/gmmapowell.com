@@ -1,0 +1,73 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr handling policy conditions & deferred reading of ARN
+1hr tearing down distributions
+1hr attaching policies to buckets
+
+
+2hrs CNAME records and distribution aliases/certs
+1.5hrs mime types and default object
+
+
+Tue
+
+
+2hrs breaking up distribution_creator
+1hr breaking up distribution_creator
+
+
+Wed
+
+
+30mins patching up distribution 
+30mins extracting file and env processing
+1hr breaking apart driver and deployer
+
+
+Thu
+
+
+2hrs breaking apart driver and deployer
+1hr refactoring
+
+
+3hrs webgl sample
+
+
+Fri
+
+
+1.5 hours finishing up rewiring
+0.5 hrs refactoring
+0.5 hrs refactoring
+
+
+1hr lists
+0.5 lists
+
+
+Sat
+
+
+0.5 lists
+
+
+4hrs WebGL textures typo
+
+
+Sun
+
+
+1hr WebGL texture type
+1hr refactoring
+2hrs WebGLRenderer
+3hrs WebGLRendering full version
+
+
+&totalhours 31
+&project FLASWebGL
+&project Deployer

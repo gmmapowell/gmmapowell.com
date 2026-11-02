@@ -1,0 +1,55 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr: implementing certificate teardown and wait
+2hrs: starting on cloudfront distribution
+
+
+Tue:
+
+
+2hrs: finishing up basic cloudfront distribution
+1hr: getting started on policies
+
+
+Wed:
+
+
+3hrs: implementing functions
+
+
+Thu:
+
+
+1hr: conditional actions
+30mins: fixing binding
+2hours: refactoring
+2hours: generating policies
+
+
+Fri
+
+
+1hr processing policies
+1hr handling predefined constants
+30mins getting policy generation closer
+
+
+Sat
+
+
+3hrs webgl sample
+
+
+Sun
+
+
+1.5hrs policy principals and nested actions 
+
+
+&totalhours 21.5
+&project Deployer
+&achieved "Certificates in deployer"

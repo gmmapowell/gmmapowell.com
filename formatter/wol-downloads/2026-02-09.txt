@@ -1,0 +1,25 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+.75hr - calculations
+1hr - calculations
+
+
+Fri
+
+
+1.5hr declarations
+
+
+Sat
+
+
+.75hr balance sheet calculations
+
+
+&totalhours 4
+&project "GnuCash Blog"
+&achieved "Completed balance sheet"

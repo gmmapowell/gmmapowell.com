@@ -1,0 +1,29 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+3 hrs - Deployer Testing Framework
+
+
+Tue
+
+
+1 hr - Deployer Testing Framework
+
+
+Wed (on plane & at Schiphol airport)
+
+
+2 hrs - Deployer Testing Framework
+
+
+Sat
+
+
+1 hr - writing sample policies file
+
+
+&totalhours 7
+&project Deployer

@@ -1,0 +1,48 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1.5hrs Deployer parsing lists
+2hrs Deployer - multiple domain names & ALIAS record
+1hr WebGL camera
+
+
+Tue
+
+
+2.5hrs Deployer - sorting out initial state vs desired state
+
+
+Wed
+
+
+1.5hrs deployer - tracking variables "properly"
+1.25hrs deployer - coin ids
+1.5hrs webgl - fiddling with camera
+
+
+Thu
+
+
+0.5 hrs webgl - fiddling with camera
+0.5 hrs deployer - figuring out provenances.
+
+
+Fri
+
+
+3hrs - extracting models from actions
+
+
+Sun
+
+
+5hrs - extracting models from actions
+
+
+&totalhours 20.25
+&project Deployer
+&project FLASWebGL
+&achieved "Handled ALIAS records"

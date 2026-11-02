@@ -1,0 +1,313 @@
+﻿politics has a number of sub-categories.  One of these should "topical" for the assisted suicide etc.
+
+
+Living or just waiting to die
+* People don't like waiting for things
+Lige/keeping breathing 
+* Merely breathing is not life
+* Need a purpose
+* Need to feel you are fulfilling that purpose
+* Need happiness 
+* Thing about Bruce and isolation with a six pack and TV - or social media
+life/systems thinking 
+life/open loops & how i hate them
+life/life-is-pointless proof-by-induction (and link into philosophical suicide at "pointless")
+Life/forgive, forget, (don't) repeat
+Life/truth and falsehood as per my email to PAAJ
+Life/one lie or mistake makes me doubt everything 
+* Eg one stat wrong in chiefs game makes me doubt all the stats
+* (no points conceded when it was 3)
+Life/I would live for you 
+life/marriage and retirement - 40 years
+Life/running to or from
+* I keep changing projects 
+* I mix up work, sport, gym etc. 
+* Am I excited by the new or bored of the okd
+* This is not how I used to be - discipline 
+Life/love is not all you need
+* Even in the sense they meant it
+* You need the ability to talk 
+* To find. Middle ground
+* Creativity
+Life/let's find out together
+* Similar to "I don't know" 
+* But is not an "out" 
+* Encourages people to collaborate 
+* And think collaboratively
+* Accepts there may be other solutions I don't know even if I know one
+* Gives you the opportunity to learn yourself 
+* More fun than doing it by yourself. 
+life/guys is not gender neutral 
+life/be it - do it - say it
+life/i don't have time
+Life/no-finally
+life/no-finally
+life/Honest feedback 
+Life/say what you mean
+* How are you? Are you OK there? 
+Life/let it go - or fix it? Always second best advice at best
+Life/trying to explain to people what your default mental state is
+* And then have a normal relationship 
+Life/arrogant assertions 
+* David Hockney I do
+* This whole website is asserting that other people just don't think things through. I do. Even if I don't end up in the right place
+life/intensity
+* living life like it matters
+* not about your job, it's about your approach
+* but i didn't realize this for the longest time
+Life/focus
+* Where do you give your attention 
+* Anna in a place of tides (esp p148) 
+Life/managing risk
+Life/promiscuity cards
+life/language is deteriorating 
+life/sorry- good game
+Life/tolerance as a virtue
+life/it's my life - rest of bits from WalkAway #1 - my life and MY choice
+Life/planned or flexible 
+Life/politics in the office
+Life/raising awareness events and raising funds for charity
+life/faux precision
+life/better service for you than for me
+* eg making someone a cup of tea (i care more about how yours is than how mine is)
+* eg software development (incl blog vs personal)
+Life/TicketMaster 
+* Don't like monopolies
+* Fairer surge pricing
+* Auction w/raffle at low prices
+* Analyze from first principle values and systems thinking
+* Reply to Joe on Bluesky
+life/marriage-as-a-contract
+* Simplified version of the thing I have planned somewhere
+life/organize-by-priority
+* bunchof things
+* comes naturally to me
+* if things are equal, it doesn't matter
+* urgent vs important
+life/joy-of-the-young
+* why does life stop being joyous at age 7 or 11?
+* Did the 60s generation try and dodge that?
+* Are these societal antibodies?
+Life/not had the opportunity vs not put in the effort
+Life/being authentic
+* It's still situational
+* Depend
+Life-songs:
+* Chimes if Freedom 
+* It ain't no sin to be glad you're alive
+* Ghosts? I'm on my own 
+Life/won't-ever-do list 
+* CF todo list and not-to-do lists 
+* I won't get around to this
+* First is queueing theory phd
+* Asg? Or should I have another go? 
+* Midi
+* Life/nobody wins
+
+
+politics/advertising is corruption
+politics/big infrastructure (like but not hs2)
+politics/population growth - elon, immigration
+politics/disused buildings
+politics/housing and rentiers
+* musing - why this is, Adam Smith, what could be done about it
+* quickfix - govt can compete at the cheap end of the scale
+politics/wealth tax
+politics/culture Welsh rugby and choirs and factories
+politics/what is wrong with simple solutions - Elon & elections, planning, Trump & healthcare, Boris - it's a lack of thinking about the questions, not having all the answers
+politics/free stuff destroys value
+* And insurance
+* So does volunteering
+* Maybe money measures the wrong things
+politics/triggers and compensating - talking about grandchildren / Ireland playing in white against wales
+* Mecca bingo and blirz
+* Dogs in restaurants
+* Smoking - who is infringing who's rights here?
+Politics/rule of law as opposed to freedom or democracy
+Politics/wealth hoarders
+Politics/Democracy and gullibility
+* Democracy does not work when people vote the way they are told, not for what is best for them
+* Make the wider point that it is certainly not the case that most people vote for what is best for the system
+politics/waste
+* Key to env repair: sell your waste products
+   * Or pay extortionate fee to have govt collect them
+Politics/prime the pump
+* Suspend disbelief about growth being good
+* How do you get it
+* Need people to spend more
+* So need more people with disposable income
+* It doesn't take a genulius to figure out how to make that happeb
+* Put more money in the hands of poor people
+* And take it from the super rich
+* Tax cuts will generally not get you there 
+* Because the people you are trying to reach already pay negligible taxes
+
+
+sports/ivan-cleary
+* https://www.rugbypass.com/plus/johann-van-graan-the-bulls-boy-who-would-be-englands-king/
+sports/miking up refs - swearing carries fines and bans
+sports/football violence - compare to legalizing prostitution
+sports/beating line speed in rugby Colin cooper
+* Compare to beating narrow swarm defence in the 90s with crossfield kick
+sports/football injury time is stupid
+sports/inconsistent rules
+* Specifically rolling mails and offside
+sports/TMO and VaR
+* Can you be 100%?
+* Is it worth it, then? 
+* Things that happen too fast
+sports/rugby player welfare
+* individuals play less games than total in season
+* remove internationals from domestic game most of the time
+sports/clear rules not severe punishment 
+* tacke hieght & burden on attacking players
+* No cards
+sports/rugby is a simple game
+* And yet a metaphor for life
+* And it never 
+* pays to cheat
+sports/improve rules of football 
+Spoets/attacking strategies in football
+Sports/fix Welsh rugby
+* Link to abi today (3/20)
+* Some things like population can't be fixed
+* Can engagement - historic strength
+* Bring in bit players from nz
+* Skills coaches from NZ but get them to work at grass roots as well
+
+
+Tech/iteration length
+* Will always be 1 natural week for me
+* Irl as well as project planning
+* I work by the week and day 
+tech/what is Agile (personal view) 
+* JB on Agile
+   * https://www.linkedin.com/posts/jbrains_youre-in-an-elevator-with-the-ceo-shes-activity-7299822730726506496-5Y3S/
+* Balance
+   * https://mercerislandma.com/the-important-role-of-balance-in-martial-arts/
+tech/how mind-blowing is literate programming?
+Tech/truly parallel circuitry
+* Remove clock
+* Talk about less certainty
+* Higher performance for AI
+Tech/wheels
+* I am an inveterate reinventor of the wheel. 
+* It may exist but does it have rubber tyres yet? 
+* I thought this meant I was cut out for research, but it turns out that requires a lot more abstract thinking than I am capable of. 
+Tech/multi level planning
+* Long term plans for gardens as a metaphor for all project planning. 
+* Idea that it takes a long time - vines and olives
+* Need to think about where you want to be in 20 years
+* But don't plan all the details at that level
+* Planning software is just like that 
+Tech/deployer
+Tech/teamradar
+* Radar chart of what team members are sensitive to 
+* Deadlines/quality/team harmony/growth/learning/architecture /technology
+* Not what you do, what causes you pain
+tech/the next big thing - blockchain, AI, marketing
+tech/software rot
+tech/why I hate the moniker "pro"
+tech/what goes around comes around
+* Number of times the wheel has been reinvented in my life
+* Particularly notifications and events
+tech/tradeoff between "doing it right" and "getting it done"
+* will have to "do it again"
+* but can meet a deadline and focus on something else
+Tech/paperless and death - how do people left behind know? 
+* Should be a central clearing house or register
+* That is a good, non-hype blockchain app
+Tech/list of blog posts, categorised
+tech/what is agile (more items)
+* Short cycle time
+* Guaranteed delivery
+* No long term commitment 
+* Always ready to go in any direction
+* Can "always" halve the cycle time (Marx broz always room for one more) 
+* No time for manual testing or deployment 
+* Be efficient in use of resources
+Texh/agil-sclae
+* It's a question of scale
+* Still design/code/test/deploy
+   * Only logical order 
+* But in small chunks
+* Quote Alice looking glass pass cake
+* Can specify test plan in design.
+* Write tests before code == make test plan in design
+* Enables feedback
+* There are also multiple scales
+   * Feature
+   * Epic
+   * "release" 
+   * Project
+   * Product
+   * Programme
+tech/agile-is-always-100%-done
+* ref LinkedIn post
+tech/retrospectives
+Rhode Island Coffee and their system
+Tech/stupid questions on linkedib
+* Impossible to actually answer in the abstract
+* Seem designed to get people engage and argue
+tech/scenario driven development
+* Higher level than TDD
+* Use storyboard scenarios to say "this is what people really want to do"
+* And then under that build UTs
+* Do multi-level TDD
+Tech/software quality is different 
+* My dad was a QA manager. 
+* Most things it's about checking the instructions have been followed
+* Other times it's about checking the machines worked properly or the materials are good enough 
+* When you sell software, you are selling the instructions. While production errors are possible, that isn't what software QA is. 
+Tech/tooling and architecture 
+* Main point is about tooling and how much I like doing it. 
+Tech/on bugs mistakes and ai
+* Difference between mistakes and bugs
+* Unit testing catches mistakes
+* You are focused on that
+* Bugs come in through the cracks, like in a house. 
+* Metaphor of complexity like a net
+   * You test the ropes and the knots
+   * But the problem is the gaps in between 
+   * Bugs can climb through
+   * It's easier to handle if the net is generally well made, but if it's a tangle... 
+   * Refactoring is all about removing the tangles. 
+* Example of a calculator 
+   * This is deliberately trivial
+   * We can do 2+2=4
+   * And 3*5=15
+   * But we make 3+4*5 possible without thinking about it... And it returns 35.
+* Can AI help? 
+   * Another analogy: pulling out on a freeway. Accidents happen because you have to look at 5 things at once. 
+   * You need help watching complexity 
+   * Current AI tools just do the opposite: they generate slop without watching for complexity. 
+   * If I had a programming assistant, I would want it to be watching for and thinking about - and generating test cases for - those things. 
+
+
+A whole bunch of tech/ things on "real work" and my philosophy
+tech/flas
+tech/reactive
+tech/subscriptions
+tech/distributed
+tech/large scale testing
+tech/centering images in css
+tech/printing and css
+
+
+and on side projects with links to blog
+tech/garminwatch
+tech/metrolink
+tech/script formatter
+tech/blockchain
+
+
+
+
+https://www.linkedin.com/posts/shawnwallack_weve-got-agile-and-ai-so-why-do-projects-activity-7345405773167968257-bVLz?utm_source=share&utm_medium=member_android&rcm=ACoAAAI7Zj0BF8c5YeYfdcwedq0zopB-6R0wjic
+
+
+Look for old documents somewhere. And the rugby scheduling app I did. 
+* Rugby app: file:///Users/gareth/Projects/WorldRugby/html/index.html
+
+
+Each section should have an "about". Attach this to the title bar

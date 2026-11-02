@@ -1,0 +1,24 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - Refactoring & Testing Files.dir/files.file
+
+
+Tue
+
+
+1hr - refactoring & test files/dir
+1hr - figuring out bash action
+
+
+Sun
+
+
+2 hours - figuring out composite actions 
+
+
+&totalhours 5
+&project Deployer

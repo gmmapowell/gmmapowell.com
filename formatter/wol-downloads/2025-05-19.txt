@@ -1,0 +1,16 @@
+﻿@WorkOutLoud
+
+
+Thu
+
+
+1 hr - teardown in reverse order & copy file contents
+
+
+2 hours - publishing blogs about GnuCash
+
+
+&totalhours 3
+&project Deployer
+&project "GnuCash Blog"
+&achieved "Published blogs around GnuCash"

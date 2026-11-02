@@ -1,0 +1,17 @@
+﻿@WorkOutLoud
+
+
+This week started with football on Easter Monday, then admin Tue & Wed, and I went to Shaw on Thu, so ...
+
+
+Fri
+
+
+3 hrs - getting started with GnuCash
+
+
+And then football @FGR on Saturday
+
+
+&totalhours 3
+&project "GnuCash Blog"

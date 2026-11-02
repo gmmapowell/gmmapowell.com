@@ -1,0 +1,50 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+4 hrs - GnuCash
+
+
+Tue
+
+
+5 hrs - GnuCash
+Also talked to Martin
+
+
+Wed
+
+
+3 hrs - Deployer
+Also talked to Pat
+
+
+Thu
+
+
+2 hrs - more serious parsing
+
+
+Fri
+
+
+2 hrs - Deployer
+inline modules
+
+
+Sat
+
+
+2 hrs - Deployer
+Added hours function
+Sun
+
+
+1 hr - Deployer
+
+
+&totalhours 19
+&project "GnuCash Blog"
+&project Deployer

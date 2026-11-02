@@ -1,0 +1,56 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+3hrs - LSP testing
+
+
+Tue
+
+
+2hrs - Lsp error handling
+
+
+Wed
+
+
+2hrs - Lsp error handling for html files
+
+
+Thu
+
+
+2hrs - figuring out issue with HTML error handling was all my fault
+3hrs - working through error handling
+
+
+Fri
+
+
+2hrs - fixing code paths for LSP
+3hrs - reworking splitter to not use ZIP file but repository
+.5hr - fixing issues with uri names in phase 2
+1.5 - fixing issues with uri names in phase 2
+
+
+Sat
+
+
+.5hr - fixing issues with running Ziniki apps in Eclipse
+1.5hrs - figuring out how to test VSIX extension
+1.5hrs - taffing with build and playwright tests
+1hr - fixing up CSS and resource issues in splitter
+1hr - working on testing extension
+
+
+Sun
+
+
+.5hr - fixing issue with memory content objects & uris
+
+
+&totalhours 25
+&project Ziniki
+&achieved "Improved LSP for VSCode"

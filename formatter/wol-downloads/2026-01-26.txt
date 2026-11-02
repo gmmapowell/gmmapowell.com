@@ -1,0 +1,50 @@
+﻿@WorkOutLoud 
+
+
+Mon
+
+
+1hr - blogs for GnuCash 
+
+
+Tue
+
+
+1hr - handling pending returns
+1.5hrs - getting deployer working with docker
+
+
+Wed
+
+
+1hr - fixing ct600
+
+
+Thu
+
+
+1hr - computations for ct600
+3hrs - generating accounts ixbrl
+
+
+Fri
+
+
+2hrs - generating accounts ixbrl 
+
+
+Sat
+
+
+3hrs - generating comps ixbrl
+
+
+Sun
+
+
+0.5hrs - tidying things up
+
+
+&totalhours 14
+&project "GnuCash Blog"
+&achieved "Generating IXBRL templates successfully"

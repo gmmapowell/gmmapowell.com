@@ -1,0 +1,26 @@
+﻿@WorkOutLoud
+
+
+"On holiday" - Keukenhof & Atlanta
+
+
+Tue - on plane to Atlanta
+
+
+3 hrs - Deployer Parsing
+
+
+Fri
+
+
+1 hr - Deployer Parsing
+
+
+Sat
+
+
+1 hr - Deployer Parsing
+
+
+&totalhours 5
+&project Deployer

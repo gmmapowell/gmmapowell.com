@@ -1,0 +1,24 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+1.5hrs - trying to access custom styling properties
+
+
+Thu
+
+
+1.5hrs - scrolling html box for workoutloud horizontally
+
+
+Fri
+
+
+1hr - scrolling html box vertically
+
+
+&totalhours 4
+&project Website
+&achieved "Scrolling WOL box"

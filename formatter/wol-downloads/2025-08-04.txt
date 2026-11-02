@@ -1,0 +1,53 @@
+﻿@WorkOutLoud
+
+
+Mon - 3
+
+
+2hrs - lambda permissions
+1hr - api action
+
+
+Tue + 5 =8
+
+
+3hrs - finishing up website composite
+2hrs - building webapp for neptune
+
+
+Wed + 7.5 = 15.5
+
+
+1hr - styling webapp for neptune
+2hrs - attempting to deploy lambda & gateway
+.5hrs - fixing issues with attachments for HMRC
+4hrs - fixing the connectivity issues with Lambda (once and for all?)
+
+
+Thu + 3 = 18.5
+
+
+1hr - trying to reconstruct and blog
+2hrs - sorting out lambda permissions
+
+
+Fri + 3 = 21.5
+
+
+1hr - sorting out issues with blog
+1hr - blogging about publishing
+1hr - making publish lambda
+
+
+Sat + 3 = 24.5
+
+
+1hr - finishing up publication
+2hrs - connecting everything together
+
+
+&totalhours 24.5
+&project Deployer
+&achieved "Deploying lambdas and api gateways"
+&project "Neptune Blog"
+&achieved "Neptune blog completed with webapp"

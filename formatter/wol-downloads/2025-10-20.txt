@@ -1,0 +1,23 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+2hrs - working on deployer VPC
+
+
+Thu
+
+
+3hrs - refactoring deployer
+
+
+Sun
+
+
+4hrs - refactoring deployer
+
+
+&totalhours 9
+&project Deployer

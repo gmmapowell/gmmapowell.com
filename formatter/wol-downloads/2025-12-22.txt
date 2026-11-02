@@ -1,0 +1,12 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - expressions as "eval" command
+1hr - ++ and bucket names
+
+
+&totalhours 2
+&project Deployer

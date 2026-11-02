@@ -1,0 +1,33 @@
+﻿@WorkOutLoud
+
+
+Thu
+
+
+2 hrs - fixing up build
+
+
+Fri
+
+
+1hr - fixing up build
+1hr - releasing deployer
+3hrs - working on splitter rewrite
+
+
+Sat
+
+
+2hrs - splitter rewrite
+
+
+Sun
+
+
+1hr - splitter rewrite 
+
+
+&totalhours 10
+&project Ziniki
+&project Deployer
+&achieved "Released Deployer"

@@ -1,0 +1,17 @@
+﻿@WorkOutLoud
+
+
+Thu
+
+
+1hr - fixing up file handling to support bash command
+
+
+Sun
+
+
+1hr - fixing up file handling
+
+
+&totalhours 2
+&project Deployer

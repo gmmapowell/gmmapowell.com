@@ -1,0 +1,55 @@
+﻿@WorkOutLoud
+
+
+Mon - 1
+
+
+1hr - Deployer resolving role things
+
+
+Tue + 2 = 3
+
+
+1hr - fixing up role issues
+1hr - publishing versions
+
+
+Wed + 4 = 7
+
+
+1.5 publishing versions 
+1.5 publishing versions
+1hr api gateway basics
+
+
+Thu + 1 = 8
+
+
+1hr api gateway basics
+
+
+Fri + 3.5 = 11.5
+
+
+1.5hrs integrations
+2hr routes, stages, deployments, starting on VPC.
+
+
+Sat + 2.5 = 14
+
+
+0.5hrs VPC subnet & security groups
+1hr VPC
+1hr VPC
+
+
+Sun + 3.5 = 17.5
+
+
+2hrs trying to get lambda to work in VPC
+.5hrs fixing roles
+1hr fixing role & add permissions
+
+
+&totalhours 17.5
+&project Deployer

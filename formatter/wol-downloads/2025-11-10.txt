@@ -1,0 +1,30 @@
+﻿@WorkOutLoud
+
+
+Wed
+
+
+2hrs - patching up LSP
+
+
+Thu
+
+
+3hrs - building foundations for LSP
+
+
+Sat
+
+
+1hr - lsp testing
+
+
+Sun
+
+
+1hr - lsp testing 
+
+
+&totalhours 7
+&project Ziniki
+&achieved "Improved LSP"

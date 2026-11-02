@@ -1,0 +1,22 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+1hr Quickbuild
+
+
+Wed
+
+
+.25hr GnuCash
+
+
+Thu
+
+
+1.5hrs GunCash
+
+
+&totalhours 2.75

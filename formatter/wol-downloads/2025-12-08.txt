@@ -1,0 +1,48 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+2hrs - making wdiozinikitests work with static html
+2.5hrs - resurrecting zini53
+.5hrs - fixing quickbuild bugs
+4hrs - fixing quickbuild bugs
+
+
+Tue
+
+
+2hrs - working on wdioziniki failed login tests
+1hr - working on the ampleforth build
+2hrs - improving locking tracing to make it easier to pair lock/unlock
+
+
+Wed
+
+
+.5hr - improving ziniki tests
+1hr - updating certificate
+
+
+Thu
+
+
+1hr - working on QB performance
+1.5hrs - fixing issues with playwright tests
+
+
+Fri
+
+
+1.5hrs - Quickbuild jarjar
+
+
+Sun
+
+
+0.5hrs - Quickbuild jarjar
+
+
+&totalhours 20
+&project QuickBuild

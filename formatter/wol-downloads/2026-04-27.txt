@@ -1,0 +1,46 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - CT600 computations
+
+
+Wed 
+
+
+1.5hr - Figuring out issues with modeller and accounts and Google Sheets
+0.5hr - Rediscovering where I was with Ziniki and Postgres
+2hr - Working on DbEvolver
+
+
+Thu
+
+
+1hr - Replacing old UUID with real UUID
+2hrs - fixing bugs in ziniki golden tests
+
+
+Fri
+
+
+1hr - relational db/aurora work
+
+
+Sat
+
+
+1hr - inserting reldb into permissions()
+
+
+Sun
+
+
+0.5hr - Fixing up issues with reldb and the build
+
+
+&totalhours 10.5
+&project GnuCash
+&project Modeller
+&project Ziniki

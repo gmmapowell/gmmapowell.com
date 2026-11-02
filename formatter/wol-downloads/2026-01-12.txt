@@ -1,0 +1,25 @@
+﻿@WorkOutLoud
+
+
+Fri
+
+
+2hrs - getting accounts with two attachments to work
+.5hrs - finishing up files.project_dir
+
+
+Sat
+
+
+1hr - writing blog to go with inclusive canonicalization
+1hr - getting accounts with attachments to pass
+
+
+Sun
+
+
+0.5hr - working again
+
+
+&totalhours 5
+&project "GnuCash Blog"

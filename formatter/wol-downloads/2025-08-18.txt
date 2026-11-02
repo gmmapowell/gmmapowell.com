@@ -1,0 +1,30 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+1hr - deployer website
+
+
+Thu
+
+
+1hr - multi viewer
+
+
+Sat
+
+
+1hr - multi viewer
+
+
+Sun
+
+
+1.5hrs - multi viewer
+1.5hrs - formatting deployer website
+
+
+&totalhours 6
+&project Deployer

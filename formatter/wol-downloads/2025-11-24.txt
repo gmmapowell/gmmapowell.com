@@ -1,0 +1,42 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+2hrs Work on testing cardinfoprovider
+1hr testing cardinfoprovider
+1hr testing cardinfoprovider
+
+
+Tue
+
+
+1.25hrs testing cardinfoprovider
+1hr replacing wdiozinikitests with playwright tests
+3.5hrs implementing meaningful playwright Ziniki tests
+
+
+Wed
+
+
+4hrs figuring out issues with login and playwright tests
+
+
+Thu
+
+
+1hr - adding --domain option to Ziniki Server
+1.5hr - implementing --domain option to Ziniki Server
+
+
+Sun
+
+
+1.5hrs - fixing up code & circuit for reggiecounter
+
+
+&totalhours 17.75
+&project Ziniki
+&achieved "Implemented meaningful Ziniki playwright tests"
+&achieved "Fixed new splitter"

@@ -1,0 +1,36 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1hr - minimal implementation of reldb
+
+
+Tue
+
+
+1.5hrs - integrating reldb into permissions flow
+
+
+Thu
+
+
+2.5hrs GnuCash
+
+
+Sat
+
+
+1.5hrs GnuCash
+
+
+Sun
+
+
+1.25hrs GnuCash
+
+
+&totalhours 7.75
+&project Ziniki
+&project GnuCash

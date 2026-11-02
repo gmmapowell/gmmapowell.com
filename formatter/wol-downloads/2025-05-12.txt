@@ -1,0 +1,33 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1 hour - adding --teardown
+
+
+Tue
+
+
+1 hour - adding --teardown options
+1 hour - tearing down AWS buckets
+1 hour - starting on copying
+
+
+Wed
+
+
+2 hours - refactoring files, buckets and copy
+
+
+Thu
+
+
+1 hour - completing pour metaphor
+2 hours - folding editor for deployer lang
+
+
+&totalhours 9
+&project Deployer
+&achieved "Tearing down buckets"

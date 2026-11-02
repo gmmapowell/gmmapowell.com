@@ -1,0 +1,17 @@
+﻿@WorkOutLoud
+
+
+Mon 
+
+
+1.5hrs - Release build process
+
+
+Wed
+
+
+1hr - release build process
+
+
+&totalhours 2.5
+&project Deployer

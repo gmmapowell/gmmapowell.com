@@ -1,0 +1,32 @@
+﻿@WorkOutLoud
+
+
+Tue
+
+
+1hr - figuring out flas uris
+1hr - fixing flas compilation 
+
+
+Wed
+
+
+1hr - fixing flas compilation 
+
+
+Thu
+
+
+3hrs - fixing Ziniki Assembler wrt modules
+4hrs - introducing Ziwsh block to FLAS
+
+
+Sun
+
+
+1hr - getting everything working on Catalonia again
+
+
+&totalhours 11
+&project Ziniki
+&achieved "Getting Ziniki working again"

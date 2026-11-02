@@ -1,0 +1,27 @@
+﻿@WorkOutLoud
+
+
+Mon
+
+
+1.5hrs - ScriptFormatter download just changed files
+
+
+Tue
+
+
+1hr - ScriptFormatter download just changed files
+0.5hr - tidying up Projects repository
+1hr - completing work on WOL entries
+1hr - completing work on WOL entries
+
+
+Thu
+
+
+0.5hr - adding custom properties for scrolling
+
+
+&totalhours 5.5
+&project ScriptFormatter
+&project Website

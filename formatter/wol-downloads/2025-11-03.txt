@@ -1,0 +1,17 @@
+﻿@WorkOutLoud
+
+
+Thu
+
+
+2hrs - breaking ground on ReggieCounter
+
+
+Fri
+
+
+3hrs - ReggieCounter Go websocket
+
+
+&totalhours 5
+&project ReggieCounter

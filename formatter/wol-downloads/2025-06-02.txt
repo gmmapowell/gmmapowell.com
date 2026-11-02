@@ -1,0 +1,20 @@
+﻿@WorkOutLoud
+
+
+Wed Jun 4
+
+
+2.5 hours deployer - find domain
+
+
+1.5 hours deployer - working on certificate requests
+
+
+Fri
+
+
+2 hours deployer - certificate verification
+
+
+&totalhours 6
+&project Deployer

@@ -1,0 +1,60 @@
+﻿@Article
+title=Payment Processing for the Modern Web
+saveAs=tech/payments
+
+
+It always seems to me that the possibilities of technology are years ahead of the realities.
+
+
+Payment processing on the web seems to be one such.  Credit card payments on the web seem trapped in the technology of &sp
+&link 'https://en.wikipedia.org/wiki/Credit_card_imprinter' '1970s card imprinters'
+.  Basically, you have to give a website (or its trusted partner) your credit card details and it will then process a transaction.  Worse, this is generally _sufficient_ and is backwards.
+
+
+I understand why this decision was made (although possibly not when - I don't remember the 60s).  Simply, it was the only practical way to make a payment with a credit card - imprint your card details on a single piece of paper with the merchants details.  Throw in a signature and it was in fact, remarkably secure.  To commit fraud, you basically had to "print" your own copy of the card with the victim's detail on it.
+
+
+Masked within the "big" change of going from cash payments to credit card payments was a "smaller" change - we went from hoarding - any then explicitly handing over - sums of cash to merely allowing a merchant to take _a copy_ of something and using that as authority to take money directly from your account.  (It could be said that cheques did the same thing, but they were a halfway house - each cheque was a personal possession that you held onto until you handed one specific cheque to a merchant; banks had their own security features in cheques making it almost impossible to clone them.)
+
+
+This persisted into the electronic area and then onto the web.  Again, I understand _why_ this was done - it was simple and expeditious and plugged into existing systems - but what I don't understand is why nobody (e.g. Paypal) recognized that it was a basically broken way of processing payments in the web era.  Especially when almost all card issuers have their own websites and apps.
+
+
+So, let me present my "obvious" solution to this problem, which I feel has been "valid" since about 2000 but I have never seen implemented on a website.
+
+
+The problem in fact breaks down into two parts: the "first time" problem and the "recurring" problem.  When you make a purchase on a website for the first time, you need to enter your details; generally you will be offered the opportunity to save them.  Although this is a convenience, depending on somebody else to store your private information is the biggest risk.  When you visit the website again, you generally have the option to reuse such a stored card to make a payment.
+
+
+I claim this relationship is the wrong way around.  Instead of telling the merchant (and by implication, potentially all the world) about your bank details, you should tell your _bank_ about the merchant.  I'm too lazy to mock up screenshots, although I might one day build a demo on &sp
+&link 'https://ignorancemaybestrength.blogspot.com/' 'my blog'
+&sp of how this could work, so you'll have to use a bit of imagination.
+
+
+When you reach the "payment" screen, you generally see a set of options: credit card, paypal, Google Pay, Venmo, etc.  I propose adding an option to this which I will call $MerchantPay$ for the context of this article.  When you click on that link, it will take you to a page with a selection of information on it, but the most important is a "transaction id" (think &sp
+&link '' 'UUID'
+&sp but it obviously doesn't need to be anything like that long), a QR code for that same information and a $Copy$ button to copy onto the clipboard.  The other information on the screen will include information about the merchant and the value of the transaction.
+
+
+In order to authorize this transaction, you need to go to your bank's website or app.  If you're using your bank's website or are using your phone for both transaction and banking, click on the $Copy$ button, navigate to their $MerchantPay$ page, and paste the transaction id into the appropriate box on the page.  The page will then fill in with the details of the transaction which should always match those on the merchant's page, including their name, merchant id and the amount of the transaction.  You then have three options: "approve", "approve and register" and "something looks wrong".
+
+
+Before discussing the options, let's go back to the app.  Opening your bank's app on your phone, you can select the $MerchantPay$ screen.  By default, it opens the camera to scan for a QR code.  Point it at the website to scan the transaction code and you will move to the option screen.
+
+
+Clicking "Approve" on the options screen will approve the transaction and the merchant site will update to reflect this, moving on to the "confirmation" screen.  However, it will not record the merchant as someone you have done business with before.
+
+
+Clicking "Approve and Register" gives you the option to record the merchant with two nicknames: one to remember the merchant by in the bank's website and app; and one to remember the bank card you have used in the merchant's app.  The second of these is sent across to the merchant's app along with the approval and a unique code to be used for _that_ merchant to request payment from _your bank_ to be charged to _your code_ in future.  It is just a routing code (again, think UUID) and does not disclose _any_ information about you or your bank (this information obviously is held by the payment processor).
+
+
+Clicking "Something Seems Wrong" takes you through to a screen to try and figure out what has gone wrong.  It's possibly a system error, a routing error, a network error or fraud.  The only thing I can think of right now is to put the bank's phone number there and to say "call us".
+
+
+If you registered your account, when you return to the merchant on a later occasion, the "Payment Options" screen will have multiple options for $MerchantPay$: there will be "use a different bank" along with all the bank cards you have previously registered, with each of them showing the nickname you provided.  Selecting an existing account will automatically push through the payment.  Your phone will beep and you will have a notification that you need to approve the payment - much as a 3D Secure payment notification works at the moment.
+
+
+Note that at _no_ point in this process have you given the merchant _any_ information about you - not credit card details, not a registered address, not the bank you use.  But the merchant has been paid.  While fraud is not impossible, a fraudster cannot steal and use your information; they have to successfully authenticate as you into at least one of the merchant website or your bank's website: both of these are real, current risks.  The merchant only interacts with a clearing house, which generates a UUID for the transaction and then matches incoming requests from banks.  Funds are transferred directly from your bank to the merchant's bank.  Depending on the protocol used for this, there is the possibility of some information "leaking", but that is assuredly an implementation detail.
+
+
+Obviously this description avoids a lot of the details, both of implementation and "corner cases".  For example, you might not have sufficient funds: in this case, none of the three options described above will show up, but instead you will see "insufficient funds available for transaction".  For banks where you have multiple accounts, it will require you to select an account to pay from.  To save typing, the bank app will probably allow you to specify a default card nickname to use for each account, but then allow you to change it.  It could also accept a "default" nickname sent across from the merchant.
