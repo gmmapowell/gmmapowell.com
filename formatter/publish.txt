@@ -27,6 +27,14 @@ life
   no-time I don't have Time
   title What's in a Title?
 
+now
+  when-2020-07-15 2020-07-15
+  when-2020-11-08 2020-11-08
+  when-2021-12-31 2021-12-31
+  when-2023-05-02 2023-05-02
+  when-2024-12-28 2024-12-28
+  when-2025-07-16 2025-07-16
+
 politics-musings
   empowered-departure Empowered Departure
   immigration Immigration is a Category Error
