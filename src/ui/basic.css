@@ -37,10 +37,10 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.text p {
+div.text p {
 	margin-block-start: 0px;
 }
-.text tt {
+div.text tt {
 	font-size: 9pt;
 }
 .article_blockquote {

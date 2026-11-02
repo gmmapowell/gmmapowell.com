@@ -1,10 +1,10 @@
 @media screen AND (min-aspect-ratio: 2/3) and (min-width: 1100px) {
-	.text {
+	div.text {
 		column-width: 15em;
 	}
 }
 @media screen AND (min-aspect-ratio: 2/3) and (min-width: 1500px) {
-	.text {
+	div.text {
 		column-width: 22em;
 	}
 }

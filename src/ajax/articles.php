@@ -32,6 +32,17 @@ header("Access-Control-Allow-Headers: *");
 			{ "id": "title", "title": "What's in a Title?" }
 <?php
 		break;
+	case "now":
+?>
+			{ "id": "when-2020-07-15", "title": "2020-07-15" },
+			{ "id": "when-2020-11-08", "title": "2020-11-08" },
+			{ "id": "when-2021-12-31", "title": "2021-12-31" },
+			{ "id": "when-2023-05-02", "title": "2023-05-02" },
+			{ "id": "when-2024-12-28", "title": "2024-12-28" },
+			{ "id": "when-2025-07-16", "title": "2025-07-16" },
+			{ "id": "when-now", "title": "Now" }
+<?php
+		break;
 	case "politics-musings":
 ?>
 			{ "id": "musings-empowered-departure", "title": "Empowered Departure" },

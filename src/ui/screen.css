@@ -19,7 +19,7 @@
 		width: 80%;
 		height: 80%;
 	}	
-	.text {
+	div.text {
 		position: absolute;
 		top: 4em;
 		bottom: 3em;
@@ -33,7 +33,7 @@
 		font-size: 12pt;
 	}
 
-	.text ul {
+	div.text ul {
 		padding: 0px 0px 0px 12px;
 		margin-block-end: 12px;
 	}
