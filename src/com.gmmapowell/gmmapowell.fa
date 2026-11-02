@@ -20,6 +20,30 @@
 						article.load "life-"
 						article.load articleId
 						observations.nest article
+			route "now"
+				title "Now"
+				nowthen <- NowThen
+				fromWhen <- Article
+				enter
+					main.nest nowthen
+					nowthen.nest fromWhen
+					fromWhen.load "now-when-now"
+			route "then"
+				title "Then"
+				nowthen <- NowThen
+				whens <- ArticleList
+				enter
+					main.nest nowthen
+					whens.load "now"
+				at
+					nowthen.nest whens
+				route "{date}"
+					fromWhen <- Article
+					enter
+						nowthen.SetTitle.title date
+						fromWhen.load "now-"
+						fromWhen.load date
+						nowthen.nest fromWhen
 //			route "creative"
 //				title "Getting Creative"
 //				creative <- Creative

@@ -1,0 +1,22 @@
+	card NowThen
+		state
+			Image background
+			Card card
+			String myTitle <- 'Now'
+
+		template nowthen
+			| => 'flas-screensize'
+			backdrop <- background
+				| => (fillTargetCenter 75 73) 'backdrop'
+			article-title <- myTitle
+			articles <- card
+
+		implements Lifecycle
+			nest c
+				card <- c
+			ready
+				background <- Image.asset '/images/rainbow.jpg'
+
+		implements SetTitle
+			title t
+				myTitle <- replaceStr t "when-" ""

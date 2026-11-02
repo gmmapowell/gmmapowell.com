@@ -21,6 +21,9 @@
 				=> playSports
 			sports-text
 				| => 'center-me' (sizeText 25)
+			now
+				| => "tile" (minAspect 60 30 15 1 0.7)
+				=> whatNow
 			politics
 				| => "tile" (minAspect 15 55 15 1 1)
 				=> talkPolitics
@@ -95,6 +98,9 @@
 
 		event lookAtTech (ClickEvent ev)
 			<- n.redirect (parseUri "technology")
+
+		event whatNow (ClickEvent ev)
+			<- n.redirect (parseUri "then")
 
 		event workoutloud (ClickEvent ev)
 			<- n.redirect (parseUri "workoutloud")
