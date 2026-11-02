@@ -1,51 +1,21 @@
-<p>I generally don't get involved much in social media.</p>
-<p>The fact is that it's mainly a troll farm.  And you don't want to feed trolls.  I mainly use Twitter as a way of consolidating various different mailing lists and being able to scroll through things I might be interested in quickly and reliably.  I always just look at tweets from accounts I am "Following", I never let the algorithm get involved.  On Bluesky, I do the same and frequently interact with friends/acquaintances there, along with posting what's going on in my life.</p>
-<p>My biggest exposure to life-threatening danger is on LinkedIn.</p>
-<p>As far as I know (and tell me if I just don't know!) there is no way to avoid the algorithm (or the ads) on LinkedIn.  When you log in, you see whatever crap they want to show you.  And so I end up being exposed to all sorts of troll bait that I have no desire to see.  From time to time I give in and slap someone because I can't resist.  Unlike most people, I am not trying to garner engagement, it's just that I sometimes reach a point where I am so frustrated by the stupidity of people that I feel the need to point out their idiocy.</p>
-<p>And then I sometimes retreat here to mull things over and make a broader or more detailed point.</p>
-<p>So, here's what  <a href='https://www.linkedin.com/feed/update/urn:li:activity:7349014602166231041?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7349014602166231041%2C7349141526569988097%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287349141526569988097%2Curn%3Ali%3Aactivity%3A7349014602166231041%29'>I wrote the other day</a> in response to a long post about agile vs waterrfall:</p>
-<blockquote class='article_blockquote'>
-No,&nbsp;
-no,&nbsp;
-no.<br/>
-An&nbsp;
-agile&nbsp;
-project&nbsp;
-is&nbsp;
-always&nbsp;
-exactly&nbsp;
-100%&nbsp;
-done.<br/>
-Everything&nbsp;
-that&nbsp;
-has&nbsp;
-been&nbsp;
-built,&nbsp;
-shipped&nbsp;
-and&nbsp;
-is&nbsp;
-running&nbsp;
-in&nbsp;
-live&nbsp;
-is&nbsp;
-done.&nbsp;
-Everything&nbsp;
-else&nbsp;
-is&nbsp;
-just&nbsp;
-so&nbsp;
-much&nbsp;
-fantasizing.<br/>
-</blockquote>
-<p>The original poster had hypothesized that in a waterfall project it is possible to know how far you are through a project by looking at all the specifications and seeing how far through you are, and then comparing this to "stories" in agile.  While the ultimate conclusion was that agile only cares about work that is "done", in my mind it misses the much bigger, if philosophical point: you cannot <b>possibly</b> know how far through a project you are unless you know what the end point is.</p>
-<p>I want to be clear that this is different to the "usual objection" that, even if you know where you are going, you <i>still don't know how far you are through</i>.  Let's go with an analogy.</p>
-<p>If I am taking a train from Manchester to London, I can see that the timetable says I will be on the train for 2h6m.  If everything goes according to plan, then, I will arrive 126 minutes after I leave.  I am sure that this has happened to me at least once in my life, but if so, I don't remember it.  These trains are almost always late.  So if you ask me at Stoke how far we are through the journey, I <b>could</b> look at my watch and say "42 minutes gone, so 33% done, 67% to go".  I would, of course, be lying.  I don't know that.  I'm not going to go through all the various cases, because I'm sure they're obvious.</p>
-<p>I could, more accurately, tell you what percentage of the <i>distance</i> we've gone, because that is fixed (as it happens, <i>I</i> couldn't tell you this; but I accept the data is out there somewhere).  But, in general, you won't care about that.  What you care about is when you can check in to your hotel/have a coffee/meet your friends/attend a meeting.  And that is about time.</p>
-<p>Following on from this, the broader point that I want to make about agile is that <i>the whole question is wrong</i>.  Suppose we had "no particular reason" for going to London - we just thought it would be good for a weekend.  When we reach Stoke, a friend calls up and says that she is hosting a party in Birmingham.  We discuss it quickly, leave the train at Stoke and get on the Cross-Country service to Southampton instead (which calls at Birmingham).  Leaving aside the inflexibility of the ticketing system on British trains, <i>how far are we through our journey</i>?</p>
-<p>The only truly valid statement I can make about our train journey is that "we have reached Stoke".  Those passengers who wanted to reach Stoke are done, and they can get off.  Those who wanted to go to London are on their way, and those who want to go to Birmingham can get off here and change.</p>
-<p>Software Projects are pretty much the same.  When you start a software project, you build something.  Anything that you <i>have built</i> and that works, and that you have deployed in some way <i>is real</i> and has been achieved.  It can be used.</p>
-<p>Everything else is just a conversation you had over coffee.</p>
-<p>You might think that your system needs a "recurring billing" feature.  Your client may think that.  You may be about to start building it when, suddenly, a sponsor comes forward and says they will pick up all the costs of your system; leave it free at point of use.  Your system no longer needs this feature.  Is your system more or less done that it was this morning?  If you insist that your original specification is the only valid definition of done, it will <i>never</i> now be done, since you are never going to implement this feature.  On the other hand, if you insist that the target may have moved, but not your commitment to it, you are now more done that you were before.  On the other hand, if new requirements come up - oh, and they will - then you will suddenly wake up one morning to be further behind than you were yesterday.</p>
-<p>All of this is ridiculous.  Mendacious, even.  Sophistry, anyone?</p>
-<p>The only thing that <b>ever</b> counts on any software project is what you have built, shipped and placed in your user's hands.  And that is always 100% done.</p>
-<p>By definition.</p>
+<p class='text'>I generally don't get involved much in social media.</p>
+<p class='text'>The fact is that it's mainly a troll farm.  And you don't want to feed trolls.  I mainly use Twitter as a way of consolidating various different mailing lists and being able to scroll through things I might be interested in quickly and reliably.  I always just look at tweets from accounts I am "Following", I never let the algorithm get involved.  On Bluesky, I do the same and frequently interact with friends/acquaintances there, along with posting what's going on in my life.</p>
+<p class='text'>My biggest exposure to life-threatening danger is on LinkedIn.</p>
+<p class='text'>As far as I know (and tell me if I just don't know!) there is no way to avoid the algorithm (or the ads) on LinkedIn.  When you log in, you see whatever crap they want to show you.  And so I end up being exposed to all sorts of troll bait that I have no desire to see.  From time to time I give in and slap someone because I can't resist.  Unlike most people, I am not trying to garner engagement, it's just that I sometimes reach a point where I am so frustrated by the stupidity of people that I feel the need to point out their idiocy.</p>
+<p class='text'>And then I sometimes retreat here to mull things over and make a broader or more detailed point.</p>
+<p class='text'>So, here's what  <a href='https://www.linkedin.com/feed/update/urn:li:activity:7349014602166231041?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7349014602166231041%2C7349141526569988097%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287349141526569988097%2Curn%3Ali%3Aactivity%3A7349014602166231041%29'>I wrote the other day</a> in response to a long post about agile vs waterrfall:</p>
+<p class='text'>$No, no, no.</p>
+<p class='text'>An agile project is always exactly 100% done.</p>
+<p class='text'>Everything that has been built, shipped and is running in live is done. Everything else is just so much fantasizing.$</p>
+<p class='text'>The original poster had hypothesized that in a waterfall project it is possible to know how far you are through a project by looking at all the specifications and seeing how far through you are, and then comparing this to "stories" in agile.  While the ultimate conclusion was that agile only cares about work that is "done", in my mind it misses the much bigger, if philosophical point: you cannot <b>possibly</b> know how far through a project you are unless you know what the end point is.</p>
+<p class='text'>I want to be clear that this is different to the "usual objection" that, even if you know where you are going, you <i>still don't know how far you are through</i>.  Let's go with an analogy.</p>
+<p class='text'>If I am taking a train from Manchester to London, I can see that the timetable says I will be on the train for 2h6m.  If everything goes according to plan, then, I will arrive 126 minutes after I leave.  I am sure that this has happened to me at least once in my life, but if so, I don't remember it.  These trains are almost always late.  So if you ask me at Stoke how far we are through the journey, I <b>could</b> look at my watch and say "42 minutes gone, so 33% done, 67% to go".  I would, of course, be lying.  I don't know that.  I'm not going to go through all the various cases, because I'm sure they're obvious.</p>
+<p class='text'>I could, more accurately, tell you what percentage of the <i>distance</i> we've gone, because that is fixed (as it happens, <i>I</i> couldn't tell you this; but I accept the data is out there somewhere).  But, in general, you won't care about that.  What you care about is when you can check in to your hotel/have a coffee/meet your friends/attend a meeting.  And that is about time.</p>
+<p class='text'>Following on from this, the broader point that I want to make about agile is that <i>the whole question is wrong</i>.  Suppose we had "no particular reason" for going to London - we just thought it would be good for a weekend.  When we reach Stoke, a friend calls up and says that she is hosting a party in Birmingham.  We discuss it quickly, leave the train at Stoke and get on the Cross-Country service to Southampton instead (which calls at Birmingham).  Leaving aside the inflexibility of the ticketing system on British trains, <i>how far are we through our journey</i>?</p>
+<p class='text'>The only truly valid statement I can make about our train journey is that "we have reached Stoke".  Those passengers who wanted to reach Stoke are done, and they can get off.  Those who wanted to go to London are on their way, and those who want to go to Birmingham can get off here and change.</p>
+<p class='text'>Software Projects are pretty much the same.  When you start a software project, you build something.  Anything that you <i>have built</i> and that works, and that you have deployed in some way <i>is real</i> and has been achieved.  It can be used.</p>
+<p class='text'>Everything else is just a conversation you had over coffee.</p>
+<p class='text'>You might think that your system needs a "recurring billing" feature.  Your client may think that.  You may be about to start building it when, suddenly, a sponsor comes forward and says they will pick up all the costs of your system; leave it free at point of use.  Your system no longer needs this feature.  Is your system more or less done that it was this morning?  If you insist that your original specification is the only valid definition of done, it will <i>never</i> now be done, since you are never going to implement this feature.  On the other hand, if you insist that the target may have moved, but not your commitment to it, you are now more done that you were before.  On the other hand, if new requirements come up - oh, and they will - then you will suddenly wake up one morning to be further behind than you were yesterday.</p>
+<p class='text'>All of this is ridiculous.  Mendacious, even.  Sophistry, anyone?</p>
+<p class='text'>The only thing that <b>ever</b> counts on any software project is what you have built, shipped and placed in your user's hands.  And that is always 100% done.</p>
+<p class='text'>By definition.</p>
