@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# rm -f formatter/html/now/when-now.html
+# cp formatter/html/now/`ls -1 formatter/html/now | tail -1` formatter/html/now/when-now.html
+
 (cd formatter/html ; find * -type f) | sed 's/.html//' | sort > /tmp/all-articles.txt
 
 awk '
@@ -9,6 +12,7 @@ awk '
     print "\t\tbreak;" > ap
   }
   BEGIN {
+    nowLatest = "";
     ap = "src/ajax/articles.php";
     print "<?php" > ap
 	  printf "header(%cAccess-Control-Allow-Origin: *%c);\n", 34, 34 > ap
@@ -23,6 +27,14 @@ awk '
   $0 ~ /^#/ { next }
   $0 ~ /^[ \t]*$/ { next }
   $0 ~ /^[a-z-]*$/ {
+    if (category == "now") {
+      print "nowLatest: " nowLatest;
+      if (needComma) {
+        printf ",\n" > ap
+      }
+      printf "\t\t\t{ %cid%c: %cwhen-now%c, %ctitle%c: %cNow%c }", 34, 34, 34, 34, 34, 34, 34, 34 > ap
+      printf "if [ -f %cformatter/html/%s/%s.html%c ]; then cp %cformatter/html/%s/%s.html%c articles/%s-when-now; fi\n", 34, category, name, 34, 34, category, name, 34, category, name > "/tmp/publish.sh"
+    }
   	category = $0;
 	  if (haveCase == 1) {
 	    endit();
@@ -48,6 +60,12 @@ awk '
     }
 	  printf "\t\t\t{ %cid%c: %c%s%s%c, %ctitle%c: %c%s%c }", 34, 34, 34, prefix, name, 34, 34, 34, 34, $0, 34 > ap
     needComma = 1
+    if (category == "now") {
+      if (nowLatest == "" || name > nowLatest) {
+        nowLatest = name;
+      }
+      print "latest = " nowLatest
+    }
   }
   END {
     endit()
