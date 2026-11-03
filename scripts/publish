@@ -12,7 +12,6 @@ awk '
     print "\t\tbreak;" > ap
   }
   BEGIN {
-    nowLatest = "";
     ap = "src/ajax/articles.php";
     print "<?php" > ap
 	  printf "header(%cAccess-Control-Allow-Origin: *%c);\n", 34, 34 > ap
@@ -22,18 +21,24 @@ awk '
 	  printf "\t%carticles%c: [\n", 34, 34 > ap
     print "<?php" > ap
 	  printf "\tswitch ($_GET[%ccat%c]) {\n", 39, 39 > ap
+
+    ps = "/tmp/publish.sh";
+    print "docp() {" > ps;
+    printf "  sed -e %cs/href=%c\%c%cWEBSITE-\([^%c\%c%c]*\)%c\\%c%c/data-flas-link=%clink%c data-route=%c\\1%c/%c %c$1%c > $2\n", 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 34, 34, 34, 34, 39, 34, 34 > ps
+    print "}" > ps;
+
+    nowLatest = "";
 	  haveCase = 0
   }
   $0 ~ /^#/ { next }
   $0 ~ /^[ \t]*$/ { next }
   $0 ~ /^[a-z-]*$/ {
     if (category == "now") {
-      print "nowLatest: " nowLatest;
       if (needComma) {
         printf ",\n" > ap
       }
       printf "\t\t\t{ %cid%c: %cwhen-now%c, %ctitle%c: %cNow%c }", 34, 34, 34, 34, 34, 34, 34, 34 > ap
-      printf "if [ -f %cformatter/html/%s/%s.html%c ]; then cp %cformatter/html/%s/%s.html%c articles/%s-when-now; fi\n", 34, category, name, 34, 34, category, name, 34, category, name > "/tmp/publish.sh"
+      printf "if [ -f %cformatter/html/%s/%s.html%c ]; then docp %cformatter/html/%s/%s.html%c articles/%s-when-now; fi\n", 34, category, name, 34, 34, category, name, 34, category, name > ps
     }
   	category = $0;
 	  if (haveCase == 1) {
@@ -54,7 +59,7 @@ awk '
   	name=$1;
 	  sub("  " name " *", "");
     printf "%s/%s\n", category, name > "/tmp/published-articles.txt"
-	  printf "if [ -f %cformatter/html/%s/%s.html%c ]; then cp %cformatter/html/%s/%s.html%c articles/%s-%s; fi\n", 34, category, name, 34, 34, category, name, 34, category, name > "/tmp/publish.sh"
+	  printf "if [ -f %cformatter/html/%s/%s.html%c ]; then docp %cformatter/html/%s/%s.html%c articles/%s-%s; fi\n", 34, category, name, 34, 34, category, name, 34, category, name > ps
     if (needComma) {
       printf ",\n" > ap
     }
@@ -64,7 +69,6 @@ awk '
       if (nowLatest == "" || name > nowLatest) {
         nowLatest = name;
       }
-      print "latest = " nowLatest
     }
   }
   END {
@@ -81,4 +85,4 @@ sort /tmp/published-articles.txt | comm -23 /tmp/all-articles.txt - | sed 's/^/ 
 
 bash -e /tmp/publish.sh
 
-rm /tmp/publish.sh
+# rm /tmp/publish.sh
