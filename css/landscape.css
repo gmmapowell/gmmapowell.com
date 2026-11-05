@@ -1,0 +1,8 @@
+@media screen AND (min-aspect-ratio: 3/2) AND (min-width: 1100px) { /* landscape */
+	div.article-title-list {
+		column-count: 3;
+	}
+	div.text {
+		column-width: 15em;
+	}
+}
