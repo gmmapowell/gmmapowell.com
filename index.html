@@ -200,35 +200,35 @@
 					</div>
 				</div>
     </template>
-    <link rel='stylesheet' type='text/css' href='/css/basic.css'>
-    <link rel='stylesheet' type='text/css' href='/css/landscape.css'>
-    <link rel='stylesheet' type='text/css' href='/css/narrow.css'>
-    <link rel='stylesheet' type='text/css' href='/css/portrait.css'>
-    <link rel='stylesheet' type='text/css' href='/css/printer.css'>
-    <link rel='stylesheet' type='text/css' href='/css/screen.css'>
-    <link rel='stylesheet' type='text/css' href='/css/square.css'>
-    <link rel='stylesheet' type='text/css' href='/css/wide.css'>
-    <script type='module' src='/js/ziwsh.js' charset='UTF-8'></script>
-    <script type='module' src='/js/flasjs.js' charset='UTF-8'></script>
-    <script type='module' src='/js/flaslive.js' charset='UTF-8'></script>
-    <script type='module' src='/js/ajaxmod.js' charset='UTF-8'></script>
-    <script type='module' src='/js/services.js' charset='UTF-8'></script>
-    <script type='module' src='/js/root.package.js' charset='UTF-8'></script>
-    <script type='module' src='/js/com.gmmapowell.js' charset='UTF-8'></script>
+    <link rel='stylesheet' type='text/css' href='./css/basic.css'>
+    <link rel='stylesheet' type='text/css' href='./css/landscape.css'>
+    <link rel='stylesheet' type='text/css' href='./css/narrow.css'>
+    <link rel='stylesheet' type='text/css' href='./css/portrait.css'>
+    <link rel='stylesheet' type='text/css' href='./css/printer.css'>
+    <link rel='stylesheet' type='text/css' href='./css/screen.css'>
+    <link rel='stylesheet' type='text/css' href='./css/square.css'>
+    <link rel='stylesheet' type='text/css' href='./css/wide.css'>
+    <script type='module' src='./js/ziwsh.js' charset='UTF-8'></script>
+    <script type='module' src='./js/flasjs.js' charset='UTF-8'></script>
+    <script type='module' src='./js/flaslive.js' charset='UTF-8'></script>
+    <script type='module' src='./js/ajaxmod.js' charset='UTF-8'></script>
+    <script type='module' src='./js/services.js' charset='UTF-8'></script>
+    <script type='module' src='./js/root.package.js' charset='UTF-8'></script>
+    <script type='module' src='./js/com.gmmapowell.js' charset='UTF-8'></script>
   </head>
   <body>
     <div id='flaselt_root'></div>
 <script type='module'>
-  import { JSEnv } from "/js/flaslive.js";
+  import { JSEnv } from "./js/flaslive.js";
   const env = new JSEnv();
   const baseUri = '';
   env.broker.connectToServer(null);
   const cx = env.newContext();
-  import { mod_services } from "/js/services.js";
+  import { mod_services } from "./js/services.js";
   mod_services._init(cx);
-  import { root__package } from "/js/root.package.js";
+  import { root__package } from "./js/root.package.js";
   root__package._init(cx);
-  import { com__gmmapowell } from "/js/com.gmmapowell.js";
+  import { com__gmmapowell } from "./js/com.gmmapowell.js";
   com__gmmapowell._init(cx);
   env.makeReady();
   var appl = new com__gmmapowell._Application(cx, 'flaselt_root', baseUri);
