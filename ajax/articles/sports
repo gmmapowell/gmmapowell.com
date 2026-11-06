@@ -1,0 +1,10 @@
+{
+	"articles": [
+			{ "id": "tv-football", "title": "TV Football" },
+			{ "id": "rugby-calendar", "title": "Harmonized Rugby Calendar" },
+			{ "id": "contracts", "title": "Sports Contracts are Stupid" },
+			{ "id": "fire-the-manager", "title": "Should We Fire the Manager?" },
+			{ "id": "women", "title": "Women's Sports" },
+			{ "id": "ivan-cleary", "title": "Ivan Cleary" }
+	]
+}

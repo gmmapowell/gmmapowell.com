@@ -106,8 +106,25 @@ export {
   mod_services
 };
 LiveAjaxService.prototype.ajax = function(_cxt, uri, handler) {
-	console.log("need to override uri request for ", uri);
-	uri = "ajax/articles/now";
+	console.log("need to override uri request for ", uri.pathname, uri.search);
+	switch (uri.pathname) {
+		case "/ajax/articles.php": {
+			var cat = uri.search.replace("?cat=", "");
+			console.log("want articles cat", cat);
+			uri = "ajax/articles/" + cat;
+			break;
+		}
+		case "/ajax/article.php": {
+			var aid = uri.search.replace("?aid=", "");
+			console.log("want articles cat", aid);
+			uri = "../articles/" + aid;
+			break;
+		}
+		default: {
+			uri = "ajax/articles/now";
+			break;
+		}
+	}
   var verb = "GET";
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = handler;

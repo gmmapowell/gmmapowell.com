@@ -1,0 +1,6 @@
+{
+	"articles": [
+			{ "id": "quickfixes-land-tax", "title": "A Land Use Tax" },
+			{ "id": "quickfixes-free-transport", "title": "Public Transport should be Free" }
+	]
+}
