@@ -24,7 +24,7 @@ FLError.eval = function(_cxt, msg) {
 };
 
 // src/main/javascript/runtime/messages.js
-import { IdempotentHandler, NamedIdempotentHandler } from "/js/ziwsh.js";
+import { IdempotentHandler, NamedIdempotentHandler } from "./js/ziwsh.js";
 
 // src/main/javascript/runtime/lists.js
 var Nil = function() {
@@ -1036,7 +1036,7 @@ ScrollTo.prototype._field_source.nfargs = function() {
 };
 
 // src/main/javascript/runtime/flcxt.js
-import { EvalContext, FieldsContainer } from "/js/ziwsh.js";
+import { EvalContext, FieldsContainer } from "./js/ziwsh.js";
 
 // src/main/javascript/runtime/builtin.js
 var True = function() {
@@ -2022,7 +2022,7 @@ Link.prototype._field_uri.nfargs = function() {
 };
 
 // src/main/javascript/runtime/crobag.js
-import { IdempotentHandler as IdempotentHandler2 } from "/js/ziwsh.js";
+import { IdempotentHandler as IdempotentHandler2 } from "./js/ziwsh.js";
 var SlideWindow = function(_cxt) {
   IdempotentHandler2.call(this, _cxt);
   return;
@@ -3724,7 +3724,7 @@ CommonEnv.prototype.cacheSingleton = function(name, value) {
 };
 
 // src/main/javascript/runtime/cstore.js
-import { NamedIdempotentHandler as NamedIdempotentHandler2, proxy } from "/js/ziwsh.js";
+import { NamedIdempotentHandler as NamedIdempotentHandler2, proxy } from "./js/ziwsh.js";
 var ContractStore = function(_cxt) {
   this.env = _cxt.env;
   this.recorded = {};

@@ -1,5 +1,5 @@
 // src/main/javascript/live/grounduri.js
-import { FLURI } from "/js/flasjs.js";
+import { FLURI } from "./js/flasjs.js";
 var groundUri = function(_cxt, uri) {
   try {
     if (uri instanceof FLURI) {
@@ -18,8 +18,8 @@ var groundUri = function(_cxt, uri) {
 };
 
 // src/main/javascript/live/ajax.js
-import { AjaxMessage } from "/js/root.package.js";
-import { Send } from "/js/flasjs.js";
+import { AjaxMessage } from "./js/root.package.js";
+import { Send } from "./js/flasjs.js";
 var LiveAjaxService = function() {
 };
 LiveAjaxService.prototype.subscribe = function(_cxt, uri, options, handler) {
