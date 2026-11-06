@@ -1,8 +1,8 @@
 var com__gmmapowell = {};
 
-import { IdempotentHandler } from "./js/ziwsh.js";
-import { Application, Assign, AssignCons, AssignItem, Debug, ResponseWithMessages, Send, UpdateDisplay, ClickEvent, ScrollTo, ContractStore, Entity, Image, Link, FLBuiltin, False, True, MakeHash, HashPair, Tuple, TypeOf, FLCard, FLObject, FLError, Nil, Cons, Crobag, CroEntry, SlideWindow, CrobagWindow, CrobagChangeEvent, CrobagWindowEvent, Random, Interval, Instant, Calendar } from "./js/flasjs.js";
-import { root__package, Ajax, AjaxHandler, AjaxHeader, AjaxMessage, AjaxOptions, CallMe, ContentAccess, ContentDelivery, Lifecycle, Navigation, Repeater, cross, cross1, fillRect, fillTargetCenter, head, last, map, minAspect, promoteBox, recurse, safeHead, safeTail, sing, sizeText, tail, transpose, trim2, trimEnd } from "./js/root.package.js";
+import { IdempotentHandler } from "./ziwsh.js";
+import { Application, Assign, AssignCons, AssignItem, Debug, ResponseWithMessages, Send, UpdateDisplay, ClickEvent, ScrollTo, ContractStore, Entity, Image, Link, FLBuiltin, False, True, MakeHash, HashPair, Tuple, TypeOf, FLCard, FLObject, FLError, Nil, Cons, Crobag, CroEntry, SlideWindow, CrobagWindow, CrobagChangeEvent, CrobagWindowEvent, Random, Interval, Instant, Calendar } from "./flasjs.js";
+import { root__package, Ajax, AjaxHandler, AjaxHeader, AjaxMessage, AjaxOptions, CallMe, ContentAccess, ContentDelivery, Lifecycle, Navigation, Repeater, cross, cross1, fillRect, fillTargetCenter, head, last, map, minAspect, promoteBox, recurse, safeHead, safeTail, sing, sizeText, tail, transpose, trim2, trimEnd } from "./root.package.js";
 
 com__gmmapowell.SetTitle = function(_cxt) {
   return ;

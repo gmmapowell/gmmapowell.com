@@ -1,5 +1,5 @@
 // src/main/javascript/core/ajaxmod.js
-import { root__package, AjaxMessage } from "./js/root.package.js";
+import { root__package, AjaxMessage } from "./root.package.js";
 AjaxMessage.prototype._convertToHTML = function() {
   return this.state.get("body");
 };

@@ -1,6 +1,6 @@
 // src/main/javascript/live/jsenv.js
-import { CommonEnv } from "./js/flasjs.js";
-import { SimpleBroker } from "./js/ziwsh.js";
+import { CommonEnv } from "./flasjs.js";
+import { SimpleBroker } from "./ziwsh.js";
 var JSEnv = function(broker) {
   if (broker == null)
     broker = new SimpleBroker(console, this, {});
